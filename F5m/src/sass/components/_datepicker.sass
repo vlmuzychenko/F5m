@@ -1,0 +1,97 @@
+.datepicker
+	position: relative
+	&__row
+		text-align: center
+		+clr
+	&__btn-left, &__btn-right, &__select
+		display: inline-block
+		vertical-align: top
+		width: 100px
+		height: 50px
+		border: 1px solid #000000
+		background: none
+		border-radius: 30px
+		.icon-arrow-left
+			fill: #000
+			font-size: 24px
+	&__select
+		position: relative
+		width: 130px
+		margin: 0 14px
+		padding: 0 40px 0 15px
+		line-height: 50px
+		font-size: 16px
+		span
+			white-space: nowrap
+		.icon-arrow-sm
+			position: absolute
+			top: 50%
+			right: 15px
+			margin-top: -4px
+			font-size: 8px
+	&__btn-right
+		.icon-arrow-left
+			transform: scale(-1)
+	&__dropdown
+		position: absolute
+		top: 100%
+		left: 50%
+		width: 270px
+		margin-left: -135px
+		margin-top: 20px
+		padding: 20px 20px 10px 20px
+		background: #fff
+		box-shadow: 0px -6px 13px 0px rgba(0, 0, 0, 0.17)
+		border-radius: 4px
+		opacity: 0
+		visibility: hidden
+		transform: translate3d(0, -10px, 0)
+		transition: opacity .3s ease, visibility .3s ease, transform .3s ease
+		z-index: 10
+		&.is-open
+			opacity: 1
+			visibility: visible
+			transform: translate3d(0, 0, 0)
+		&:before
+			content: ''
+			position: absolute
+			bottom: 100%
+			right: 80px
+			+arr(17,8,#fff,t)
+	&__input
+		cursor: pointer
+		display: block
+		input
+			position: absolute
+			opacity: 0
+			visibility: hidden
+			&:checked
+				+ span
+					opacity: 1
+		span
+			opacity: .4
+	&__header
+		border-bottom: 1px solid #ccc
+		white-space: nowrap
+		font-size: 0
+		overflow: auto
+		.datepicker__input
+			padding: 0 0 10px
+	&__year
+		display: inline-block
+		width: 33.33%
+		text-align: center
+		font-size: 18px
+	&__body
+		padding-top: 15px
+		+clr
+	&__month
+		float: left
+		width: 25%
+		font-size: 14px
+		.datepicker__input
+			padding: 10px 0
+
+
+
+

@@ -1,0 +1,43 @@
+.type
+	position: relative
+	display: block
+	height: 120px
+	margin: 7px 0
+	background: #dbdbdb
+	font-size: 24px
+	line-height: 120px
+	+f-demi
+	text-transform: uppercase
+	+r(375)
+		font-size: 20px
+		height: 100px
+		line-height: 100px
+	&__checkbox
+		position: relative
+		padding: 0 20px 0 95px
+		+r(375)
+			padding-left: 70px
+		&:before
+			content: ''
+			position: absolute
+			font-size: 10px
+			top: 50%
+			left: 20px
+			height: 6.5em
+			width: 5em
+			margin-top: -32px
+			background: url('../img/yacht.png') center / cover no-repeat
+			+r(375)
+				left: 15px
+				font-size: 8px
+		.checkbox
+			&__block
+				float: right
+				margin-top: 40px
+				+r(375)
+					margin-top: 30px
+
+
+.types
+	margin-bottom: 40px
+

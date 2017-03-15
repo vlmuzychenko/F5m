@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Search</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      function resize()
+      {
+        var metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag)
+        {
+          metaTag.remove();
+          console.log('metaTag');
+        }
+        metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width < 600)
+        {
+          metaTag.content = "width=480, user-scalable=0";
+        }
+        else
+        {
+          metaTag.content = "width=480, initial-scale=1.0, user-scalable=0";
+        }
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+      resize();
+      window.addEventListener('orientationchange', resize, false);
+
+    </script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!--BEGIN  header-->
+      <header class="header">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button> </div>
+      </header>
+      <!--END  header-->
+      <div class="menu js-menu">
+        <div class="menu__topline">
+          <a href="#" class="menu__step js-navigation-step"> <svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg> <span data-root-title="главное меню"></span></a>
+          <!--<button class="menu__close btn-close js-close-menu">
+<svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
+</button>--></div>
+        <!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+        <div class="menu__navigation">
+          <nav class="navigation js-navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+                <div class="navigation__more js-navigation-more">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"> <a href="#" class="navigation__link">яхт-вики</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link">Аренда яхт</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+                            <div class="navigation__more js-navigation-more">
+                              <ul class="navigation__list">
+                                <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                              </ul>
+                          </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+              </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a> </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <div class="search">
+          <div class="search__nav">
+            <div class="nav js-nav swiper-container">
+              <div class="nav__list swiper-wrapper">
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">регион</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">тип яхты</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">даты оренды</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">поиск</div>
+                </div>
+              </div>
+              <div class="nav__line js-nav-line"></div>
+            </div>
+          </div>
+          <form class="search__body">
+            <div class="swiper-container js-content">
+              <div class="search__content swiper-wrapper ">
+                <div class="swiper-slide">
+                  <div class="regions">
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>южная америка</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>северная америка</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>западная африка</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>северная европа</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>атлантическая европа</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>средний восток</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>средиземноморье</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>океания</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>карибы</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="region"> <label class="region__checkbox checkbox">
+			<span>индийский океан</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="types">
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+			<span>парусные яхты</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+			<span>моторные яхты</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+			<span>катамараны</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+			<span>суперяхты</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label> </div>
+                  </div>
+                </div>
+                <div class="search__vertical swiper-slide">
+                  <div class="dates">
+                    <div class="dates__field">
+                      <div class="dates__title">Отплытие</div> <input readonly type="text" class="dates__input" data-calendar-from data-title="Отплытие"> </div>
+                    <div class="dates__field">
+                      <div class="dates__title">Прибытие</div> <input readonly type="text" class="dates__input" data-calendar-to data-title="Прибытие"> </div>
+                  </div>
+                </div>
+                <div class="search__vertical search__vertical_yellow swiper-slide">
+                  <div class="final">
+                    <div class="final__title"> Найти подходящие яхты </div>
+                    <div class="final__btn"> <button type="submit" class="button button_xl button_white">Найти</button> </div>
+                    <div class="final__footer"> <a href="#" class="button button_xl">Развернуты поиск</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <a href="#" class="search__message message js-open-popup" data-open="feedback"> <svg class="icon icon-chat"><use xlink:href="img/sprite.svg#icon-chat"></use></svg> <span>Не знаете что подобрать?</span></a>
+        </div>
+        <div class="popup popup_calendar" data-calendar-popup> <button type="button" class="popup__close btn-close" data-close-calendar>
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__in">
+            <div class="popup__title" data-calendar-title>Отплытие</div>
+            <div class="calendar">
+              <ul class="calendar__years">
+                <li><a href="#" data-calendar-year data-value="2016">2016</a></li>
+                <li><a href="#" data-calendar-year class="is-active" data-value="2017">2017</a></li>
+                <li><a href="#" data-calendar-year data-value="2018">2018</a></li>
+                <li><a href="#" data-calendar-year data-value="2019">2019</a></li>
+                <li><a href="#" data-calendar-year data-value="2020">2020</a></li>
+                <li><a href="#" data-calendar-year data-value="2021">2021</a></li>
+              </ul>
+              <div class="calendar__main" data-calendar></div>
+              <div class="popup__button calendar__button"> <button type="button" class="button button_lg" data-calendar-save>Сохранить</button> </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup_form js-popup" data-popup="feedback"> <button type="button" class="popup__close btn-close js-close-popup">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__in popup__in_yellow js-popup-in">
+            <div class="form">
+              <form action="">
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formName" type="text" class="input__main" placeholder="ФИО"> <label class="input__label" for="formName">Имя и фамилия</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formPhone" type="tel" class="input__main" placeholder="(0--) --- -- --"> <label class="input__label" for="formPhone">Телефон</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formEmail" type="email" class="input__main" placeholder="name@mail.com"> <label class="input__label" for="formEmail">Email</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <textarea class="input__main" placeholder="Напишите комментарий"></textarea> </div>
+                </div>
+                <div class="form__field form__field_center"> <button type="submit" class="button button_lg">Отправить</button> </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
+  </body>
+
+</html>

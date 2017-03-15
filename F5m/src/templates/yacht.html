@@ -1,0 +1,134 @@
+---
+title: Yacht Card
+mapBtns: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="card">
+
+	<div class="card__slider js-images swiper-container">
+		<div class="card__imgs swiper-wrapper">
+			<div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+			<div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+			<div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+			<div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<div class="card__info">
+		<div class="card__name">Riva Duchessa</div>
+		<div class="card__text">20 000 грн / день</div>
+	</div>
+</div>
+
+<div class="description">
+
+	<div class="description__article">
+
+		<h3>Общее:</h3>
+		<ul>
+			<li>Тип — sailing</li>
+			<li>Длина — 10.36 м</li>
+			<li>Скорость —</li>
+			<li>максимальная 28 узлов</li>
+			<li>круизная 18 узлов</li>
+			<li>Кают — 1</li>
+			<li>Спальные места — 2+2</li>
+			<li>WC/Душ — 1</li>
+			<li>Местонахождение — о. Крк (Хорватия) <a href="#" class="js-open-popup-map" data-open="map">на карте</a></li>
+			<li>Двигатель — GM 8.1L (496cid) 525 л.с.</li>
+		</ul>
+
+		<h3>Навигация:</h3>
+		<ul>
+			<li>Подруливающее устройство</li>
+			<li>Тип грота</li>
+			<li>Автопилот</li>
+		</ul>
+
+		<h3>Комфорт:</h3>
+		<ul>
+			<li>Холодильник</li>
+			<li>Наличие эл. туалета</li>
+			<li>Radio-CD player</li>
+			<li>Акустическая система в кокпите</li>
+			<li>Наличие козырька</li>
+			<li>Наличие переднего стекла</li>
+			<li>Система накопления отходов</li>
+			<li>Резиновая лодка</li>
+		</ul>
+
+		<h3>Доп опционал:</h3>
+		<ul>
+			<li>Холодильник</li>
+		</ul>
+
+	</div>
+
+	<div class="description__btns">
+		<button type="button" class="button button_icon button_icon-360 js-open-popup-panorama" data-open="panorama"></button>
+		<button type="button" class="button button_icon js-open-popup-video" data-open="video">{{mixins.icon('filmstrip')}}</button>
+	</div>
+
+	<div class="description__article">
+		<p>Название Ruya имеет несколько красивых вариантов перевода, идеально олицетворяющих эту удивительную яхту. Этим старинным китайским словом обозначают мудрый, скромный и самосовершенствующийся характер древнего ученого. Название этой яхты прекрасно вписывается в общую концепцию деятельности Sealine, которая заключается в том, чтобы строить первоклассные яхты по исключительным стандартам проектирования и с тщательным вниманием к деталям.</p>
+	</div>
+
+	<div class="description__actions">
+		<div>
+			<a href="#" class="button button_lg button_yellow">Забронировать</a>
+
+		</div>
+		<div>
+			<a href="#" class="button button_lg">Нужна консультация?</a>
+		</div>
+	</div>
+
+	<div class="description__table">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Период</th>
+					<th>Цена в неделю</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>29 окт. 2016 - 15 ноя. 2016</td>
+					<td>€4 100</td>
+				</tr>
+				<tr>
+					<td>29 окт. 2016 - 15 ноя. 2016</td>
+					<td>€4 100</td>
+				</tr>
+				<tr>
+					<td>29 окт. 2016 - 15 ноя. 2016</td>
+					<td>€4 100</td>
+				</tr>
+				<tr>
+					<td>29 окт. 2016 - 15 ноя. 2016</td>
+					<td>€4 100</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+</div>
+{% include "partials/_popupVideo.html" %}
+{% include "partials/_popupMap.html" %}
+{% include "partials/_popupPanorama.html" %}
+
+{% endblock %}
+
+{% block scripts %}
+<script src="js/panorama.js"></script>
+{% endblock %}
+
+
+
+
+

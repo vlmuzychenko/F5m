@@ -1,0 +1,116 @@
+.events
+	position: relative
+	height: calc(100vh - 60px)
+	padding-top: 60px
+	&__topline
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 5px 0
+		box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
+	&__body
+		height: 100%
+		padding-top: 5px
+		min-height: 520px
+	&__chapter
+		height: 33.333%
+	&__title
+		float: left
+		width: 45px
+		height: 100%
+		margin-right: 7px
+		text-align: center
+		box-shadow: 3px 0 8px -3px rgba(0, 0, 0, 0.21)
+		+vertical
+		letter-spacing: 2px
+		span
+			display: inline-block
+			vertical-align: middle
+			writing-mode: vertical-lr
+			transform: scale(-1)
+			font-size: 30px
+			+f-bold
+	&__title_yellow
+		background: $primary
+		color: $white
+	&__title_dark
+		background: $black
+		color: $primary
+	&__items
+		width: calc(100% - 52px)
+		height: 100%
+		float: left
+		white-space: nowrap
+		padding: 3px 0
+		overflow: auto
+		font-size: 0
+		.event
+			display: inline-block
+			vertical-align: top
+			white-space: normal
+
+
+
+.event
+	position: relative
+	height: 100%
+	width: 268px
+	margin-right: 6px
+	background: center center / cover no-repeat
+	font-size: 18px
+	&__body
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 95px
+		padding: 9px 10px
+		background: rgba(#000, .5)
+		color: #fff
+	&__title
+		line-height: 1.1
+		height: 57px
+		//margin-bottom: 2px
+		overflow: hidden
+	&__dates
+		color: $primary
+
+.event-info
+	position: relative
+	height: 100%
+	&__img
+		height: 310px
+		background: center center / cover no-repeat
+	&__body
+		position: relative
+		padding: 20px 25px
+		display: flex
+		flex-direction: column
+		height: calc(100% - 310px)
+		overflow: auto
+	&__entry
+		flex: 1 0 auto
+	&__title
+		max-height: 124px
+		overflow: hidden
+		margin-bottom: 10px
+		+f-bold
+		font-size: 24px
+		text-transform: uppercase
+	&__text
+		margin-bottom: 30px
+		color: $text
+		font-size: 16px
+		strong
+			color: #000
+			+bold
+	&__btns
+		.button
+			width: 230px
+			text-transform: uppercase
+			&:not(:last-child)
+				margin-bottom: 20px
+
+
+

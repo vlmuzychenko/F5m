@@ -1,0 +1,34 @@
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 90
+	background: $black
+	&__in
+		height: 60px
+		+clr
+	&__home
+		float: left
+		display: block
+		width: 55px
+		height: inherit
+		background: $primary
+		+vertical
+		.icon
+			vertical-align: middle
+			fill: $black
+			font-size: 22px
+	&__home_btn
+		opacity: 0
+		visibility: hidden
+		transition: opacity .4s ease, visibility .4s ease
+		&.is-active
+			opacity: 1
+			visibility: visible
+	&__burger
+		display: block
+		float: right
+		width: 85px
+		height: inherit
+		padding: 0 25px

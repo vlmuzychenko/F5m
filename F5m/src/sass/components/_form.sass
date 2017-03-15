@@ -1,0 +1,175 @@
+.btn-close
+	display: inline-block
+	background: none
+	+vertical
+	padding: 10px
+	.icon
+		vertical-align: middle
+		font-size: 30px
+
+.button
+	display: inline-block
+	height: 50px
+	line-height: 50px
+	padding: 0 18px
+	border: 1px solid $black
+	border-radius: 50px
+	background: none
+	color: $black
+	font-size: 18px
+	text-align: center
+	text-transform: uppercase
+	.icon
+		vertical-align: middle
+		margin-top: -5px
+		margin-right: 10px
+
+.button_sm
+	width: 150px
+
+.button_sm
+	width: 200px
+
+.button_lg
+	width: 230px
+
+.button_xl
+	width: 300px
+	height: 70px
+	line-height: 70px
+	font-size: 24px
+
+.button_icon
+	vertical-align: top
+	width: 100px
+	.icon
+		margin-right: 0
+		font-size: 26px
+
+.button_icon-360
+	background: #fff url('../img/i-tour.png') center center / 36px 22px no-repeat
+
+.button_white
+	border-color: $white
+	background: $white
+
+.button_yellow
+	border-color: $primary
+	background: $primary
+
+.button_tr-white
+	background-color: transparent
+	color: $white
+	border-color: $white
+
+.input
+	&__main
+		width: 100%
+		height: 40px
+		padding: 0 20px
+		border: 1px solid $grayLight
+		border-radius: 3px
+		font-size: 18px
+		+placeholder
+			color: $black
+	textarea.input__main
+		height: 200px
+		padding-top: 10px
+		padding-bottom: 10px
+		border: 0
+		color: $black
+		resize: vertical
+		+placeholder
+			color: $black
+			font-size: 18px
+	&__label
+		display: block
+		margin: 2px 0 0 20px
+		font-size: 18px
+	&__text
+		margin-left: 10px
+	&_white
+		.input__main
+			color: #fff
+			background: rgba(255, 255, 255, 0.1)
+			border-radius: 0
+			border: 0
+			+placeholder
+				color: #8c8dbe
+		.input__label
+			color: #fff
+
+.input_inline
+	display: inline-block
+
+.input_additional
+	.input
+		&__main
+			width: 90px
+			padding: 0 10px
+		&__text
+			display: inline-block
+			vertical-align: middle
+
+.input_lg
+	.input__main
+		height: 70px
+		font-size: 30px
+
+.input_op
+	.input__main
+		border-radius: 0
+		border: 0
+		background: rgba($white, .4)
+
+.form
+	&__block
+		margin-bottom: 15px
+		padding: 0 10px 20px
+		&:not(:last-child)
+			border-bottom: 1px solid $grayLight
+	&__block_no-bd
+		&:not(:last-child)
+			border-bottom: 0
+	&__checkbox
+		padding-right: 150px
+		margin-bottom: 15px
+	&__field
+		margin-bottom: 26px
+		&:last-child
+			margin-bottom: 0
+	&__field_mt
+		margin-top: 15px
+	&__field_center
+		text-align: center
+	&__title
+		margin-bottom: 10px
+		+f-bold
+		text-transform: uppercase
+	&__title_mb
+		margin-bottom: 20px
+	&__row
+		margin: 0 -15px
+		+clr
+	&__col
+		width: 50%
+		float: left
+		padding: 0 15px
+	&__col_full
+		width: 100%
+	&__col_center
+		text-align: center
+	&__col_right
+		text-align: right
+	&__inputs
+		display: flex
+		justify-content: space-between
+	&__btns
+		text-align: center
+		.button
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+	&__slider
+		margin-top: 30px
+		margin-bottom: 15px

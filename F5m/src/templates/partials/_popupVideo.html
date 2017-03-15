@@ -1,0 +1,38 @@
+<div class="popup popup_video js-popup-video" data-popup="video">
+	<div class="popup__in js-popup-video-in">
+
+		<div class="popup__video">
+			<div id="video"></div>
+			<a href="#" class="popup__video-play js-play-video" style="background-image: url('img/slide-1.jpg')"><span>Смотреть видео</span></a>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	var ytPlayer;
+	var tag = document.createElement('script');
+
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	function onYouTubeIframeAPIReady() {
+		ytPlayer = new YT.Player('video', {
+			height: '270',
+			width: '480',
+			videoId: '-8IHsnyV44A', // paste here an id of your video from youtube
+			events: {
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	}
+
+	function onPlayerStateChange(event) {
+
+		if (event.data == YT.PlayerState.UNSTARTED) {
+			document.querySelector('.js-play-video').classList.add('is-hide')
+		}
+
+	}
+</script>

@@ -1,0 +1,73 @@
+.custom-select
+	position: relative
+	height: 40px
+	min-width: 200px
+	border-radius: 3px
+	border: 1px solid $grayLight
+	color: $black
+	font-size: 18px
+	line-height: 2.15
+
+	&.is-open
+		.custom-select
+			&__dropdown
+				//opacity: 1
+				//visibility: visible
+		&:before
+		//transform: translate3d(0,0,0) scaleX(1)
+		.icon-down
+			transform: translate3d(0, 0, 0) rotate(180deg)
+	&:before
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+
+		border-bottom: 1px solid $black
+		width: 100%
+
+		transform: translate3d(0,0,0) scaleX(0)
+		transform-origin: left center
+		transition: transform .3s
+	select
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		opacity: 0
+		//visibility: hidden
+	&__visible
+		position: relative
+		padding: 0 30px 0 10px
+		cursor: pointer
+	&__text
+		color: $black
+		padding: 2px 13px 0 0
+		+text-overflow
+	&__dropdown
+		position: absolute
+		z-index: 1
+		top: 100%
+		left: -1px
+		right: -1px
+		border: 1px solid $grayLight
+		border-radius: 0 0 2px 2px
+		opacity: 0
+		visibility: hidden
+		background: $white
+		transition: opacity 0.25s ease, visibilty 0.25s ease
+		li
+			padding: 0 10px
+			line-height: 27px
+			transition: background 0.25s ease, color 0.25s ease
+			cursor: pointer
+	&__icon
+		position: absolute
+		right: 10px
+		top: 50%
+		margin-top: -4px
+		+arr(16,8,$black,b)

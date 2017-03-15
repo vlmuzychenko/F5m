@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Pages</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      function resize()
+      {
+        var metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag)
+        {
+          metaTag.remove();
+          console.log('metaTag');
+        }
+        metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width < 600)
+        {
+          metaTag.content = "width=480, user-scalable=0";
+        }
+        else
+        {
+          metaTag.content = "width=480, initial-scale=1.0, user-scalable=0";
+        }
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+      resize();
+      window.addEventListener('orientationchange', resize, false);
+
+    </script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!--BEGIN  header-->
+      <header class="header">
+        <div class="header__in"> <button type="button" class="header__home header__home_btn js-close-chapter">
+<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+</button> <button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button> </div>
+      </header>
+      <!--END  header-->
+      <div class="menu js-menu">
+        <div class="menu__topline">
+          <a href="#" class="menu__step js-navigation-step"> <svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg> <span data-root-title="главное меню"></span></a>
+          <!--<button class="menu__close btn-close js-close-menu">
+<svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
+</button>--></div>
+        <!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+        <div class="menu__navigation">
+          <nav class="navigation js-navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+                <div class="navigation__more js-navigation-more">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"> <a href="#" class="navigation__link">яхт-вики</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link">Аренда яхт</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+                            <div class="navigation__more js-navigation-more">
+                              <ul class="navigation__list">
+                                <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                              </ul>
+                          </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+              </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a> </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <div class="chapters js-chapters">
+          <div class="chapters__items">
+            <a href="#" class="chapters__item subject" style="background-image: url(img/chapter-1.jpg)">
+              <div class="subject__title">яхт-вики</div>
+            </a>
+            <a href="#" class="chapters__item subject" style="background-image: url(img/chapter-2.jpg)">
+              <div class="subject__title">аренда яхт</div>
+            </a>
+            <a href="#" class="chapters__item subject" style="background-image: url(img/chapter-3.jpg)">
+              <div class="subject__title">регаты</div>
+            </a>
+            <div role="button" class="chapters__item js-open-chapter" data-open="academy">
+              <div class="chapters__inner subject js-chapter-inner" style="background-image: url(img/chapter-4.jpg)">
+                <div class="subject__title">академия</div>
+              </div>
+              <div class="chapters__more">
+                <div class="chapter js-chapter" data-chapter="academy">
+                  <div class="chapter__list">
+                    <ul class="chapter__nav">
+                      <li><a href="#" class="is-active">лицензии</a></li>
+                      <li><a href="#">теоретический курс</a></li>
+                      <li><a href="#">ПРАКТИЧЕСКИЙ КУРС</a></li>
+                      <li><a href="#">ИНСТРУКТОРЫ</a></li>
+                      <li><a href="#">КЛАССЫ ОБУЧЕНИЯ</a></li>
+                      <li><a href="#">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
+  </body>
+
+</html>

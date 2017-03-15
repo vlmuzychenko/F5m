@@ -1,0 +1,56 @@
+.checkbox
+	display: block
+	input[type="checkbox"]
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		&:checked
+			+ .checkbox__block
+				background: svg-load('../../build/img/check.svg', fill=#fff) $primary center center no-repeat
+
+	&__block
+		position: relative
+		display: inline-block
+		height: 40px
+		width: 40px
+		border: 1px solid $primary
+
+.checkbox_dark
+	input[type="checkbox"]
+		&:checked + .checkbox__block
+			background-color: $black
+	.checkbox__block
+		border-color: $black
+
+.checkbox_icon
+	position: relative
+	padding-left: 30px
+	&:before
+		content: ''
+		position: absolute
+		font-size: 4px
+		top: 50%
+		left: 0
+		height: 6.5em
+		width: 5em
+		margin-top: -16px
+		background: url(../img/yacht.png) center/cover no-repeat
+		+gpu
+
+.checkbox_mod
+	position: relative
+	input[type="checkbox"]
+		&:checked + .checkbox__block
+			background-color: $black
+			background-size: 16px 16px
+	.checkbox__block
+		width: 20px
+		height: 20px
+		float: right
+		margin-top: 1px
+		border-color: $black
+
+.checkbox_left
+	.checkbox__block
+		float: left
+		margin-right: 10px

@@ -1,0 +1,46 @@
+$default-fonts: Helvetica, Arial, sans-serif
+
++font(Casper-Regular, Casper-Regular)
+=reg
+  font-family: 'Casper-Regular', $default-fonts
++font(Casper-Bold, Casper-Bold)
+=bold
+  font-family: 'Casper-Bold', $default-fonts
+
++font(FuturaPT-Demi, FuturaPT-Demi)
+=f-demi
+  font-family: 'FuturaPT-Demi', $default-fonts
++font(FuturaPT-Bold, FuturaPT-Bold)
+=f-bold
+  font-family: 'FuturaPT-Bold', $default-fonts
+
+html, body, .out
+
+  height: 100%
+
+body
+  background: #FFF
+  //+css-lock(16, 18, 320, 1000)
+  font-size: 18px
+  line-height: 1.3
+  +reg
+  &.popup-open
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 100%
+    overflow: hidden
+
+a
+  text-decoration: none
+
+.out
+  //position: relative
+  padding-top: 60px
+  //overflow: hidden
+
+.container
+  padding: 0 20px
+
+

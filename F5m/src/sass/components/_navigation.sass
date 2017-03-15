@@ -1,0 +1,46 @@
+.navigation
+	//position: fixed
+	//top: 0
+	height: 100%
+	overflow: auto
+	&__list
+		position: relative
+		height: 100%
+		overflow: auto
+		overflow-x: hidden
+		.navigation__list
+			position: static
+	&__link
+		position: relative
+		display: block
+		margin: 0 35px
+		padding: 26px 23px 22px 0
+		border-bottom: 2px solid #4b4b4b
+		color: #a8a8a8
+		font-size: 24px
+		text-transform: uppercase
+		&:not(:only-child)
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				top: 30px
+				width: 22px
+				height: 22px
+				background: svg-load('../../build/img/arrow-right-sm.svg', fill="#fff") center center / contain no-repeat
+	&__more
+		transform: translate3d(100%,0,0) scale(.9)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: #3d3d3d
+		z-index: 2
+		transition: transform .3s ease
+		&.is-active
+			transform: translate3d(0,0,0) scale(1)
+
+
+
+

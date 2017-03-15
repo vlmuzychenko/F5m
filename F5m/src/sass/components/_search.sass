@@ -1,0 +1,34 @@
+.search
+	position: relative
+	padding-top: 120px
+	margin-top: -60px
+	height: 100vh
+	&__nav
+		position: absolute
+		top: 60px
+		left: 0
+		right: 0
+	&__body
+		height: 100%
+		background: #3d3d3d
+		position: relative
+		padding-bottom: 70px
+		overflow: auto
+	&__content
+		.swiper-slide
+			> *
+				box-sizing: border-box
+			position: relative
+			//min-height: calc(100vh - 120px - 75px)
+			&.search__vertical
+				height: calc(100vh - 120px - 72px)
+				min-height: 400px
+				+vertical
+			&.search__vertical_yellow
+				background: $primary
+	&__message
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 10

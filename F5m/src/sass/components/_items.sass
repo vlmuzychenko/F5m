@@ -1,0 +1,59 @@
+.item
+	display: block
+	border: 1px solid $grayLight
+	border-radius: 5px
+	color: #010101
+	&__img
+		border-radius: 5px 5px 0 0
+		height: 290px
+		background: center center / cover  no-repeat
+	&__title
+		margin-bottom: 13px
+		font-size: 24px
+		+f-bold
+		text-transform: uppercase
+	&__body
+		padding: 15px 50px 10px
+	&__info
+		position: relative
+		padding-right: 175px
+	&__data
+		color: $text
+		font-size: 18px
+	&__price
+		position: absolute
+		right: 0
+		top: 50%
+		margin-top: -13px
+		+f-demi
+		font-size: 20px
+
+.item_list
+	.item
+		+clr
+		&__title
+			margin-bottom: 5px
+		&__img
+			width: 100px
+			height: 100px
+			margin: 15px
+			float: left
+			border-radius: 0
+		&__body
+			overflow: hidden
+			padding: 10px 30px 10px 10px
+		&__info
+			padding-right: 100px
+		&__price
+			text-align: center
+			margin-top: -26px
+			span
+				display: block
+
+
+.items
+	.item
+		&:not(:last-child)
+			margin-bottom: 20px
+
+

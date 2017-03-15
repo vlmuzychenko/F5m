@@ -1,0 +1,53 @@
+{% set months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']%}
+
+<form class="datepicker js-datepicker">
+	<div class="datepicker__row">
+		<button type="button" data-direction="prev" class="datepicker__btn-left js-datepicker-btn">{{mixins.icon('arrow-left')}}</button>
+		<button type="button" class="datepicker__select js-open-datepicker">
+			<span class="js-datepicker-text">Окт 2016</span>
+			{{mixins.icon('arrow-sm')}}
+		</button>
+		<button type="button" data-direction="next" class="datepicker__btn-right js-datepicker-btn">{{mixins.icon('arrow-left')}}</button>
+	</div>
+	<div class="datepicker__dropdown js-datepicker-dropdown">
+		<div class="datepicker__header">
+			<div class="datepicker__year">
+				<label class="datepicker__input js-datepicker-year"><input type="radio" name="datepickerYear" data-type="year" data-val="2015">
+					<span>2015</span>
+				</label>
+			</div>
+			<div class="datepicker__year">
+				<label class="datepicker__input js-datepicker-year"><input type="radio" checked="true" name="datepickerYear" data-type="year" data-val="2016">
+					<span>2016</span>
+				</label>
+			</div>
+			<div class="datepicker__year">
+				<label class="datepicker__input js-datepicker-year"><input type="radio" name="datepickerYear" data-type="year" data-val="2017">
+					<span>2017</span>
+				</label>
+			</div>
+		</div>
+		<div class="datepicker__body">
+
+			{% for month in months %}
+				{% if loop.index == 10 %}
+				<div class="datepicker__month">
+					<label class="datepicker__input js-datepicker-month">
+						<input type="radio" checked="true" name="datepickerMonth" data-type="month" data-val="{{month}}">
+						<span>{{month}}</span>
+					</label>
+				</div>
+				{% else%}
+				<div class="datepicker__month">
+					<label class="datepicker__input js-datepicker-month">
+						<input type="radio" name="datepickerMonth" data-type="month" data-val="{{month}}">
+						<span>{{month}}</span>
+					</label>
+				</div>
+				{% endif %}
+
+			{% endfor %}
+
+		</div>
+	</div>
+</form>

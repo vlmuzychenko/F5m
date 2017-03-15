@@ -1,0 +1,173 @@
+<!--BEGIN  header-->
+<header class="header">
+	<div class="header__in">
+
+		{% if homePage == true %}
+		<button type="button" class="header__home header__home_btn js-close-chapter">{{mixins.icon('arrow-left')}}</button>
+		{% else %}
+		<a href="#" class="header__home">{{mixins.icon('arrow-left')}}</a>
+		{% endif %}
+
+		<button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+	</div>
+</header>
+<!--END  header-->
+
+<div class="menu js-menu">
+	<div class="menu__topline">
+		<a href="#" class="menu__step js-navigation-step">{{mixins.icon('arrow-left-sm')}} <span data-root-title="главное меню"></span></a>
+		<!--<button class="menu__close btn-close js-close-menu">{{mixins.icon('close-thin')}}</button>-->
+	</div>
+
+	<!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+
+	<div class="menu__navigation">
+		<nav class="navigation js-navigation">
+			<ul class="navigation__list">
+
+				<li class="navigation__item">
+					<a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+
+					<div class="navigation__more js-navigation-more">
+						<ul class="navigation__list">
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">яхт-вики</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">Аренда яхт</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+
+								<div class="navigation__more js-navigation-more">
+									<ul class="navigation__list">
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">лицензии</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">теоретический курс</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">ИНСТРУКТОРЫ</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+											<div class="navigation__more js-navigation-more">
+												<ul class="navigation__list">
+
+													<li class="navigation__item">
+														<a href="#" class="navigation__link">лицензии</a>
+													</li>
+
+													<li class="navigation__item">
+														<a href="#" class="navigation__link">теоретический курс</a>
+													</li>
+
+													<li class="navigation__item">
+														<a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a>
+													</li>
+
+													<li class="navigation__item">
+														<a href="#" class="navigation__link">ИНСТРУКТОРЫ</a>
+													</li>
+
+													<li class="navigation__item">
+														<a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a>
+													</li>
+
+													<li class="navigation__item">
+														<a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+													</li>
+
+												</ul>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+
+								<div class="navigation__more js-navigation-more">
+									<ul class="navigation__list">
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">лицензии</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">теоретический курс</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">ИНСТРУКТОРЫ</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a>
+										</li>
+
+										<li class="navigation__item">
+											<a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</li>
+
+				<li class="navigation__item">
+					<a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a>
+				</li>
+
+
+			</ul>
+		</nav>
+
+	</div>
+</div>
+
+

@@ -1,0 +1,29 @@
+.nav
+	position: relative
+	.swiper-wrapper
+		width: 3000px
+	.swiper-slide
+		width: auto
+	&__line
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate3d(-50%,0,0)
+		height: 8px
+		width: 80px
+		background: $primary
+		transition: width .4s ease
+	&__slide
+		opacity: .7
+		font-size: 18px
+		height: 60px
+		line-height: 60px
+		margin: 0 12px
+		&.swiper-slide-active
+			opacity: 1
+			.nav__item
+				transform: scale(1.1) translate3d(0, -2px, 0)
+	&__item
+		+f-demi
+		text-transform: uppercase
+		transition: transform .4s ease

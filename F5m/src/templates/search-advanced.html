@@ -1,0 +1,22 @@
+---
+title: Search
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="catalog">
+	{% include "partials/_filter.html" %}
+	{% include "partials/_items.html" %}
+
+	<div class="catalog__btns">
+		<a href="#" class="button button_sm button_yellow js-open-popup" data-open="filters">Фильтры</a>
+		<a href="#" class="button button_sm button_yellow js-open-popup-map" data-open="map">Карта</a>
+	</div>
+</div>
+
+{% include "partials/_popupFilter.html" %}
+{% include "partials/_popupMap.html" %}
+
+{% endblock %}
+

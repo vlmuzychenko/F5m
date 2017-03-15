@@ -1,0 +1,21 @@
+.filter
+	min-height: 60px
+	padding: 10px 40px
+	+clr
+	&__left
+		float: left
+	&__right
+		float: right
+	&__type
+		display: inline-block
+		padding-top: 7px
+		font-size: 0
+		&:not(:last-child)
+			margin-right: 17px
+		&.is-active
+			.icon
+				fill: $primary
+		.icon
+			fill: #e2e2e2
+			font-size: 30px
+

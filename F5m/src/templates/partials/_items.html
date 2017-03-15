@@ -1,0 +1,47 @@
+{% set items = [
+{
+	title: 'Riva Duchessa',
+	img: 'item-1.jpg',
+	data: ['Длина: 26 м', 'Каюты: 4 + 1', 'Спальных мест: 8 + 2']
+},
+{
+title: 'Riva Duchessa',
+img: 'item-2.jpg',
+data: ['Длина: 26 м', 'Каюты: 4 + 1', 'Спальных мест: 8 + 2']
+},
+{
+title: 'Riva Duchessa',
+img: 'item-1.jpg',
+data: ['Длина: 26 м', 'Каюты: 4 + 1', 'Спальных мест: 8 + 2']
+},
+{
+title: 'Riva Duchessa',
+img: 'item-2.jpg',
+data: ['Длина: 26 м', 'Каюты: 4 + 1', 'Спальных мест: 8 + 2']
+},
+{
+title: 'Riva Duchessa',
+img: 'item-1.jpg',
+data: ['Длина: 26 м', 'Каюты: 4 + 1', 'Спальных мест: 8 + 2']
+}
+] %}
+
+<div class="items">
+	{% for item in items %}
+		<a href="#" class="item js-item">
+			<div class="item__img" style="background-image: url('img/{{item.img}}')"></div>
+			<div class="item__body">
+				<div class="item__title">{{item.title}}</div>
+				<div class="item__info">
+					<ul class="item__data">
+						{% for information in item.data %}
+							<li>{{information}}</li>
+						{% endfor %}
+					</ul>
+					<div class="item__price">20 000 <span>грн / день</span></div>
+				</div>
+			</div>
+		</a>
+
+	{% endfor %}
+</div>

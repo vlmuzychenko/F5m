@@ -1,0 +1,146 @@
+.popup
+	display: none
+	position: fixed
+	top: 60px
+	bottom: 0
+	right: 0
+	left: 0
+	background: #fff
+	overflow: auto
+
+	z-index: 99
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 10
+	&__in
+		position: relative
+		min-height: 100%
+		padding: 20px 20px
+		+r(375)
+			padding: 15px 20px
+	&__in_yellow
+		background: $primary
+	&__title
+		font-size: 24px
+		text-align: center
+	&__button
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 32px
+	&__map
+		width: 100%
+		height: 100%
+	&__btns
+		position: absolute
+		bottom: 20px
+		left: 0
+		right: 0
+		text-align: center
+	&__box
+		height: 100%
+
+.popup_form
+	.popup__in
+		padding-top: 60px
+		padding-bottom: 10px
+
+.popup_calendar
+	.popup__in
+		padding-bottom: 92px
+
+.popup_filter
+	.popup__in
+		padding-top: 30px
+
+.popup_video
+	background: rgba(#000, .8)
+	+vertical
+
+	.popup
+		&__in
+			display: inline-block
+			vertical-align: middle
+			width: 100%
+			min-height: 0
+			text-align: left
+			//height: 100%
+			padding: 20px 0
+			//+vertical
+		&__video
+			position: relative
+			width: 100%
+			display: inline-block
+			vertical-align: middle
+		&__video-play
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: center center / cover no-repeat
+			color: #fff
+			+vertical
+			pointer-events: none
+			transition: opacity .3s ease, visibility .3s ease
+			&.is-hide
+				opacity: 0
+				visibility: hidden
+			span
+				position: relative
+				display: inline-block
+				vertical-align: middle
+				padding-top: 120px
+				font-size: 24px
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 50%
+					width: 95px
+					height: 95px
+					margin-left: -47px
+					border: 1px solid $white
+					border-radius: 50%
+				&:after
+					content: ''
+					position: absolute
+					top: 27px
+					left: 50%
+					margin-left: -13px
+					+arr(40, 42, $white, r)
+
+.popup_panorama
+	&:after
+		content: ''
+		position: absolute
+		width: 94px
+		height: 64px
+		bottom: 122px
+		left: 50%
+		margin-left: -47px
+		background: url('../img/i-tour-big.png') center center / contain no-repeat
+	.popup__close
+		z-index: 9999
+
+.popup_event
+	background: rgba(#000, .5)
+	+clr
+	.popup
+		&__in
+			height: 100%
+			width: 415px
+			float: right
+			padding: 0
+			background: #fff
+		&__close
+			left: 0
+			.icon
+				fill: $primary
+
+
+
+
+

@@ -1,0 +1,60 @@
+{% set subjects = [
+{
+title: 'яхт-вики',
+img: 'img/chapter-1.jpg'
+}, {
+title: 'аренда яхт',
+img: 'img/chapter-2.jpg'
+}, {
+title: 'регаты',
+img: 'img/chapter-3.jpg'
+}, {
+id: 'academy',
+title: 'академия',
+img: 'img/chapter-4.jpg',
+list: ['лицензии', 'теоретический курс', 'ПРАКТИЧЕСКИЙ КУРС', 'ИНСТРУКТОРЫ', 'КЛАССЫ ОБУЧЕНИЯ', 'ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ']
+}
+
+] %}
+
+<div class="chapters js-chapters">
+
+	<div class="chapters__items">
+		{% for subject in  subjects %}
+		{% if subject.list %}
+		<div role="button" class="chapters__item js-open-chapter"  data-open="{{subject.id}}">
+			<div class="chapters__inner subject js-chapter-inner" style="background-image: url({{subject.img}})">
+				<div class="subject__title">{{subject.title}}</div>
+			</div>
+			<div class="chapters__more">
+				{% for subject in  subjects %}
+				{% if subject.list %}
+				<div class="chapter js-chapter" data-chapter="{{subject.id}}">
+					<div class="chapter__list">
+						<ul class="chapter__nav">
+							{% for link in subject.list%}
+							{% if loop.index == 1 %}
+							<li><a href="#" class="is-active">{{link}}</a></li>
+							{% else %}
+							<li><a href="#">{{link}}</a></li>
+							{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+		{% else %}
+		<a href="#" class="chapters__item subject" style="background-image: url({{subject.img}})">
+			<div class="subject__title">{{subject.title}}</div>
+		</a>
+		{% endif %}
+
+		{% endfor %}
+	</div>
+
+
+
+</div>

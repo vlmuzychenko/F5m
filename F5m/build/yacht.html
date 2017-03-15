@@ -1,0 +1,522 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Yacht Card</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      function resize()
+      {
+        var metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag)
+        {
+          metaTag.remove();
+          console.log('metaTag');
+        }
+        metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width < 600)
+        {
+          metaTag.content = "width=480, user-scalable=0";
+        }
+        else
+        {
+          metaTag.content = "width=480, initial-scale=1.0, user-scalable=0";
+        }
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+      resize();
+      window.addEventListener('orientationchange', resize, false);
+
+    </script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!--BEGIN  header-->
+      <header class="header">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button> </div>
+      </header>
+      <!--END  header-->
+      <div class="menu js-menu">
+        <div class="menu__topline">
+          <a href="#" class="menu__step js-navigation-step"> <svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg> <span data-root-title="главное меню"></span></a>
+          <!--<button class="menu__close btn-close js-close-menu">
+<svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
+</button>--></div>
+        <!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+        <div class="menu__navigation">
+          <nav class="navigation js-navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+                <div class="navigation__more js-navigation-more">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"> <a href="#" class="navigation__link">яхт-вики</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link">Аренда яхт</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+                            <div class="navigation__more js-navigation-more">
+                              <ul class="navigation__list">
+                                <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                              </ul>
+                          </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+              </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a> </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__slider js-images swiper-container">
+            <div class="card__imgs swiper-wrapper">
+              <div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+              <div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+              <div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+              <div class="card__slide swiper-slide" style="background-image: url('img/slide-1.jpg')"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="card__info">
+            <div class="card__name">Riva Duchessa</div>
+            <div class="card__text">20 000 грн / день</div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="description__article">
+            <h3>Общее:</h3>
+            <ul>
+              <li>Тип — sailing</li>
+              <li>Длина — 10.36 м</li>
+              <li>Скорость —</li>
+              <li>максимальная 28 узлов</li>
+              <li>круизная 18 узлов</li>
+              <li>Кают — 1</li>
+              <li>Спальные места — 2+2</li>
+              <li>WC/Душ — 1</li>
+              <li>Местонахождение — о. Крк (Хорватия) <a href="#" class="js-open-popup-map" data-open="map">на карте</a></li>
+              <li>Двигатель — GM 8.1L (496cid) 525 л.с.</li>
+            </ul>
+            <h3>Навигация:</h3>
+            <ul>
+              <li>Подруливающее устройство</li>
+              <li>Тип грота</li>
+              <li>Автопилот</li>
+            </ul>
+            <h3>Комфорт:</h3>
+            <ul>
+              <li>Холодильник</li>
+              <li>Наличие эл. туалета</li>
+              <li>Radio-CD player</li>
+              <li>Акустическая система в кокпите</li>
+              <li>Наличие козырька</li>
+              <li>Наличие переднего стекла</li>
+              <li>Система накопления отходов</li>
+              <li>Резиновая лодка</li>
+            </ul>
+            <h3>Доп опционал:</h3>
+            <ul>
+              <li>Холодильник</li>
+            </ul>
+          </div>
+          <div class="description__btns"> <button type="button" class="button button_icon button_icon-360 js-open-popup-panorama" data-open="panorama"></button> <button type="button" class="button button_icon js-open-popup-video" data-open="video">
+<svg class="icon icon-filmstrip"><use xlink:href="img/sprite.svg#icon-filmstrip"></use></svg>
+</button> </div>
+          <div class="description__article">
+            <p>Название Ruya имеет несколько красивых вариантов перевода, идеально олицетворяющих эту удивительную яхту. Этим старинным китайским словом обозначают мудрый, скромный и самосовершенствующийся характер древнего ученого. Название этой яхты прекрасно
+              вписывается в общую концепцию деятельности Sealine, которая заключается в том, чтобы строить первоклассные яхты по исключительным стандартам проектирования и с тщательным вниманием к деталям.</p>
+          </div>
+          <div class="description__actions">
+            <div> <a href="#" class="button button_lg button_yellow">Забронировать</a> </div>
+            <div> <a href="#" class="button button_lg">Нужна консультация?</a> </div>
+          </div>
+          <div class="description__table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Период</th>
+                  <th>Цена в неделю</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>29 окт. 2016 - 15 ноя. 2016</td>
+                  <td>€4 100</td>
+                </tr>
+                <tr>
+                  <td>29 окт. 2016 - 15 ноя. 2016</td>
+                  <td>€4 100</td>
+                </tr>
+                <tr>
+                  <td>29 окт. 2016 - 15 ноя. 2016</td>
+                  <td>€4 100</td>
+                </tr>
+                <tr>
+                  <td>29 окт. 2016 - 15 ноя. 2016</td>
+                  <td>€4 100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="popup popup_video js-popup-video" data-popup="video">
+          <div class="popup__in js-popup-video-in">
+            <div class="popup__video">
+              <div id="video"></div> <a href="#" class="popup__video-play js-play-video" style="background-image: url('img/slide-1.jpg')"><span>Смотреть видео</span></a> </div>
+          </div>
+        </div>
+        <script>
+          var ytPlayer;
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          function onYouTubeIframeAPIReady()
+          {
+            ytPlayer = new YT.Player('video',
+            {
+              height: '270',
+              width: '480',
+              videoId: '-8IHsnyV44A', // paste here an id of your video from youtube
+              events:
+              {
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+
+          function onPlayerStateChange(event)
+          {
+            if (event.data == YT.PlayerState.UNSTARTED)
+            {
+              document.querySelector('.js-play-video').classList.add('is-hide')
+            }
+          }
+
+        </script>
+        <div class="popup popup_map js-popup-map" data-popup="map"> <button class="popup__close btn-close js-close-popup-map">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__map map" id="map"></div>
+        </div>
+        <script>
+          function initialize()
+          {
+            var styles = [
+            {
+              "featureType": "administrative",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                "color": "#444444"
+              }]
+            },
+            {
+              "featureType": "landscape",
+              "elementType": "all",
+              "stylers": [
+              {
+                "color": "#f2f2f2"
+              }]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "all",
+              "stylers": [
+              {
+                "visibility": "off"
+              }]
+            },
+            {
+              "featureType": "road",
+              "elementType": "all",
+              "stylers": [
+              {
+                "saturation": -100
+              },
+              {
+                "lightness": 45
+              }]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "all",
+              "stylers": [
+              {
+                "visibility": "simplified"
+              }]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "labels.icon",
+              "stylers": [
+              {
+                "visibility": "off"
+              }]
+            },
+            {
+              "featureType": "transit",
+              "elementType": "all",
+              "stylers": [
+              {
+                "visibility": "off"
+              }]
+            },
+            {
+              "featureType": "water",
+              "elementType": "all",
+              "stylers": [
+              {
+                "color": "#c2dcfc"
+              },
+              {
+                "visibility": "on"
+              }]
+            }];
+            var mapOptions = {
+              zoom: 5,
+              //			center: new google.maps.LatLng(50.450091, 30.523415),
+              center: new google.maps.LatLng(20.432608, -95.133209),
+              scrollwheel: false,
+              zoomControl: true,
+              disableDefaultUI: true,
+              zoomControlOptions:
+              {
+                style: google.maps.ZoomControlStyle.DEFAULT
+              },
+              styles: styles
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            map.mapTypeControl = false;
+            var image = {
+              url: 'img/marker.png',
+              anchor: new google.maps.Point(15, 40)
+            };
+            var activeIcon = {
+              url: 'img/marker-a.png',
+              anchor: new google.maps.Point(15, 40)
+            };
+            var ibOptions = {
+              disableAutoPan: false,
+              maxWidth: 0,
+              pixelOffset: new google.maps.Size(-140, 0),
+              zIndex: null,
+              boxStyle:
+              {
+                padding: "0px 0px 0px 0px",
+                width: "252px",
+                height: "40px"
+              },
+              closeBoxURL: "",
+              infoBoxClearance: new google.maps.Size(1, 1),
+              isHidden: false,
+              pane: "floatPane",
+              enableEventPropagation: false
+            };
+            var markers = [
+            {
+              lat: 15.839039,
+              lng: -90.219657,
+              map: map,
+              title: 'Киев',
+              icon: image,
+              iconA: activeIcon,
+              content:
+              {
+                img: 'img/item-1.jpg',
+                title: 'ЯХТА Riva Duchessa',
+                info: '20 000 грн / день'
+              }
+            },
+            {
+              lat: 19.522787,
+              lng: -99.050696,
+              map: map,
+              title: '',
+              icon: image,
+              iconA: activeIcon,
+              content:
+              {
+                img: 'img/item-2.jpg',
+                title: 'ЯХТА Riva Duchessa',
+                info: '20 000 грн / день'
+              }
+            },
+            {
+              lat: 19.149590,
+              lng: -96.106360,
+              map: map,
+              title: '',
+              icon: image,
+              iconA: activeIcon,
+              content:
+              {
+                img: 'img/item-1.jpg',
+                title: 'ЯХТА Riva Duchessa',
+                info: '20 000 грн / день'
+              }
+            },
+            {
+              lat: 18.358968,
+              lng: -100.544836,
+              map: map,
+              title: '',
+              icon: image,
+              iconA: activeIcon,
+              content:
+              {
+                img: 'img/item-2.jpg',
+                title: 'ЯХТА Riva Duchessa',
+                info: '20 000 грн / день'
+              }
+            },
+            {
+              lat: 20.965811,
+              lng: -89.602454,
+              map: map,
+              title: '',
+              icon: image,
+              iconA: activeIcon,
+              content:
+              {
+                img: 'img/item-1.jpg',
+                title: 'ЯХТА Riva Duchessa',
+                info: '10 000 грн / день'
+              }
+            }];
+            var markersDone = [];
+            var ibArray = [];
+            markers.forEach(function(el)
+            {
+              var marker = new google.maps.Marker(
+              {
+                position: new google.maps.LatLng(el.lat, el.lng),
+                map: el.map,
+                title: el.title,
+                icon: el.icon
+              });
+              markersDone.push(marker);
+              var template = '<a href="#" class="infowindow">' + '<div class="infowindow__img" style="background-image: url(' + el.content.img + ')"></div>' + '<div class="infowindow__title">' + el.content.title + '</div>' + '<div class="infowindow__text">' + el.content.info + '</div>' + '</a>';
+              let boxText = document.createElement("div");
+              boxText.innerHTML = template;
+              let myOptions = {
+                content: boxText,
+                disableAutoPan: false,
+                maxWidth: 0,
+                pixelOffset: new google.maps.Size(-143, -270),
+                zIndex: null,
+                boxStyle:
+                {
+                  opacity: 1,
+                  width: "270px"
+                },
+                closeBoxURL: "",
+                infoBoxClearance: new google.maps.Size(1, 1),
+                isHidden: false,
+                pane: "floatPane",
+                enableEventPropagation: false
+              };
+              var ib = new InfoBox(myOptions);
+              ibArray.push(ib);
+              google.maps.event.addListener(marker, "click", function(e)
+              {
+                CloseAll();
+                marker.setIcon(el.iconA);
+                ib.open(map, this);
+              });
+              google.maps.event.addListener(map, "click", function(event)
+              {
+                CloseAll();
+              });
+            });
+
+            function CloseAll()
+            {
+              for (var i = 0; i < ibArray.length; i++)
+              {
+                ibArray[i].close();
+              }
+              IconsBack();
+            }
+
+            function IconsBack()
+            {
+              for (var i = 0; i < markersDone.length; i++)
+              {
+                markersDone[i].setIcon(markers[i].icon);
+              }
+            }
+          }
+
+        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCdKzXeKm-qJO4uqPR39L4lZf109YLmOFo"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/infobox/src/infobox.js"></script>
+        <div class="popup popup_panorama js-popup-panorama" data-popup="panorama"> <button class="popup__close btn-close js-close-popup-panorama">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__box js-panorama" data-image="img/panorama/panorama.jpg"></div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <script src="js/panorama.js"></script>
+      <!-- END scripts -->
+  </body>
+
+</html>

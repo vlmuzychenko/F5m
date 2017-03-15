@@ -1,0 +1,15 @@
+{% set regions = ['южная америка', 'северная америка', 'западная африка', 'северная европа', 'атлантическая европа', 'средний восток', 'средиземноморье', 'океания', 'карибы', 'индийский океан'] %}
+
+<div class="regions">
+	{% for region in regions %}
+	<div class="region">
+		<label class="region__checkbox checkbox">
+			<span>{{region}}</span>
+			<input type="checkbox">
+			<span class="checkbox__block"></span>
+		</label>
+	</div>
+	{% endfor %}
+</div>
+
+

@@ -1,0 +1,53 @@
+.infowindow
+	position: relative
+	display: block
+	width: 270px
+	padding: 5px 5px 10px
+	border-radius: 4px
+	background: #fff
+	color: $black
+	z-index: 3
+	transition: transform .3s ease, color .3s ease
+	box-shadow: 1px 1px 10px rgba($black, .5)
+	&:active
+		transform: scale(0.98)
+		color: rgba($black, .6)
+	&:after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 50%
+		+arr(16,8,#fff,b)
+	&__img
+		height: 145px
+		margin-bottom: 10px
+		background: center center / cover no-repeat
+	&__title
+		font-size: 20px
+		+f-bold
+	&__text
+		+f-demi
+		font-size: 18px
+		
+//.gm-bg
+//	background: transparent !important
+//	z-index: 2
+//	&:after
+//		content: ''
+//		position: absolute
+//		left: 10px
+//		right: 35px
+//		top: 5px
+//		bottom: 0
+//		background: #fff
+//		border-radius: 4px
+//		z-index: 1
+
+//.gm-style div div div div div
+//	//display: none
+//	div
+//		&:not([class])
+//			border: none !important
+//			&:nth-child(3)
+//
+//				display: none
