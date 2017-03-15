@@ -151,9 +151,9 @@
                   <div class="yw-descr">
                     <div class="yw-descr__pic">
                       <div class="yw-descr__pic-title"> <span style='color:#ec1c82; font-size: 3em;'>Buongiorno,</span> <span style='color:#fff; font-size: 5em; line-height: .5em;'>Italia!</span> <span style='color:#f6cb02; font-size: 3em;'>29.04 - 06.05</span> <span style='color:#004e9d; font-size: 4em; line-height: .5em;'>2017</span>                        </div>
-                      <div class="yw__video-btn js-open-popup-video" data-open="video"> <span>Посмотрите видео</span> </div>
+                      <div class="yw__video-btn"> <span>Посмотрите видео</span> </div>
+                      <div class="yw-descr__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a> <a href="#" class="button button_lg button_dark">Календарь</a> </div>
                     </div>
-                    <div class="yw-descr__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="feedback">Записаться</a> <a href="#" class="button button_lg">Календарь</a> </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -177,7 +177,7 @@
                       <div style='background-image: url(img/yacht-wiki/det-p-2.jpg);'></div>
                       <div style='background-image: url(img/yacht-wiki/det-p-3.jpg);'></div>
                       <div style='background-image: url(img/yacht-wiki/det-p-4.jpg);'></div>
-                    </div> <a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="feedback">Записаться</a> </div>
+                    </div> <a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="registration">Записаться</a> </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="yw-price">
@@ -212,7 +212,7 @@
                         <li>скоростной интернет</li>
                       </ul>
                     </div>
-                    <div class="yw-price__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="feedback">Записаться</a> </div>
+                    <div class="yw-price__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a> </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -248,7 +248,7 @@
 </button> <button type="button" class="yw-p__slider-btn-right">
 <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
 </button> </div>
-                    <div class="yw-price__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="feedback">Записаться</a> </div>
+                    <div class="yw-price__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a> </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -266,7 +266,10 @@
                           <div class="form__field">
                             <div class="input input_white input_lg"> <input id="formEmail" type="email" class="input__main" placeholder="name@mail.com"> <label class="input__label" for="formEmail">Email</label> </div>
                           </div>
-                          <div class="yw-form__btn-container"> <button type="button" class="button button_yellow button_lg js-thnk">Записаться</button> <a href="#" class="button button_tr-white button_lg">Календарь</a> </div>
+                          <div class="form__field">
+                            <div class="input input_lg input_white"> <textarea class="input__main" placeholder="Остались вопросы? Напишите нам!"></textarea> </div>
+                          </div>
+                          <div class="yw-form__btn-container"> <button type="button" class="button button_yellow button_lg js-thnk-stat">Записаться</button> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
                         </form>
                       </div>
                     </div>
@@ -282,11 +285,16 @@
                       <a href='#' class="yw-socials__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
                     </div>
                   </div>
-                  <div class="yw-thnk">
-                    <div class="yw-thnk__logo"> <img src="img/yacht-wiki/thnk-logo.png" alt=""> </div>
-                    <div class="yw-thnk__text">Спасибо! <br>Мы обработаем заявку <br>и свяжемся с Вами в ближайшее время.</div>
-                    <div class="yw-thnk__btn-container">
-                      <div class="yw-thnk__btn-title">А пока посмотрите другие события</div> <a href="#" class="button button_tr-white button_lg">Календарь</a> </div>
+                  <div class="popup-thnk popup-thnk_registration">
+                    <div class="popup-thnk__logo"> <img src="img/yacht-wiki/thnk-logo.png" alt=""> </div>
+                    <div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+                    <div class="popup-thnk__socials">
+                      <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg> </a>
+                      <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg> </a>
+                      <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
+                    </div>
+                    <div class="popup-thnk__btn-container">
+                      <div class="popup-thnk__btn-title">А пока посмотрите другие события</div> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
                   </div>
                 </div>
               </div>
@@ -329,7 +337,7 @@
           }
 
         </script>
-        <div class="popup popup_form js-popup" data-popup="feedback"> <button type="button" class="popup__close btn-close js-close-popup">
+        <div class="popup popup_form js-popup" data-popup="registration"> <button type="button" class="popup__close btn-close js-close-popup">
 <svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
 </button>
           <div class="popup__in popup__in_yellow js-popup-in">
@@ -347,9 +355,20 @@
                 <div class="form__field">
                   <div class="input input_lg input_op"> <textarea class="input__main" placeholder="Напишите комментарий"></textarea> </div>
                 </div>
-                <div class="form__field form__field_center"> <button type="submit" class="button button_lg">Отправить</button> </div>
+                <div class="form__field form__field_center"> <button type="button" class="button button_lg js-thnk">Отправить</button> </div>
               </form>
             </div>
+          </div>
+          <div class="popup-thnk popup-thnk_registration">
+            <div class="popup-thnk__logo"> <img src="img/yacht-wiki/thnk-logo.png" alt=""> </div>
+            <div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+            <div class="popup-thnk__socials">
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg> </a>
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg> </a>
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
+            </div>
+            <div class="popup-thnk__btn-container">
+              <div class="popup-thnk__btn-title">А пока посмотрите другие события</div> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
           </div>
         </div>
       </div>

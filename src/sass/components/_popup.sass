@@ -14,6 +14,9 @@
 		top: 0
 		right: 0
 		z-index: 10
+		&_white
+			.icon
+				fill: $white
 	&__in
 		position: relative
 		min-height: 100%
@@ -140,7 +143,47 @@
 			.icon
 				fill: $primary
 
+.popup-thnk
+	height: calc(100vh - 60px)
+	min-height: 500px
+	background-image: url(../img/popup-bg.jpg)
+	background-size: cover
+	background-position: 100% 50%
+	background-repeat: no-repeat
+	text-align: center
+	padding-top: 10vh
+	display: none
+	&_registration
+		background-image: url(../img/yacht-wiki/thnk-bg.jpg)
+		background-position: 50% 100%
+	&__text
+		+reg
+		font-size: 24px
+		color: $primary
+		margin-top: 20px
+	&__btn-container
+		margin-top: 30px
+	&__btn-title
+		font-size: 18px
+		color: #fff
+		+reg
+		margin-bottom: 30px
+	&__socials
+		width: 100%
+		background-color: transparent
+		padding: 20px 0
+		text-align: center
+		margin-top: 30px
+	&__socials-item
+    display: inline-block
+    width: 35px
+    height: 35px
+    +cover
+    font-size: 35px
+    &:not(:last-child)
+      margin-right: 80px
 
-
-
-
+.button_dark
+	background-color: rgba(0,0,0,.8)
+	color: $primary
+	border-color: $primary

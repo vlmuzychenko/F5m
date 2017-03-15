@@ -6,6 +6,7 @@ $(function(){
      draggable: false,
      arrows: false,
      fade: true,
+     swipe: false,
      asNavFor: '.yw-det__slider-nav',
      cssEase: 'linear'
   });
@@ -18,6 +19,8 @@ $(function(){
      focusOnSelect: true,
      infinity: false,
      draggable: false,
+     swipe: false,
+     margin: 2,
      arrows: false
   });
 
@@ -28,13 +31,15 @@ $(function(){
      slidesToScroll: 1,
      draggable: false,
      fade: true,
+     swipe: false,
      cssEase: 'linear',
      prevArrow: $('.yw-p__slider-btn-left'),
      nextArrow: $('.yw-p__slider-btn-right')
   });
 
-  $('.js-thnk').click(function(){
+  $('.js-thnk-stat').click(function(){
     $('.yw-form-wrap').fadeOut(500);
-    $('.yw-thnk').delay(500).fadeIn();
+    $('.popup-thnk').delay(500).fadeIn();
+    $('.yw__content').css('height', 'calc(100vh - 120px)');
   })
 });

@@ -31,14 +31,14 @@
 					  		<span style='color:#f6cb02; font-size: 3em;'>29.04 - 06.05</span>
 					  		<span style='color:#004e9d; font-size: 4em; line-height: .5em;'>2017</span>
 					  	</div>
-							<div class="yw__video-btn js-open-popup-video" data-open="video">
+							<div class="yw__video-btn">
 								<span>Посмотрите видео</span>
 							</div>
+							<div class="yw-descr__btn-container">
+	              <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
+	              <a href="#" class="button button_lg button_dark">Календарь</a>
+	            </div>
 					  </div>
-            <div class="yw-descr__btn-container">
-              <a href="#" class="button button_yellow button_lg js-open-popup" data-open="feedback">Записаться</a>
-              <a href="#" class="button button_lg">Календарь</a>
-            </div>
 					</div>
 				</div>
 
@@ -64,7 +64,7 @@
 							<div style='background-image: url(img/yacht-wiki/det-p-3.jpg);'></div>
 							<div style='background-image: url(img/yacht-wiki/det-p-4.jpg);'></div>
 						</div>
-						<a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="feedback">Записаться</a>
+						<a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="registration">Записаться</a>
 					</div>
 				</div>
 
@@ -105,7 +105,7 @@
 							</ul>
 						</div>
 						<div class="yw-price__btn-container">
-							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="feedback">Записаться</a>
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
 						</div>
 					</div>
 				</div>
@@ -143,7 +143,7 @@
 							<button type="button" class="yw-p__slider-btn-right">{{mixins.icon('arrow-left')}}</button>
 						</div>
 						<div class="yw-price__btn-container">
-							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="feedback">Записаться</a>
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
 						</div>
 					</div>
 				</div>
@@ -177,9 +177,15 @@
 										</div>
 									</div>
 
+									<div class="form__field">
+										<div class="input input_lg input_white">
+											<textarea  class="input__main" placeholder="Остались вопросы? Напишите нам!"></textarea>
+										</div>
+									</div>
+
 									<div class="yw-form__btn-container">
-										<button type="button" class="button button_yellow button_lg js-thnk" >Записаться</button>
-										<a href="#" class="button button_tr-white button_lg">Календарь</a>
+										<button type="button" class="button button_yellow button_lg js-thnk-stat" >Записаться</button>
+										<a href="#" class="button button_dark button_lg">Календарь</a>
 									</div>
 
 								</form>
@@ -215,14 +221,25 @@
 					    </a>
 						</div>
 					</div>
-					<div class="yw-thnk">
-						<div class="yw-thnk__logo">
+					<div class="popup-thnk popup-thnk_registration">
+						<div class="popup-thnk__logo">
 							<img src="img/yacht-wiki/thnk-logo.png" alt="">
 						</div>
-						<div class="yw-thnk__text">Спасибо! <br>Мы обработаем заявку <br>и свяжемся с Вами в ближайшее время.</div>
-						<div class="yw-thnk__btn-container">
-							<div class="yw-thnk__btn-title">А пока посмотрите другие события</div>
-							<a href="#" class="button button_tr-white button_lg">Календарь</a>
+						<div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+						<div class="popup-thnk__socials">
+					    <a href='#' class="popup-thnk__socials-item">
+					      {{mixins.icon('yt')}}
+					    </a>
+					    <a href='#' class="popup-thnk__socials-item">
+					      {{mixins.icon('fb')}}
+					    </a>
+					    <a href='#' class="popup-thnk__socials-item">
+					      {{mixins.icon('insta')}}
+					    </a>
+					  </div>
+						<div class="popup-thnk__btn-container">
+							<div class="popup-thnk__btn-title">А пока посмотрите другие события</div>
+							<a href="#" class="button button_dark button_lg">Календарь</a>
 						</div>
 					</div>
 

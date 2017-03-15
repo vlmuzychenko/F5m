@@ -93,5 +93,10 @@ export default class Popup {
 
 }
 
-
-
+$(function(){
+	$('.js-thnk').click(function(){
+    $('.js-popup-in').fadeOut(200);
+    $('.popup-thnk').fadeIn(200);
+		$('.popup__close').addClass('popup__close_white');
+  })
+});

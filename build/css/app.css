@@ -2944,6 +2944,12 @@ a {
   border-color: #fff;
 }
 
+.button_dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f6cb02;
+  border-color: #f6cb02;
+}
+
 .input__main {
   width: 100%;
   height: 40px;
@@ -3029,6 +3035,26 @@ a {
 
 .input_white .input__main::placeholder {
   color: #8c8dbe;
+}
+
+.input_white textarea.input__main {
+  color: #fff;
+}
+
+.input_white textarea.input__main::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.input_white textarea.input__main::-moz-placeholder {
+  color: #fff;
+}
+
+.input_white textarea.input__main:-ms-input-placeholder {
+  color: #fff;
+}
+
+.input_white textarea.input__main::placeholder {
+  color: #fff;
 }
 
 .input_white .input__label {
@@ -4429,6 +4455,10 @@ a {
   z-index: 10;
 }
 
+.popup__close_white .icon {
+  fill: #fff;
+}
+
 .popup__in {
   position: relative;
   min-height: 100%;
@@ -4613,6 +4643,69 @@ a {
   fill: #f6cb02;
 }
 
+.popup-thnk {
+  height: calc(100vh - 60px);
+  min-height: 500px;
+  background-image: url(../img/popup-bg.jpg);
+  background-size: cover;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 10vh;
+  display: none;
+}
+
+.popup-thnk_registration {
+  background-image: url(../img/yacht-wiki/thnk-bg.jpg);
+  background-position: 50% 100%;
+}
+
+.popup-thnk__text {
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  color: #f6cb02;
+  margin-top: 20px;
+}
+
+.popup-thnk__btn-container {
+  margin-top: 30px;
+}
+
+.popup-thnk__btn-title {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+.popup-thnk__socials {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.popup-thnk__socials-item {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 35px;
+}
+
+.popup-thnk__socials-item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.button_dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f6cb02;
+  border-color: #f6cb02;
+}
+
 .search {
   position: relative;
   padding-top: 120px;
@@ -4730,12 +4823,8 @@ a {
 }
 
 .yw__video-btn {
-  position: absolute;
-  bottom: 110px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  position: relative;
+  margin: 50px auto;
   text-align: center;
   width: 290px;
 }
@@ -4746,6 +4835,7 @@ a {
   color: #fff;
   display: block;
   padding-top: 103px;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
 }
 
 .yw__video-btn span::before {
@@ -4765,13 +4855,13 @@ a {
 }
 
 .yw-descr__pic {
-  height: 600px;
   width: 100%;
   background-image: url(../img/yacht-wiki/yw-main-bg.jpg);
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   position: relative;
+  min-height: calc(100vh - 119px);
 }
 
 .yw-descr__pic-title {
@@ -4786,7 +4876,7 @@ a {
 
 .yw-descr__btn-container {
   text-align: center;
-  padding-top: 40px;
+  padding-top: 30px;
   width: 50%;
   margin: 0 auto;
 }
@@ -4798,10 +4888,12 @@ a {
 .yw-det {
   position: relative;
   overflow: hidden;
+  padding: 4px;
 }
 
 .yw-det__slider {
   height: calc(100vh - 180px - 60px);
+  min-height: 470px;
 }
 
 .yw-det__slider .slick-track div {
@@ -4814,6 +4906,14 @@ a {
 
 .yw-det__slider-nav {
   height: 120px;
+}
+
+.yw-det__slider-nav .slick-slide {
+  margin: 4px 2px 0;
+}
+
+.yw-det__slider-nav .slick-list {
+  margin: 0 -2px;
 }
 
 .yw-det__slider-nav .slick-track div {
@@ -4949,13 +5049,11 @@ a {
 }
 
 .yw-p__slider-btn {
+  width: 100%;
   position: absolute;
   top: 555px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
   z-index: 9999;
+  text-align: center;
 }
 
 .yw-p__slider-btn .slick-disabled {
@@ -4963,7 +5061,6 @@ a {
 }
 
 .yw-p__slider-btn-left, .yw-p__slider-btn-right {
-  float: left;
   width: 100px;
   height: 50px;
   border: 1px solid #000000;
