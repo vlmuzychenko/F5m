@@ -1,0 +1,81 @@
+<div class="popup popup_form js-popup" data-popup="academy">
+
+	<button type="button" class="popup__close btn-close js-close-popup">{{mixins.icon('close')}}</button>
+
+	<div class="popup__in popup__in_yellow js-popup-in">
+		<div class="form">
+			<form action="">
+
+				<div class="form__field">
+					<div class="input input_lg input_op">
+						<input id="formName" type="text" class="input__main" placeholder="ФИО">
+						<label class="input__label" for="formName">Имя и фамилия</label>
+					</div>
+				</div>
+
+				<div class="form__field">
+					<div class="input input_lg input_op">
+						<input id="formPhone" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --">
+						<label class="input__label" for="formPhone">Телефон</label>
+					</div>
+				</div>
+
+				<div class="form__field">
+					<div class="input input_lg input_op">
+						<input id="formEmail" type="email" class="input__main" placeholder="name@mail.com">
+						<label class="input__label" for="formEmail">Email</label>
+					</div>
+				</div>
+
+				<div class="form__field">
+					<div class="input input_lg input_op js-select-field input-academy_dropdown">
+            <select name="" id="" class="js-select-single">
+              <option value="Не определился">Не определился</option>
+              <option value="25.02 (по субботам)">25.02 (по субботам)</option>
+              <option value="28.02 (по вторникам и четвергам)">28.02 (по вторникам и четвергам)</option>
+              <option value="6.03 (по понедельникам и средам)">6.03 (по понедельникам и средам)</option>
+            </select>
+            <label for="" class="input__label">Старт ближайшего курса</label>
+            <div class="input__descr">
+              <span>Занятия проводятся по таким дням:</span>
+              <ol>
+                <li>1. Понедельник-среда</li>
+                <li>2. Вторник-четверг</li>
+                <li>3. Суббота (занятие длится _ часов)</li>
+              </ol>
+            </div>
+					</div>
+				</div>
+
+				<div class="form__field form__field_center">
+					<button type="button" class="button button_lg js-thnk">Отправить</button>
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+
+	<div class="popup-thnk popup-thnk_academy">
+		<div class="popup-thnk__logo">
+			<img src="img/yacht-wiki/thnk-logo.png" alt="">
+		</div>
+		<div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+		<div class="popup-thnk__socials">
+	    <a href='#' class="popup-thnk__socials-item">
+	      {{mixins.icon('yt')}}
+	    </a>
+	    <a href='#' class="popup-thnk__socials-item">
+	      {{mixins.icon('fb')}}
+	    </a>
+	    <a href='#' class="popup-thnk__socials-item">
+	      {{mixins.icon('insta')}}
+	    </a>
+	  </div>
+		<div class="popup-thnk__btn-container">
+			<div class="popup-thnk__btn-title">А пока посмотрите другие события</div>
+			<a href="#" class="button button_dark button_lg">Календарь</a>
+		</div>
+	</div>
+
+</div>

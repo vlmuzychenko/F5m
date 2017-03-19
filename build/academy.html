@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Academy</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      function resize()
+      {
+        var metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag)
+        {
+          metaTag.remove();
+          console.log('metaTag');
+        }
+        metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width < 600)
+        {
+          metaTag.content = "width=480, user-scalable=0";
+        }
+        else
+        {
+          metaTag.content = "width=480, initial-scale=1.0, user-scalable=0";
+        }
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+      resize();
+      window.addEventListener('orientationchange', resize, false);
+
+    </script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!--BEGIN  header-->
+      <header class="header">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button> </div>
+      </header>
+      <!--END  header-->
+      <div class="menu js-menu">
+        <div class="menu__topline">
+          <a href="#" class="menu__step js-navigation-step"> <svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg> <span data-root-title="главное меню"></span></a>
+          <!--<button class="menu__close btn-close js-close-menu">
+<svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
+</button>--></div>
+        <!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+        <div class="menu__navigation">
+          <nav class="navigation js-navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+                <div class="navigation__more js-navigation-more">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"> <a href="#" class="navigation__link">яхт-вики</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link">Аренда яхт</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+                            <div class="navigation__more js-navigation-more">
+                              <ul class="navigation__list">
+                                <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                              </ul>
+                          </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+              </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a> </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <div class="ac">
+          <div class="ac__nav">
+            <div class="nav js-nav swiper-container">
+              <div class="nav__list swiper-wrapper">
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">лицензия</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">теоретический курс</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">практический курс</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">инструкторы</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">классы обучения</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">фмк</div>
+                </div>
+              </div>
+              <div class="nav__line js-nav-line"></div>
+            </div>
+          </div>
+          <div class="ac__body">
+            <div class="swiper-container js-content">
+              <div class="ac__content swiper-wrapper ">
+                <div class="swiper-slide">
+                  <div class="ac-license">
+                    <div class="ac-license__pic">
+                      <div class="ac-license__title">лицензия iyt</div>
+                    </div>
+                    <div class="ac-license__content">
+                      <div class="ac-license__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+                      <div class="ac-license__btn-container">
+                      <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ac-course">
+                    <div class="ac-course__descr" style='background-image: url(img/academy/teor-bg.jpg);'>
+                      <div class="ac-course__item">
+                        <div class="ac-course__date">23.01</div>
+                        <div class="ac-course__title">Старт курса</div>
+                      </div>
+                      <div class="ac-course__item">
+                        <div class="ac-course__icon ac-course__icon_lessons"></div>
+                        <div class="ac-course__title">15 занятий по 3 часа</div>
+                      </div>
+                      <div class="ac-course__item">
+                        <div class="ac-course__icon ac-course__icon_book"></div>
+                        <div class="ac-course__title">Курс теории 6900 грн</div>
+                      </div>
+                    </div>
+                    <div class="ac-course__video" style='background-image: url(img/academy/teor-video-bg.jpg);'>
+                      <div class="yw__video-btn"> <span>Посмотрите видео</span> </div>
+                    </div>
+                    <div class="ac-course__benefits">
+                      <div class="ac-course__benefit">
+                        <div class="ac-course__benefit-icon ac-course__benefit-icon_programm"></div>
+                        <div class="ac-course__benefit-title">Усиленная программа обучения</div>
+                      </div>
+                      <div class="ac-course__benefit">
+                        <div class="ac-course__benefit-icon ac-course__benefit-icon_books"></div>
+                        <div class="ac-course__benefit-title">Авторские учебные материалы</div>
+                      </div>
+                      <div class="ac-course__benefit">
+                        <div class="ac-course__benefit-icon ac-course__benefit-icon_radio"></div>
+                        <div class="ac-course__benefit-title">Радиоупра-вляемая яхта для тренировок</div>
+                      </div>
+                      <div class="ac-course__benefit">
+                        <div class="ac-course__benefit-icon ac-course__benefit-icon_online"></div>
+                        <div class="ac-course__benefit-title">Доступ<br> к онлайн<br> библиотеке</div>
+                      </div>
+                    </div>
+                    <div class="ac-course__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a> <a href="#" class="button button_lg ">Календарь</a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ac-course">
+                    <div class="ac-course__descr" style='background-image: url(img/academy/practic-bg.jpg);'>
+                      <div class="ac-course__item">
+                        <div class="ac-course__icon ac-course__icon_students"></div>
+                        <div class="ac-course__title">80% учеников <br>готовы к одиночному плаванию</div>
+                        <div class="ac-course__subtitle">Индивидуальный подход к каждому ученику</div>
+                      </div>
+                      <div class="ac-course__item">
+                        <div class="ac-course__icon ac-course__icon_sea"></div>
+                        <div class="ac-course__title">2 недели практики <br>в море</div>
+                        <div class="ac-course__subtitle">Ближайшая дата отмечена в календаре</div>
+                      </div>
+                      <div class="ac-course__item">
+                        <div class="ac-course__icon ac-course__icon_wind"></div>
+                        <div class="ac-course__title">Обучение в разных <br>условиях</div>
+                        <div class="ac-course__subtitle">На воде и на суше, утром, днем и вечером</div>
+                      </div>
+                    </div>
+                    <div class="ac-course__video" style='background-image: url(img/academy/practic-video-bg.jpg);'>
+                      <div class="yw__video-btn"> <span>Посмотрите видео</span> </div>
+                    </div>
+                    <div class="ac-course__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a> <a href="#" class="button button_lg ">Календарь</a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="instructors js-instructors-slider">
+                    <div class="instructor">
+                      <div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+                      <div class="instructor__names"> <span class="instructor__name-left"></span> <span class="instructor__name-right">Андрей Иванов2</span> </div>
+                      <div class="instructor__content">
+                        <div class="instructor__title">Андрей Иванов1</div>
+                        <div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+                        <div class="instructor__info">
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'> <span class="instructor__info-val">40 000</span> <span class="instructor__info-title">Пройдено миль</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'> <span class="instructor__info-val">15 000</span> <span class="instructor__info-title">Часов обучения</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'> <span class="instructor__info-val">200</span> <span class="instructor__info-title">Выпущено шкиперов</span> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="instructor">
+                      <div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+                      <div class="instructor__names"> <span class="instructor__name-left">Андрей Иванов1</span> <span class="instructor__name-right">Андрей Иванов3</span> </div>
+                      <div class="instructor__content">
+                        <div class="instructor__title">Андрей Иванов2</div>
+                        <div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+                        <div class="instructor__info">
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'> <span class="instructor__info-val">40 000</span> <span class="instructor__info-title">Пройдено миль</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'> <span class="instructor__info-val">15 000</span> <span class="instructor__info-title">Часов обучения</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'> <span class="instructor__info-val">200</span> <span class="instructor__info-title">Выпущено шкиперов</span> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="instructor">
+                      <div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+                      <div class="instructor__names"> <span class="instructor__name-left">Андрей Иванов2</span> <span class="instructor__name-right">Андрей Иванов4</span> </div>
+                      <div class="instructor__content">
+                        <div class="instructor__title">Андрей Иванов3</div>
+                        <div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+                        <div class="instructor__info">
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'> <span class="instructor__info-val">40 000</span> <span class="instructor__info-title">Пройдено миль</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'> <span class="instructor__info-val">15 000</span> <span class="instructor__info-title">Часов обучения</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'> <span class="instructor__info-val">200</span> <span class="instructor__info-title">Выпущено шкиперов</span> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="instructor">
+                      <div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+                      <div class="instructor__names"> <span class="instructor__name-left">Андрей Иванов3</span> <span class="instructor__name-right"></span> </div>
+                      <div class="instructor__content">
+                        <div class="instructor__title">Андрей Иванов4</div>
+                        <div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+                        <div class="instructor__info">
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'> <span class="instructor__info-val">40 000</span> <span class="instructor__info-title">Пройдено миль</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'> <span class="instructor__info-val">15 000</span> <span class="instructor__info-title">Часов обучения</span> </div>
+                          <div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'> <span class="instructor__info-val">200</span> <span class="instructor__info-title">Выпущено шкиперов</span> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="instructor__slider-btn"> <button type="button" class="instructor__slider-btn-left">
+<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+</button> <button type="button" class="instructor__slider-btn-right">
+<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+</button> </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-container">
+                    <div class="gallery">
+                      <div style='background-image: url(img/academy/gallery-1.jpg);'></div>
+                      <div style='background-image: url(img/academy/gallery-1.jpg);'></div>
+                      <div style='background-image: url(img/academy/gallery-1.jpg);'></div>
+                    </div>
+                    <div class="gallery__slider-btn"> <button type="button" class="gallery__slider-btn-left">
+<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+</button> <button type="button" class="gallery__slider-btn-right">
+<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+</button> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="fmk">
+                    <div class="fmk__descr">
+                      <div class="fmk__item">
+                        <div class="fmk__icon fmk__icon_boat"></div>
+                        <div class="fmk__title">Выбор лодки</div>
+                      </div>
+                      <div class="fmk__item">
+                        <div class="fmk__icon fmk__icon_compass"></div>
+                        <div class="fmk__title">Первый опыт под руководством инструктора</div>
+                      </div>
+                      <div class="fmk__item">
+                        <div class="fmk__icon fmk__icon_hand"></div>
+                        <div class="fmk__title">Полностью твоя лодка. <br>Твое пространство</div>
+                      </div>
+                    </div>
+                    <div class="fmk__video" style='background-image: url(img/academy/fmk-video-bg.jpg);'>
+                      <div class="yw__video-btn"> <span>Посмотрите видео</span> </div>
+                    </div>
+                    <div class="fmk__benefit">Наши выпускники готовы к одиночному плаванью, но хотят, чтобы первый опыт прошел под наблюдение инструктора. Специально для них мы подготовили отдельный продукт - ФМК. </div>
+                    <div class="fmk__bottom"> <span>ФМК - полный ассист твоего первого путешествия!</span>
+                      <div class="fmk__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a> <a href="#" class="button button_dark button_lg ">Календарь</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup_form js-popup" data-popup="academy"> <button type="button" class="popup__close btn-close js-close-popup">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__in popup__in_yellow js-popup-in">
+            <div class="form">
+              <form action="">
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formName" type="text" class="input__main" placeholder="ФИО"> <label class="input__label" for="formName">Имя и фамилия</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formPhone" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --"> <label class="input__label" for="formPhone">Телефон</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formEmail" type="email" class="input__main" placeholder="name@mail.com"> <label class="input__label" for="formEmail">Email</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op js-select-field input-academy_dropdown"> <select name="" id="" class="js-select-single">
+              <option value="Не определился">Не определился</option>
+              <option value="25.02 (по субботам)">25.02 (по субботам)</option>
+              <option value="28.02 (по вторникам и четвергам)">28.02 (по вторникам и четвергам)</option>
+              <option value="6.03 (по понедельникам и средам)">6.03 (по понедельникам и средам)</option>
+            </select> <label for="" class="input__label">Старт ближайшего курса</label>
+                    <div class="input__descr"> <span>Занятия проводятся по таким дням:</span>
+                      <ol>
+                        <li>1. Понедельник-среда</li>
+                        <li>2. Вторник-четверг</li>
+                        <li>3. Суббота (занятие длится _ часов)</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__field form__field_center"> <button type="button" class="button button_lg js-thnk">Отправить</button> </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-thnk popup-thnk_academy">
+            <div class="popup-thnk__logo"> <img src="img/yacht-wiki/thnk-logo.png" alt=""> </div>
+            <div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+            <div class="popup-thnk__socials">
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg> </a>
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg> </a>
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
+            </div>
+            <div class="popup-thnk__btn-container">
+              <div class="popup-thnk__btn-title">А пока посмотрите другие события</div> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
+  </body>
+
+</html>

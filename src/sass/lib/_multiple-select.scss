@@ -1,0 +1,230 @@
+.ms-parent {
+   display: inline-block;
+   position: relative;
+   vertical-align: middle;
+   font-family: 'Casper-Regular', Arial, sans-serif;
+   font-size: 16px;
+   color: #000;
+}
+
+.ms-choice {
+   display: block;
+   width: 100%;
+   height: 40px;
+   padding: 0;
+   overflow: hidden;
+   cursor: pointer;
+   border: 1px solid rgba(#6b6b6b, .5);
+   text-align: left;
+   white-space: nowrap;
+   line-height: 40px;
+   color: #000;
+   text-decoration: none;
+   border-radius: 2px;
+   background-color: #fff;
+   transition: .25s;
+   font-size: 16px;
+   &:hover {
+      border-color: rgba(#6b6b6b, .9);
+   }
+}
+
+.ms-choice.disabled {
+   background-color: #f4f4f4;
+   background-image: none;
+   border: 1px solid #ddd;
+   cursor: default;
+}
+
+.ms-choice > span {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 35px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: block;
+   padding: 0 0 0 10px;
+   font-family: 'Casper-Regular', Arial, sans-serif;
+}
+
+.ms-choice > span.placeholder {
+   font-size: 16px;
+   font-family: 'Casper-Regular', Arial, sans-serif;
+   color: #000;
+}
+
+.ms-choice > div {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 12px;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 8px 8px 0 8px;
+   border-color: #000000 transparent transparent transparent;
+}
+
+.ms-choice > div.open {
+}
+
+.ms-drop {
+   width: 100%;
+   overflow: hidden;
+   display: none;
+   margin-top: -1px;
+   padding: 5px 0;
+   position: absolute;
+   z-index: 1000;
+   background: #fff;
+   color: #000;
+   border: 1px solid #aaa;
+   border-radius: 0 0 2px 2px;
+}
+
+.ms-drop.bottom {
+   top: 100%;
+   -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+   box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+}
+
+.ms-drop.top {
+   bottom: 100%;
+   -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
+   -moz-box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
+   box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
+}
+
+.ms-search {
+   display: inline-block;
+   margin: 0;
+   min-height: 26px;
+   padding: 4px;
+   position: relative;
+   white-space: nowrap;
+   width: 100%;
+   z-index: 10000;
+}
+
+.ms-drop ul {
+   position: relative;
+   overflow: auto;
+   margin: 0;
+   padding: 0;
+}
+
+.ms-drop ul > li {
+   list-style: none;
+   display: list-item;
+   background-image: none;
+}
+
+.ms-drop ul > li .disabled {
+   opacity: .35;
+   filter: Alpha(Opacity=35);
+}
+
+.ms-drop ul > li.multiple {
+   display: block;
+   float: left;
+}
+
+.ms-drop ul > li.group {
+   clear: both;
+}
+
+.ms-drop ul > li.multiple label {
+   width: 100%;
+   display: block;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.ms-drop ul > li label {
+   font-weight: normal;
+   display: block;
+   white-space: nowrap;
+   padding: 5px 10px;
+   padding-left: 25px;
+   transition: all .2s ease;
+   cursor: pointer;
+   &:hover {
+      background-color: rgba(#bcbcbc, .5);
+   }
+}
+
+.ms-drop ul > li label.optgroup {
+   font-weight: bold;
+}
+
+.ms-drop input[type="checkbox"] {
+   display: none;
+}
+
+.ms-drop .ms-no-results {
+   display: none;
+}
+
+.js-select-multiple {
+   li {
+      position: relative;
+      border-radius: 2px;
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+      }
+      &::before {
+         left: 8px;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 14px;
+         height: 14px;
+         border: 2px solid #000;
+         background-color: #fff;
+         overflow: hidden;
+         transition: all .3s ease-in-out;
+      }
+      &::after {
+         content: '';
+         position: absolute;
+         top: 5px;
+         left: 3px;
+         opacity: 0;
+         transform: scale(.1);
+         transition: all .3s ease-in-out;
+         background-image: url(../img/ui-icons/checked.png);
+         background-repeat: no-repeat;
+         width: 24px;
+         height: 20px;
+         overflow: hidden;
+      }
+      &.selected::after {
+         transform: scale(.5);
+         opacity: 1;
+      }
+      &.selected::before {
+         background-color: #000;
+      }
+   }
+   li label {
+      padding: 5px 10px !important;
+      padding-left: 28px !important;
+      margin-right: 13px;
+   }
+}
+
+.js-select-single {
+   li {
+      position: relative;
+      border-radius: 2px;
+   }
+   li label {
+      padding: 5px 10px !important;
+      padding-left: 10px !important;
+   }
+}

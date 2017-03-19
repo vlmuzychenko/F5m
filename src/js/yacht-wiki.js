@@ -42,4 +42,9 @@ $(function(){
     $('.popup-thnk').delay(500).fadeIn();
     $('.yw__content').css('height', 'calc(100vh - 120px)');
   })
+
+  $(function($){
+   $(".js-phone").mask("(099) 999 99 99", {placeholder: "---------"});
+  });
+
 });

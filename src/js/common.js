@@ -7,6 +7,7 @@ import './modules/Popup'
 import './modules/_selects'
 import './modules/Navigation'
 import './modules/EventsDatepicker'
+import './lib/mask'
 
 window.$ = require('jquery');
 
@@ -112,7 +113,7 @@ let popupMore = new Popup({
 		let docHeight = getDocumentHeight();
 		let winHeight = window.innerHeight;
 		let division = docHeight - (docHeight - winHeight);
-		
+
 		if (chapters.hasClass('is-active')) {
 			// setTimeout(function() {
 				chapterInner.css({
@@ -256,4 +257,3 @@ let popupMore = new Popup({
 	// });
 
 })();
-

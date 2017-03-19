@@ -1,0 +1,281 @@
+{% set tabs = ['лицензия', 'теоретический курс', 'практический курс', 'инструкторы', 'классы обучения', 'фмк']%}
+
+<div class="ac">
+
+	<div class="ac__nav">
+
+		<div class="nav js-nav swiper-container">
+
+			<div class="nav__list swiper-wrapper">
+				{% for tab in tabs %}
+					<div class="nav__slide swiper-slide">
+						<div class="nav__item">{{tab}}</div>
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="nav__line js-nav-line"></div>
+		</div>
+	</div>
+
+	<div class="ac__body">
+		<div class="swiper-container js-content">
+			<div class="ac__content swiper-wrapper ">
+
+				<div class="swiper-slide">
+          <div class="ac-license">
+            <div class="ac-license__pic">
+              <div class="ac-license__title">лицензия iyt</div>
+            </div>
+            <div class="ac-license__content">
+              <div class="ac-license__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+              <div class="ac-license__btn-container">
+                <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a>
+              </div>
+            </div>
+          </div>
+				</div>
+
+				<div class="swiper-slide">
+          <div class="ac-course">
+            <div class="ac-course__descr" style='background-image: url(img/academy/teor-bg.jpg);'>
+              <div class="ac-course__item">
+                <div class="ac-course__date">23.01</div>
+                <div class="ac-course__title">Старт курса</div>
+              </div>
+              <div class="ac-course__item">
+                <div class="ac-course__icon ac-course__icon_lessons"></div>
+                <div class="ac-course__title">15 занятий по 3 часа</div>
+              </div>
+              <div class="ac-course__item">
+                <div class="ac-course__icon ac-course__icon_book"></div>
+                <div class="ac-course__title">Курс теории 6900 грн</div>
+              </div>
+            </div>
+            <div class="ac-course__video" style='background-image: url(img/academy/teor-video-bg.jpg);'>
+              <div class="yw__video-btn">
+								<span>Посмотрите видео</span>
+							</div>
+            </div>
+            <div class="ac-course__benefits">
+              <div class="ac-course__benefit">
+                <div class="ac-course__benefit-icon ac-course__benefit-icon_programm"></div>
+                <div class="ac-course__benefit-title">Усиленная программа обучения</div>
+              </div>
+              <div class="ac-course__benefit">
+                <div class="ac-course__benefit-icon ac-course__benefit-icon_books"></div>
+                <div class="ac-course__benefit-title">Авторские учебные материалы</div>
+              </div>
+              <div class="ac-course__benefit">
+                <div class="ac-course__benefit-icon ac-course__benefit-icon_radio"></div>
+                <div class="ac-course__benefit-title">Радиоупра-вляемая яхта для тренировок</div>
+              </div>
+              <div class="ac-course__benefit">
+                <div class="ac-course__benefit-icon ac-course__benefit-icon_online"></div>
+                <div class="ac-course__benefit-title">Доступ<br> к онлайн<br> библиотеке</div>
+              </div>
+            </div>
+						<div class="ac-course__btn-container">
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a>
+							<a href="#" class="button button_lg ">Календарь</a>
+						</div>
+          </div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="ac-course">
+            <div class="ac-course__descr" style='background-image: url(img/academy/practic-bg.jpg);'>
+              <div class="ac-course__item">
+                <div class="ac-course__icon ac-course__icon_students"></div>
+                <div class="ac-course__title">80% учеников <br>готовы к одиночному плаванию</div>
+								<div class="ac-course__subtitle">Индивидуальный подход к каждому ученику</div>
+              </div>
+              <div class="ac-course__item">
+                <div class="ac-course__icon ac-course__icon_sea"></div>
+                <div class="ac-course__title">2 недели практики <br>в море</div>
+								<div class="ac-course__subtitle">Ближайшая дата отмечена в календаре</div>
+              </div>
+              <div class="ac-course__item">
+                <div class="ac-course__icon ac-course__icon_wind"></div>
+                <div class="ac-course__title">Обучение в разных <br>условиях</div>
+								<div class="ac-course__subtitle">На воде и на суше, утром, днем и вечером</div>
+              </div>
+            </div>
+            <div class="ac-course__video" style='background-image: url(img/academy/practic-video-bg.jpg);'>
+              <div class="yw__video-btn">
+								<span>Посмотрите видео</span>
+							</div>
+            </div>
+						<div class="ac-course__btn-container">
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a>
+							<a href="#" class="button button_lg ">Календарь</a>
+						</div>
+          </div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="instructors js-instructors-slider">
+
+						<div class="instructor">
+							<div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+							<div class="instructor__names">
+								<span class="instructor__name-left"></span>
+								<span class="instructor__name-right">Андрей Иванов2</span>
+							</div>
+							<div class="instructor__content">
+								<div class="instructor__title">Андрей Иванов1</div>
+								<div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+								<div class="instructor__info">
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'>
+										<span class="instructor__info-val">40 000</span>
+										<span class="instructor__info-title">Пройдено миль</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'>
+										<span class="instructor__info-val">15 000</span>
+										<span class="instructor__info-title">Часов обучения</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'>
+										<span class="instructor__info-val">200</span>
+										<span class="instructor__info-title">Выпущено шкиперов</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="instructor">
+							<div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+							<div class="instructor__names">
+								<span class="instructor__name-left">Андрей Иванов1</span>
+								<span class="instructor__name-right">Андрей Иванов3</span>
+							</div>
+							<div class="instructor__content">
+								<div class="instructor__title">Андрей Иванов2</div>
+								<div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+								<div class="instructor__info">
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'>
+										<span class="instructor__info-val">40 000</span>
+										<span class="instructor__info-title">Пройдено миль</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'>
+										<span class="instructor__info-val">15 000</span>
+										<span class="instructor__info-title">Часов обучения</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'>
+										<span class="instructor__info-val">200</span>
+										<span class="instructor__info-title">Выпущено шкиперов</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="instructor">
+							<div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+							<div class="instructor__names">
+								<span class="instructor__name-left">Андрей Иванов2</span>
+								<span class="instructor__name-right">Андрей Иванов4</span>
+							</div>
+							<div class="instructor__content">
+								<div class="instructor__title">Андрей Иванов3</div>
+								<div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+								<div class="instructor__info">
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'>
+										<span class="instructor__info-val">40 000</span>
+										<span class="instructor__info-title">Пройдено миль</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'>
+										<span class="instructor__info-val">15 000</span>
+										<span class="instructor__info-title">Часов обучения</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'>
+										<span class="instructor__info-val">200</span>
+										<span class="instructor__info-title">Выпущено шкиперов</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="instructor">
+							<div class="instructor__pic" style='background-image: url(img/academy/instructor-1.jpg);'></div>
+							<div class="instructor__names">
+								<span class="instructor__name-left">Андрей Иванов3</span>
+								<span class="instructor__name-right"></span>
+							</div>
+							<div class="instructor__content">
+								<div class="instructor__title">Андрей Иванов4</div>
+								<div class="instructor__subtitle">Прошел Атлантический океан в 2 стороны</div>
+								<div class="instructor__info">
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-1.png);'>
+										<span class="instructor__info-val">40 000</span>
+										<span class="instructor__info-title">Пройдено миль</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-2.png);'>
+										<span class="instructor__info-val">15 000</span>
+										<span class="instructor__info-title">Часов обучения</span>
+									</div>
+									<div class="instructor__info-item" style='background-image: url(img/academy/instructor-1-3.png);'>
+										<span class="instructor__info-val">200</span>
+										<span class="instructor__info-title">Выпущено шкиперов</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="instructor__slider-btn">
+						<button type="button" class="instructor__slider-btn-left">{{mixins.icon('arrow-left')}}</button>
+						<button type="button" class="instructor__slider-btn-right">{{mixins.icon('arrow-left')}}</button>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="gallery-container">
+						<div class="gallery">
+							<div style='background-image: url(img/academy/gallery-1.jpg);'></div>
+							<div style='background-image: url(img/academy/gallery-1.jpg);'></div>
+							<div style='background-image: url(img/academy/gallery-1.jpg);'></div>
+						</div>
+						<div class="gallery__slider-btn">
+							<button type="button" class="gallery__slider-btn-left">{{mixins.icon('arrow-left')}}</button>
+							<button type="button" class="gallery__slider-btn-right">{{mixins.icon('arrow-left')}}</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="swiper-slide">
+					<div class="fmk">
+						<div class="fmk__descr">
+              <div class="fmk__item">
+                <div class="fmk__icon fmk__icon_boat"></div>
+                <div class="fmk__title">Выбор лодки</div>
+              </div>
+              <div class="fmk__item">
+                <div class="fmk__icon fmk__icon_compass"></div>
+                <div class="fmk__title">Первый опыт под руководством инструктора</div>
+              </div>
+              <div class="fmk__item">
+                <div class="fmk__icon fmk__icon_hand"></div>
+                <div class="fmk__title">Полностью твоя лодка. <br>Твое пространство</div>
+              </div>
+            </div>
+            <div class="fmk__video" style='background-image: url(img/academy/fmk-video-bg.jpg);'>
+              <div class="yw__video-btn">
+								<span>Посмотрите видео</span>
+							</div>
+            </div>
+						<div class="fmk__benefit">Наши выпускники готовы к одиночному плаванью, но хотят, чтобы первый опыт прошел под наблюдение инструктора. Специально для них мы подготовили отдельный продукт - ФМК. </div>
+						<div class="fmk__bottom">
+							<span>ФМК - полный ассист твоего первого путешествия!</span>
+							<div class="fmk__btn-container">
+								<a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a>
+								<a href="#" class="button button_dark button_lg ">Календарь</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+</div>

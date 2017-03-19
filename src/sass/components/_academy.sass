@@ -1,0 +1,356 @@
+.ac
+	position: relative
+	padding-top: 120px
+	margin-top: -60px
+	height: 100vh
+	&__nav
+		position: absolute
+		top: 60px
+		left: 0
+		right: 0
+		.nav__line
+			width: 100px
+	&__body
+		height: 100%
+		position: relative
+		overflow: auto
+	&__content
+		.swiper-slide
+			> *
+				box-sizing: border-box
+			position: relative
+.ac-license
+	height: calc(100vh - 120px)
+	min-height: 650px
+.ac-license
+  &__pic
+    height: 190px
+    background-image: url(../img/academy/license-bg.jpg)
+    padding-top: 110px
+    padding-left: 25px
+    box-sizing: border-box
+    +cover
+  &__title
+    +f-bold
+    font-size: 60px
+    color: $white
+    text-transform: uppercase
+  &__content
+    min-height: calc(100% - 190px)
+    background-color: #000
+  &__text
+    font-size: 18px
+    +reg
+    color: #fff
+    padding: 20px 25px
+  &__btn-container
+    margin-top: 90px
+    text-align: center
+
+.ac-course
+	&__descr
+		padding: 90px 25px
+		+cover
+	&__date
+		font-size: 36px
+		color: $primary
+	&__item:not(:first-child)
+		margin-top: 60px
+	&__title
+		font-size: 36px
+		color: #fff
+		line-height: 36px
+		+f-demi
+	&__subtitle
+		font-size: 24px
+		+f-demi
+		color: $primary
+	&__icon
+		width: 70px
+		height: 70px
+		position: relative
+		margin-bottom: 5px
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			+vcenter
+			background-size: contain
+			background-position: 50%
+			background-repeat: no-repeat
+		&_lessons:before
+			background-image: url(../img/academy/teoretic-lessons.png)
+		&_book:before
+			background-image: url(../img/academy/teoretic-book.png)
+		&_students:before
+			background-image: url(../img/academy/practic-students.png)
+		&_wind:before
+			background-image: url(../img/academy/practic-wind.png)
+		&_sea:before
+			background-image: url(../img/academy/practic-sea.png)
+	&__video
+		height: 240px
+		padding: 5px
+		box-sizing: border-box
+		margin-bottom: 45px
+		+cover
+	&__benefits
+		padding: 0 45px 45px
+	&__benefit
+		width: 170px
+		display: inline-block
+		text-align: center
+		margin-bottom: 60px
+		&:nth-child(2n + 1)
+			margin-right: 10%
+	&__benefit-icon
+		width: 80px
+		height: 80px
+		position: relative
+		margin: 0 auto 30px
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			+vcenter
+			background-size: contain
+			background-position: 50%
+			background-repeat: no-repeat
+		&_programm
+			width: 110px
+			&:before
+				background-image: url(../img/academy/teoretic-programm.png)
+		&_books:before
+			background-image: url(../img/academy/author-books.png)
+		&_radio:before
+			background-image: url(../img/academy/radio.png)
+		&_online:before
+			background-image: url(../img/academy/online.png)
+	&__benefit-title
+		font-size: 24px
+		+f-demi
+		line-height: 24px
+	&__btn-container
+		width: 50%
+		text-align: center
+		margin: 0 auto
+		.button
+			margin-bottom: 40px
+
+.instructors
+	position: relative
+	+clr
+.instructor
+	float: left
+	position: relative
+	&__pic
+		height: 390px
+		background-size: cover
+		background-position: 50% 100%
+		background-repeat: no-repeat
+	&__content
+		background-color: #000
+		padding-top: 15px
+		padding-bottom: 30px
+	&__title
+		font-size: 30px
+		text-transform: uppercase
+		+f-bold
+		color: #fff
+		padding-bottom: 10px
+		border-bottom: 2px solid #fff
+		margin-left: 30px
+	&__subtitle
+		font-size: 18px
+		color: #fff
+		padding-top: 10px
+		margin-left: 30px
+		+reg
+	&__info-item
+		text-align: center
+		padding-top: 30px
+		margin-top: 30px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: 20% 0
+	&__info-val
+		font-size: 48px
+		color: $primary
+		+f-bold
+		display: block
+	&__info-title
+		font-size: 18px
+		color: #fff
+		text-transform: uppercase
+		display: block
+		+reg
+	&__slider-btn
+		width: 100%
+		position: absolute
+		top: 330px
+		z-index: 9999
+		text-align: center
+		.slick-disabled
+			background-color: transparent
+			opacity: .5
+			border-color: #fff
+			.icon
+				fill: #fff
+	&__slider-btn-left, &__slider-btn-right
+		width: 100px
+		height: 50px
+		border: 1px solid $primary
+		background-color: rgba(0,0,0,.5)
+		border-radius: 30px
+		.icon
+			font-size: 24px
+			fill: $primary
+	&__slider-btn-right
+		margin-left: 30px
+		.icon
+			transform: scale(-1)
+	&__names
+		position: absolute
+		top: 300px
+		width: 100%
+		+clr
+		span
+			color: #fff
+			font-size: 18px
+			text-transform: uppercase
+			display: block
+			width: calc(50% - 15px)
+			float: left
+			min-height: 1px
+			+f-bold
+	&__name-left
+		text-align: right
+		margin-right: 30px
+	&__name-right
+		text-align: left
+
+.gallery-container
+	height: calc(100vh - 120px)
+	min-height: 650px
+
+.gallery
+	height: 500px
+	position: relative
+	+clr
+	.slick-list,
+	.slick-track,
+	.slick-track div
+		height: 100%
+	.slick-track div
+		float: left
+		+cover
+	.slick-dots
+    position: absolute
+    bottom: 40px
+    left: 50%
+    transform: translateX(-50%)
+    background-color: rgba(#fff, .5)
+    height: 24px
+    z-index: 9999
+    border-radius: 12px
+    padding: 0 7px
+    li
+      display: inline-block
+      vertical-align: top
+      line-height: 0
+      margin-top: 4px
+      &:not(:last-child)
+        margin-right: 12px
+      &.slick-active button
+        background-color: $primary
+    button
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background-color: #fff
+      font-size: 0
+      transition: background-color .5s
+	&__slider-btn
+		height: calc(100% - 500px)
+		width: 100%
+		text-align: center
+		background-color: #000
+		box-sizing: border-box
+		padding-top: 45px
+		.slick-disabled
+			background-color: transparent
+			opacity: .5
+			border-color: #fff
+			.icon
+				fill: #fff
+	&__slider-btn-left, &__slider-btn-right
+		width: 100px
+		height: 50px
+		border: 1px solid $primary
+		background-color: rgba(0,0,0,.5)
+		border-radius: 30px
+		.icon
+			font-size: 24px
+			fill: $primary
+	&__slider-btn-right
+		margin-left: 30px
+		.icon
+			transform: scale(-1)
+
+.fmk
+	&__descr
+		background-color: $primary
+		color: #000
+		padding-top: 40px
+		padding-left: 20px
+		padding-bottom: 5px
+	&__item
+		margin-bottom: 40px
+	&__icon
+		width: 70px
+		height: 70px
+		position: relative
+		margin-bottom: 10px
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			+vcenter
+			background-size: contain
+			background-position: 50%
+			background-repeat: no-repeat
+		&_boat
+			width: 130px
+			&:before
+				background-image: url(../img/academy/fmk-1.png)
+		&_compass:before
+			background-image: url(../img/academy/fmk-2.png)
+		&_hand:before
+			background-image: url(../img/academy/fmk-3.png)
+	&__title
+		+f-demi
+		font-size: 36px
+		line-height: 36px
+	&__video
+		height: 240px
+		padding: 5px
+		box-sizing: border-box
+		+cover
+	&__benefit
+		padding: 40px
+		background-color: #fff
+		+f-demi
+		font-size: 30px
+		text-align: center
+	&__bottom
+		background-color: #000
+		color: $primary
+		font-size: 30px
+		+f-demi
+		text-align: center
+		padding: 40px
+	&__btn-container
+		width: 50%
+		margin: 0 auto
+		.button
+			margin-top: 40px

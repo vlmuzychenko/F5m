@@ -91,7 +91,7 @@ setTimeout(function(){
 		let max 	= +maxInput.data('max');
 
 		let form 	= $range.parents('form');
-		
+
 		$range.slider({
 			range: true,
 			min,
@@ -146,4 +146,3 @@ setTimeout(function(){
 	});
 
 })();
-

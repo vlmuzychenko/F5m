@@ -1,0 +1,46 @@
+.page-404
+  width: 100%
+  height: calc(100vh - 60px)
+  background-image: url('../img/404-bg.jpg')
+  +cover
+  padding-top: 80px
+  position: relative
+
+  &__text
+    text-align: center
+    text-transform: uppercase
+    color: #336699
+    +bold
+    font-size: 16px
+
+  &__content
+    width: 60%
+    position: absolute
+    bottom: 5%
+    right: 5%
+    text-align: center
+
+  &__pic
+    width: 100%
+    height: 120px
+    background-image: url('../img/404.png')
+    +cover
+    margin-bottom: 30px
+
+  &__socials
+    width: 100%
+    text-align: center
+    margin-bottom: 50px
+
+  &__socials-item
+    display: inline-block
+    width: 35px
+    height: 35px
+    +cover
+    font-size: 35px
+
+    &:not(:last-child)
+      margin-right: 55px
+
+  &__btn-container .button:first-child
+    margin-bottom: 25px
