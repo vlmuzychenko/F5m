@@ -10,6 +10,9 @@
 		right: 0
 		.nav__line
 			width: 200px
+		&_regatta
+			.nav__line
+				width: 80px
 	&__body
 		height: 100%
 		position: relative
@@ -19,7 +22,7 @@
 			> *
 				box-sizing: border-box
 			position: relative
-			
+
 	&__message
 		position: absolute
 		bottom: 0
@@ -87,7 +90,7 @@
 		min-height: 470px
 		.slick-track div
 			background-size: cover
-			background-position: 0 0
+			background-position: 50% 50%
 			background-repeat: no-repeat
 			float: left
 			height: 100%
@@ -158,7 +161,7 @@
 		+f-demi
 	&__pic
 		height: 460px
-		margin-bottom: 100px
+		margin-bottom: 20px
 		+cover
 	&__date
 		font-size: 28px
@@ -174,6 +177,11 @@
 		padding-top: 20px
 		+f-demi
 	&__slider
+		margin-bottom: 20px
+		+clr
+		&.js-yw-programm-slider
+			.yw-p__pic
+				margin-bottom: 100px
 		.slick-track
 			+clr
 	&__slide

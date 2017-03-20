@@ -24,7 +24,7 @@ $(function(){
      arrows: false
   });
 
-  $('.yw-p__slider').slick({
+  $('.js-yw-programm-slider').slick({
      useTransform: true,
      slidesToShow: 1,
      infinite: false,

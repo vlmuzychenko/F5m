@@ -1,0 +1,267 @@
+{% set tabs = ['о регате', 'детали', 'подготовка', 'программа', 'стоимость', 'регистрация']%}
+
+<div class="yw">
+
+	<div class="yw__nav yw__nav_regatta">
+
+		<div class="nav js-nav swiper-container">
+
+			<div class="nav__list swiper-wrapper">
+				{% for tab in tabs %}
+					<div class="nav__slide swiper-slide">
+						<div class="nav__item">{{tab}}</div>
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="nav__line js-nav-line"></div>
+		</div>
+	</div>
+
+	<div class="yw__body">
+		<div class="swiper-container js-content">
+			<div class="yw__content swiper-wrapper ">
+
+				<div class="swiper-slide">
+					<div class="yw-descr">
+					  <div class="yw-descr__pic" style='background-image: url(img/regatta/regatta-main-bg.jpg)'>
+					  	<div class="yw-descr__pic-title">
+					  		<span style='color:#4745c1; font-size: 3em;'>Регата</span>
+					  		<span style='color:#4745c1; font-size: 3.5em; line-height: .5em;'>эллада 2017</span>
+					  		<span style='color:#0ea3d8; font-size: 3em;'>06 - 13 мая</span>
+					  		<span style='color:#004e9d; font-size: 4em; line-height: .5em;'></span>
+					  	</div>
+							<div class="yw__video-btn">
+								<span>Посмотрите видео</span>
+							</div>
+							<div class="yw-descr__btn-container">
+	              <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
+	              <a href="#" class="button button_lg button_dark">Календарь</a>
+	            </div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="yw-det">
+						<div class="yw-det__slider">
+							<div style='background-image: url(img/regatta/d1.png);'></div>
+							<div style='background-image: url(img/regatta/d2.png);'></div>
+							<div style='background-image: url(img/regatta/d3.png);'></div>
+							<div style='background-image: url(img/regatta/d4.png);'></div>
+							<div style='background-image: url(img/regatta/d5.png);'></div>
+							<div style='background-image: url(img/regatta/d6.png);'></div>
+						</div>
+						<div class="yw-det__slider-nav">
+							<div style='background-image: url(img/regatta/d1p.png);'></div>
+							<div style='background-image: url(img/regatta/d2p.png);'></div>
+							<div style='background-image: url(img/regatta/d3p.png);'></div>
+							<div style='background-image: url(img/regatta/d4p.png);'></div>
+							<div style='background-image: url(img/regatta/d5p.png);'></div>
+							<div style='background-image: url(img/regatta/d6p.png);'></div>
+						</div>
+						<a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="registration">Записаться</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="yw-p">
+						<div class="yw-p__slider">
+							<div class="yw-p__slide">
+								<div class="yw-p__title">4 острова за 7 дней!<br>Возможная вторая строчка текста...</div>
+								<div class="yw-p__pic" style="background-image: url(img/regatta/map.png);"></div>
+								<div class="yw-p__text">
+									<div class="yw-p__descr">Собираемся во Флоренции и отправляемся к Marina de Cecina – нашей стартовой точке. Там уже ждет команда, которая подготовила лодку и с которой отправляемся в марину Пизы. Вперед! </div>
+								</div>
+							</div>
+						</div>
+						<div class="yw-price__btn-container">
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="yw-p">
+						<div class="yw-p__slider js-yw-programm-slider">
+							<div class="yw-p__slide">
+								<div class="yw-p__title">Прибытие экипажей<br>Возможная вторая строчка текста...</div>
+								<div class="yw-p__pic" style="background-image: url(img/yacht-wiki/yw-map-1.jpg);"></div>
+								<div class="yw-p__text">
+									<div class="yw-p__date">Первый день 6 мая</div>
+									<div class="yw-p__descr">Прибытие экипажей, прием яхт. Шкиперское собрание и инструктаж по ТБ для новичков. <br>Вечером - торжественное открытие 2-го этапа регаты и дискотека.</div>
+								</div>
+							</div>
+							<div class="yw-p__slide">
+								<div class="yw-p__title">Marina de Cecina<br>Возможная вторая строчка текста...</div>
+								<div class="yw-p__pic" style="background-image: url(img/yacht-wiki/yw-map-1.jpg);"></div>
+								<div class="yw-p__text">
+									<div class="yw-p__date">Второй день</div>
+									<div class="yw-p__descr">Собираемся во Флоренции и отправляемся к Marina de Cecina – нашей стартовой точке. Там уже ждет команда, которая подготовила лодку и с которой отправляемся в марину Пизы. Вперед! </div>
+								</div>
+							</div>
+							<div class="yw-p__slide">
+								<div class="yw-p__title">Третий день<br>Возможная вторая строчка текста...</div>
+								<div class="yw-p__pic" style="background-image: url(img/yacht-wiki/yw-map-1.jpg);"></div>
+								<div class="yw-p__text">
+									<div class="yw-p__date">29.04 - День 3</div>
+									<div class="yw-p__descr">Собираемся во Флоренции и отправляемся к Marina de Cecina – нашей стартовой точке. Там уже ждет команда, которая подготовила лодку и с которой отправляемся в марину Пизы. Вперед! </div>
+								</div>
+							</div>
+						</div>
+						<div class="yw-p__slider-btn">
+							<button type="button" class="yw-p__slider-btn-left">{{mixins.icon('arrow-left')}}</button>
+							<button type="button" class="yw-p__slider-btn-right">{{mixins.icon('arrow-left')}}</button>
+						</div>
+						<div class="yw-price__btn-container">
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
+						</div>
+					</div>
+				</div>
+
+        <div class="swiper-slide">
+					<div class="yw-price">
+						<div class="yw-price__pic" style='background-image: url(img/yacht-wiki/yw-price-bg.jpg);'></div>
+						<div class="yw-price__content">
+							<div class="yw-price__title">
+								от 1699€
+								<span>за 7 дней</span>
+							</div>
+							<div class="yw-price__list-title">В стоимость входит:</div>
+							<ul class="yw-price__list">
+								<li>услуги шкипера</li>
+								<li>аренда яхты</li>
+								<li>страховой депозит</li>
+								<li>топливо на яхте</li>
+								<li>стоянки во всех маринах</li>
+								<li>услуги видео оператора</li>
+								<li>медицинское страхование</li>
+								<li>аренда виллы на 1-ни сутки</li>
+								<li>вход на закрытые вечерник playboy</li>
+								<li>аренда машин для островных приключений</li>
+								<li>аренда виллы на 1-ни сутки</li>
+								<li>вход на закрытые вечерник playboy</li>
+								<li>медицинское страхование</li>
+								<li>страховой депозит</li>
+								<li>топливо на яхте</li>
+							</ul>
+							<div class="yw-price__list-title">Дополнительно оплачиваются:</div>
+							<ul class="yw-price__list">
+								<li>перелёт</li>
+								<li>виза</li>
+								<li>трансфер из/до аэропорта</li>
+								<li>питание</li>
+								<li>алкоголь</li>
+								<li>скоростной интернет</li>
+							</ul>
+						</div>
+						<div class="yw-price__btn-container">
+							<a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="yw-form-wrap">
+						<div class="yw-form">
+							<div class="yw-form__title">решайтесь!<br> это будет grandiosamente!</div>
+							<div class="form">
+								<form action="">
+
+									<div class="form__field">
+										<div class="input input_white input_lg">
+											<input id="formName1" type="text" class="input__main" placeholder="ФИО">
+											<label class="input__label" for="formName1">ФИО</label>
+										</div>
+									</div>
+
+									<div class="form__field">
+										<div class="input input_white input_lg">
+											<input id="formPhone1" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --">
+											<label class="input__label" for="formPhone1">Телефон</label>
+										</div>
+									</div>
+
+									<div class="form__field">
+										<div class="input input_white input_lg">
+											<input id="formEmail1" type="email" class="input__main" placeholder="name@mail.com">
+											<label class="input__label" for="formEmail1">Email</label>
+										</div>
+									</div>
+
+									<div class="form__field">
+										<div class="input input_lg input_white">
+											<textarea  class="input__main" placeholder="Остались вопросы? Напишите нам!"></textarea>
+										</div>
+									</div>
+
+									<div class="yw-form__btn-container">
+										<button type="button" class="button button_yellow button_lg js-thnk-stat" >Записаться</button>
+										<a href="#" class="button button_dark button_lg">Календарь</a>
+									</div>
+
+								</form>
+							</div>
+						</div>
+						<div class="yw-partners">
+							<div class="yw-partners__item">
+								<img src="img/yacht-wiki/partner-1.png" alt="">
+								<span>Генеральный спосор</span>
+							</div>
+							<div class="yw-partners__item">
+								<img src="img/yacht-wiki/partner-2.png" alt="">
+								<span>Клубный партнер</span>
+							</div>
+							<div class="yw-partners__item">
+								<img src="img/yacht-wiki/partner-3.png" alt="">
+								<span>Алкогольный партнер</span>
+							</div>
+							<div class="yw-partners__item">
+								<img src="img/yacht-wiki/partner-4.png" alt="">
+								<span>Информационный спонсор</span>
+							</div>
+						</div>
+						<div class="yw-socials">
+							<a href='#' class="yw-socials__socials-item">
+					      {{mixins.icon('yt')}}
+					    </a>
+					    <a href='#' class="yw-socials__socials-item">
+					      {{mixins.icon('fb')}}
+					    </a>
+					    <a href='#' class="yw-socials__socials-item">
+					      {{mixins.icon('insta')}}
+					    </a>
+						</div>
+					</div>
+					<div class="popup-thnk popup-thnk_registration">
+						<div class="popup-thnk__logo">
+							<img src="img/yacht-wiki/thnk-logo.png" alt="">
+						</div>
+						<div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+						<div class="popup-thnk__socials">
+					    <a href='#' class="popup-thnk__socials-item">
+					      {{mixins.icon('yt')}}
+					    </a>
+					    <a href='#' class="popup-thnk__socials-item">
+					      {{mixins.icon('fb')}}
+					    </a>
+					    <a href='#' class="popup-thnk__socials-item">
+					      {{mixins.icon('insta')}}
+					    </a>
+					  </div>
+						<div class="popup-thnk__btn-container">
+							<div class="popup-thnk__btn-title">А пока посмотрите другие события</div>
+							<a href="#" class="button button_dark button_lg">Календарь</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+</div>
