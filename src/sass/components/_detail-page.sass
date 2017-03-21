@@ -1,0 +1,82 @@
+.detail-page
+  height: 100%
+  min-height: 480px
+  &__slider
+    height: 280px
+    position: relative
+    overflow: hidden
+    z-index: 1
+    +clr
+    .slick-list,
+    .slick-track,
+    .slick-track div
+      height: 100%
+    .slick-track div
+      float: left
+      +cover
+    .slick-dots
+      position: absolute
+      bottom: 15px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: rgba(#fff, .5)
+      height: 24px
+      z-index: 9999
+      border-radius: 12px
+      padding: 0 7px
+      li
+        display: inline-block
+        vertical-align: top
+        line-height: 0
+        margin-top: 4px
+        &:not(:last-child)
+          margin-right: 12px
+        &.slick-active button
+          background-color: $primary
+      button
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background-color: #fff
+        font-size: 0
+        transition: background-color .5s
+  &__info
+    margin-top: 20px
+    width: 100%
+    +clr
+  &__label
+    float: left
+    font-size: 18px
+    +f-demi
+    width: 140px
+    box-sizing: border-box
+    padding-right: 15px
+    background-color: $primary
+    text-align: right
+    line-height: 28px
+  &__date
+    +reg
+    font-size: 16px
+    float: right
+    padding-right: 25px
+    line-height: 28px
+  &__content
+    padding: 0 20px
+  &__title
+    +f-demi
+    font-size: 30px
+    margin-top: 30px
+    margin-bottom: 20px
+  &__text
+    font-size: 18px
+    +reg
+  &__btn-container
+    width: 50%
+    margin: 30px auto
+    .button:not(:last-child)
+      margin-bottom: 20px
+
+.yw-socials_yellow
+  background-color: $primary
+  .icon
+    fill: #000

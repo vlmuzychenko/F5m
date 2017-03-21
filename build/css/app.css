@@ -138,6 +138,12 @@ html {
   fill: initial;
 }
 
+.icon-fb_black {
+  width: 0.5em;
+  height: 1em;
+  fill: initial;
+}
+
 .icon-filmstrip {
   width: 1em;
   height: 1em;
@@ -145,6 +151,12 @@ html {
 }
 
 .icon-insta {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-inst_black {
   width: 1em;
   height: 1em;
   fill: initial;
@@ -163,6 +175,12 @@ html {
 }
 
 .icon-yt {
+  width: 0.87em;
+  height: 1em;
+  fill: initial;
+}
+
+.icon-yt_black {
   width: 0.87em;
   height: 1em;
   fill: initial;
@@ -6070,7 +6088,6 @@ a {
   background-color: #fff;
   font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
   font-size: 30px;
-  text-align: center;
 }
 
 .fmk__bottom {
@@ -6131,7 +6148,7 @@ a {
 .page-404__socials {
   width: 100%;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .page-404__socials-item {
@@ -6150,6 +6167,141 @@ a {
 
 .page-404__btn-container .button:first-child {
   margin-bottom: 25px;
+}
+
+.detail-page {
+  height: 100%;
+  min-height: 480px;
+}
+
+.detail-page__slider {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  *zoom: 1;
+}
+
+.detail-page__slider:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.detail-page__slider .slick-list,
+.detail-page__slider .slick-track,
+.detail-page__slider .slick-track div {
+  height: 100%;
+}
+
+.detail-page__slider .slick-track div {
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.detail-page__slider .slick-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 24px;
+  z-index: 9999;
+  border-radius: 12px;
+  padding: 0 7px;
+}
+
+.detail-page__slider .slick-dots li {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 0;
+  margin-top: 4px;
+}
+
+.detail-page__slider .slick-dots li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.detail-page__slider .slick-dots li.slick-active button {
+  background-color: #f6cb02;
+}
+
+.detail-page__slider .slick-dots button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 0;
+  transition: background-color .5s;
+}
+
+.detail-page__info {
+  margin-top: 20px;
+  width: 100%;
+  *zoom: 1;
+}
+
+.detail-page__info:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.detail-page__label {
+  float: left;
+  font-size: 18px;
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  width: 140px;
+  box-sizing: border-box;
+  padding-right: 15px;
+  background-color: #f6cb02;
+  text-align: right;
+  line-height: 28px;
+}
+
+.detail-page__date {
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  float: right;
+  padding-right: 25px;
+  line-height: 28px;
+}
+
+.detail-page__content {
+  padding: 0 20px;
+}
+
+.detail-page__title {
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.detail-page__text {
+  font-size: 18px;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+}
+
+.detail-page__btn-container {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.detail-page__btn-container .button:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.yw-socials_yellow {
+  background-color: #f6cb02;
+}
+
+.yw-socials_yellow .icon {
+  fill: #000;
 }
 
 @media only screen and (min-width: 320px) {

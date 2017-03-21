@@ -3,5 +3,6 @@ import './lib/multiple-select';
 import './common';
 import './yacht-wiki';
 import './academy';
+import './detail-page';
 
 sayHello();
