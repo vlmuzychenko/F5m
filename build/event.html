@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Event</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      function resize()
+      {
+        var metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag)
+        {
+          metaTag.remove();
+          console.log('metaTag');
+        }
+        metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width < 600)
+        {
+          metaTag.content = "width=480, user-scalable=0";
+        }
+        else
+        {
+          metaTag.content = "width=480, initial-scale=1.0, user-scalable=0";
+        }
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+      resize();
+      window.addEventListener('orientationchange', resize, false);
+
+    </script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!--BEGIN  header-->
+      <header class="header">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button> </div>
+      </header>
+      <!--END  header-->
+      <div class="menu js-menu">
+        <div class="menu__topline">
+          <a href="#" class="menu__step js-navigation-step"> <svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg> <span data-root-title="главное меню"></span></a>
+          <!--<button class="menu__close btn-close js-close-menu">
+<svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
+</button>--></div>
+        <!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+        <div class="menu__navigation">
+          <nav class="navigation js-navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+                <div class="navigation__more js-navigation-more">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"> <a href="#" class="navigation__link">яхт-вики</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link">Аренда яхт</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+                            <div class="navigation__more js-navigation-more">
+                              <ul class="navigation__list">
+                                <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                              </ul>
+                          </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+              </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a> </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <div class="yw">
+          <div class="yw__nav yw__nav_event">
+            <div class="nav js-nav swiper-container">
+              <div class="nav__list swiper-wrapper">
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">событие</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">детали</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">время и место</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">партнеры</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">регистрация</div>
+                </div>
+              </div>
+              <div class="nav__line js-nav-line"></div>
+            </div>
+          </div>
+          <div class="yw__body">
+            <div class="swiper-container js-content">
+              <div class="yw__content swiper-wrapper ">
+                <div class="swiper-slide">
+                  <div class="yw-descr">
+                    <div class="yw-descr__pic" style='background-image: url(img/event/main-bg.jpg);'>
+                      <div class="yw-descr__pic-title"> <span style='color:#007bc9; font-size: 3em;'>Открытие</span> <span style='color:#007bc9; font-size: 3em; line-height: .5em;'>яхтенного </span> <span style='color:#007bc9; font-size: 3em;'>сезона 2017</span> <span style='color:#007bc9; font-size: 3em; line-height: .5em;'>C FLEET 5</span>                        <span style='color:#003550; font-size: 2em; line-height: 1.5em;'>12 апреля</span> </div>
+                      <div class="yw__video-btn"> <span>Посмотрите видео</span> </div>
+                      <div class="yw-descr__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a> <a href="#" class="button button_lg button_dark">Календарь</a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="yw-det">
+                    <div class="yw-det__slider">
+                      <div style='background-image: url(img/event/det-1.png);'></div>
+                      <div style='background-image: url(img/event/det-2.png);'></div>
+                      <div style='background-image: url(img/event/det-3.png);'></div>
+                      <div style='background-image: url(img/event/det-4.png);'></div>
+                    </div>
+                    <div class="yw-det__slider-nav">
+                      <div style='background-image: url(img/event/det-p-1.png);'></div>
+                      <div style='background-image: url(img/event/det-p-2.png);'></div>
+                      <div style='background-image: url(img/event/det-p-3.png);'></div>
+                      <div style='background-image: url(img/event/det-p-4.png);'></div>
+                    </div> <a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="registration">Записаться</a> </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="event-place">
+                    <div class="event-place__pic">
+                      <div class="event-place__pic-title">Грандиозное открытие яхтенного сезона <br>на террасе FLEET5!</div>
+                    </div>
+                    <div class="event-place__contacts">
+                      <div class="event-place__item">
+                        <p class="event-place__item-title">Звездные гости, вкусная еда<br>и отличная музыка от группы Zetetics<br>и Dj Jean Gritsfeldt.<br>С нами празднуют Playboy и Officiel Online. </p>
+                      </div>
+                      <div class="event-place__item">
+                        <p class="event-place__item-text">12 апреля в 19:00,<br>терраса FLEET5</p>
+                      </div>
+                      <div class="event-place__item">
+                        <p class="event-place__item-title">Вход только по пригласительным.</p>
+                      </div> <button type="button" class="button button_yellow event-place__button button_lg js-thnk-stat">Записаться</button> </div>
+                    <div class="event-place__map"></div>
+                    <div class="event-place__socials">
+                      <a href='#' class="event-place__socials-item"> <svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg> </a>
+                      <a href='#' class="event-place__socials-item"> <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg> </a>
+                      <a href='#' class="event-place__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="yw-p">
+                    <div class="yw-partners yw-partners_event">
+                      <div class="yw-partners__item"> <img src="img/yacht-wiki/partner-1.png" alt=""> <span>Генеральный спосор</span> </div>
+                      <div class="yw-partners__item"> <img src="img/yacht-wiki/partner-2.png" alt=""> <span>Клубный партнер</span> </div>
+                      <div class="yw-partners__item"> <img src="img/yacht-wiki/partner-3.png" alt=""> <span>Алкогольный партнер</span> </div>
+                      <div class="yw-partners__item"> <img src="img/yacht-wiki/partner-4.png" alt=""> <span>Информационный спонсор</span> </div>
+                      <div class="yw-partners__item"> <img src="img/yacht-wiki/partner-4.png" alt=""> <span>Информационный спонсор</span> </div>
+                      <div class="yw-partners__item"> <img src="img/yacht-wiki/partner-4.png" alt=""> <span>Информационный спонсор</span> </div> <button type="button" class="button button_yellow event-partners-button button_lg js-thnk-stat">Записаться</button> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="yw-form-wrap">
+                    <div class="yw-form yw-form_event">
+                      <div class="yw-form__title">решайтесь!<br> это будет грандиозно!</div>
+                      <div class="form">
+                        <form action="">
+                          <div class="form__field">
+                            <div class="input input_white input_lg"> <input id="formName1" type="text" class="input__main" placeholder="ФИО"> <label class="input__label" for="formName1">ФИО</label> </div>
+                          </div>
+                          <div class="form__field">
+                            <div class="input input_white input_lg"> <input id="formPhone1" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --"> <label class="input__label" for="formPhone1">Телефон</label> </div>
+                          </div>
+                          <div class="form__field">
+                            <div class="input input_white input_lg"> <input id="formEmail1" type="email" class="input__main" placeholder="name@mail.com"> <label class="input__label" for="formEmail1">Email</label> </div>
+                          </div>
+                          <div class="form__field">
+                            <div class="input input_lg input_white"> <textarea class="input__main" placeholder="Остались вопросы? Напишите нам!"></textarea> </div>
+                          </div>
+                          <div class="yw-form__btn-container"> <button type="button" class="button button_yellow button_lg js-thnk-stat">Записаться</button> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup-thnk popup-thnk_event">
+                    <div class="popup-thnk__logo"> <img src="img/yacht-wiki/thnk-logo.png" alt=""> </div>
+                    <div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+                    <div class="popup-thnk__socials">
+                      <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg> </a>
+                      <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg> </a>
+                      <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
+                    </div>
+                    <div class="popup-thnk__btn-container">
+                      <div class="popup-thnk__btn-title">А пока посмотрите другие события</div> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup_form js-popup" data-popup="registration"> <button type="button" class="popup__close btn-close js-close-popup">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__in popup__in_yellow js-popup-in">
+            <div class="form">
+              <form action="">
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formName" type="text" class="input__main" placeholder="ФИО"> <label class="input__label" for="formName">Имя и фамилия</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formPhone" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --"> <label class="input__label" for="formPhone">Телефон</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <input id="formEmail" type="email" class="input__main" placeholder="name@mail.com"> <label class="input__label" for="formEmail">Email</label> </div>
+                </div>
+                <div class="form__field">
+                  <div class="input input_lg input_op"> <textarea class="input__main" placeholder="Напишите комментарий"></textarea> </div>
+                </div>
+                <div class="form__field form__field_center"> <button type="button" class="button button_lg js-thnk">Отправить</button> </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-thnk popup-thnk_registration">
+            <div class="popup-thnk__logo"> <img src="img/yacht-wiki/thnk-logo.png" alt=""> </div>
+            <div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+            <div class="popup-thnk__socials">
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-yt"><use xlink:href="img/sprite.svg#icon-yt"></use></svg> </a>
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg> </a>
+              <a href='#' class="popup-thnk__socials-item"> <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg> </a>
+            </div>
+            <div class="popup-thnk__btn-container">
+              <div class="popup-thnk__btn-title">А пока посмотрите другие события</div> <a href="#" class="button button_dark button_lg">Календарь</a> </div>
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
+  </body>
+
+</html>

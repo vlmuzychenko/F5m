@@ -1,0 +1,205 @@
+{% set tabs = ['событие', 'детали', 'время и место', 'партнеры', 'регистрация']%}
+
+<div class="yw">
+
+ <div class="yw__nav yw__nav_event">
+
+   <div class="nav js-nav swiper-container">
+
+     <div class="nav__list swiper-wrapper">
+       {% for tab in tabs %}
+         <div class="nav__slide swiper-slide">
+           <div class="nav__item">{{tab}}</div>
+         </div>
+       {% endfor %}
+
+     </div>
+     <div class="nav__line js-nav-line"></div>
+   </div>
+ </div>
+
+ <div class="yw__body">
+   <div class="swiper-container js-content">
+     <div class="yw__content swiper-wrapper ">
+
+       <div class="swiper-slide">
+         <div class="yw-descr">
+           <div class="yw-descr__pic" style='background-image: url(img/event/main-bg.jpg);'>
+             <div class="yw-descr__pic-title">
+               <span style='color:#007bc9; font-size: 3em;'>Открытие</span>
+               <span style='color:#007bc9; font-size: 3em; line-height: .5em;'>яхтенного </span>
+               <span style='color:#007bc9; font-size: 3em;'>сезона 2017</span>
+               <span style='color:#007bc9; font-size: 3em; line-height: .5em;'>C FLEET 5</span>
+               <span style='color:#003550; font-size: 2em; line-height: 1.5em;'>12 апреля</span>
+             </div>
+             <div class="yw__video-btn">
+               <span>Посмотрите видео</span>
+             </div>
+             <div class="yw-descr__btn-container">
+               <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a>
+               <a href="#" class="button button_lg button_dark">Календарь</a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="swiper-slide">
+         <div class="yw-det">
+           <div class="yw-det__slider">
+             <div style='background-image: url(img/event/det-1.png);'></div>
+             <div style='background-image: url(img/event/det-2.png);'></div>
+             <div style='background-image: url(img/event/det-3.png);'></div>
+             <div style='background-image: url(img/event/det-4.png);'></div>
+           </div>
+           <div class="yw-det__slider-nav">
+             <div style='background-image: url(img/event/det-p-1.png);'></div>
+             <div style='background-image: url(img/event/det-p-2.png);'></div>
+             <div style='background-image: url(img/event/det-p-3.png);'></div>
+             <div style='background-image: url(img/event/det-p-4.png);'></div>
+           </div>
+           <a href="#" class="button button_yellow button_lg yw-det__btn js-open-popup" data-open="registration">Записаться</a>
+         </div>
+       </div>
+
+       <div class="swiper-slide">
+         <div class="event-place">
+           <div class="event-place__pic">
+             <div class="event-place__pic-title">Грандиозное открытие яхтенного сезона <br>на террасе FLEET5!</div>
+           </div>
+           <div class="event-place__contacts">
+             <div class="event-place__item">
+               <p class="event-place__item-title">Звездные гости, вкусная еда<br>и отличная музыка от группы Zetetics<br>и Dj Jean Gritsfeldt.<br>С нами празднуют Playboy и Officiel Online. </p>
+             </div>
+             <div class="event-place__item">
+               <p class="event-place__item-text">12 апреля в 19:00,<br>терраса FLEET5</p>
+             </div>
+             <div class="event-place__item">
+               <p class="event-place__item-title">Вход только по пригласительным.</p>
+             </div>
+             <button type="button" class="button button_yellow event-place__button button_lg js-thnk-stat">Записаться</button>
+           </div>
+           <div class="event-place__map"></div>
+           <div class="event-place__socials">
+             <a href='#' class="event-place__socials-item">
+               {{mixins.icon('yt')}}
+             </a>
+             <a href='#' class="event-place__socials-item">
+               {{mixins.icon('fb')}}
+             </a>
+             <a href='#' class="event-place__socials-item">
+               {{mixins.icon('insta')}}
+             </a>
+           </div>
+         </div>
+       </div>
+
+       <div class="swiper-slide">
+         <div class="yw-p">
+           <div class="yw-partners yw-partners_event">
+             <div class="yw-partners__item">
+               <img src="img/yacht-wiki/partner-1.png" alt="">
+               <span>Генеральный спосор</span>
+             </div>
+             <div class="yw-partners__item">
+               <img src="img/yacht-wiki/partner-2.png" alt="">
+               <span>Клубный партнер</span>
+             </div>
+             <div class="yw-partners__item">
+               <img src="img/yacht-wiki/partner-3.png" alt="">
+               <span>Алкогольный партнер</span>
+             </div>
+             <div class="yw-partners__item">
+               <img src="img/yacht-wiki/partner-4.png" alt="">
+               <span>Информационный спонсор</span>
+             </div>
+             <div class="yw-partners__item">
+               <img src="img/yacht-wiki/partner-4.png" alt="">
+               <span>Информационный спонсор</span>
+             </div>
+             <div class="yw-partners__item">
+               <img src="img/yacht-wiki/partner-4.png" alt="">
+               <span>Информационный спонсор</span>
+             </div>
+             <button type="button" class="button button_yellow event-partners-button button_lg js-thnk-stat">Записаться</button>
+           </div>
+
+
+         </div>
+       </div>
+
+       <div class="swiper-slide">
+
+         <div class="yw-form-wrap">
+           <div class="yw-form yw-form_event">
+             <div class="yw-form__title">решайтесь!<br> это будет грандиозно!</div>
+             <div class="form">
+               <form action="">
+
+                 <div class="form__field">
+                   <div class="input input_white input_lg">
+                     <input id="formName1" type="text" class="input__main" placeholder="ФИО">
+                     <label class="input__label" for="formName1">ФИО</label>
+                   </div>
+                 </div>
+
+                 <div class="form__field">
+                   <div class="input input_white input_lg">
+                     <input id="formPhone1" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --">
+                     <label class="input__label" for="formPhone1">Телефон</label>
+                   </div>
+                 </div>
+
+                 <div class="form__field">
+                   <div class="input input_white input_lg">
+                     <input id="formEmail1" type="email" class="input__main" placeholder="name@mail.com">
+                     <label class="input__label" for="formEmail1">Email</label>
+                   </div>
+                 </div>
+
+                 <div class="form__field">
+                   <div class="input input_lg input_white">
+                     <textarea  class="input__main" placeholder="Остались вопросы? Напишите нам!"></textarea>
+                   </div>
+                 </div>
+
+                 <div class="yw-form__btn-container">
+                   <button type="button" class="button button_yellow button_lg js-thnk-stat" >Записаться</button>
+                   <a href="#" class="button button_dark button_lg">Календарь</a>
+                 </div>
+
+               </form>
+             </div>
+           </div>
+         </div>
+         <div class="popup-thnk popup-thnk_event">
+           <div class="popup-thnk__logo">
+             <img src="img/yacht-wiki/thnk-logo.png" alt="">
+           </div>
+           <div class="popup-thnk__text">Спасибо! <br>Мы свяжемся с вами <br>как только обработаем заявку.</div>
+           <div class="popup-thnk__socials">
+             <a href='#' class="popup-thnk__socials-item">
+               {{mixins.icon('yt')}}
+             </a>
+             <a href='#' class="popup-thnk__socials-item">
+               {{mixins.icon('fb')}}
+             </a>
+             <a href='#' class="popup-thnk__socials-item">
+               {{mixins.icon('insta')}}
+             </a>
+           </div>
+           <div class="popup-thnk__btn-container">
+             <div class="popup-thnk__btn-title">А пока посмотрите другие события</div>
+             <a href="#" class="button button_dark button_lg">Календарь</a>
+           </div>
+         </div>
+
+       </div>
+
+     </div>
+   </div>
+
+
+ </div>
+
+
+</div>

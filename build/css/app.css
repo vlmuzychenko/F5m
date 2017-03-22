@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
 h6, p, blockquote, pre, a, abbr, acronym, address, big,
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
@@ -3276,19 +3277,19 @@ a {
 }
 
 .input_white .input__main::-webkit-input-placeholder {
-  color: #8c8dbe;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .input_white .input__main::-moz-placeholder {
-  color: #8c8dbe;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .input_white .input__main:-ms-input-placeholder {
-  color: #8c8dbe;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .input_white .input__main::placeholder {
-  color: #8c8dbe;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .input_white textarea.input__main {
@@ -4952,6 +4953,11 @@ a {
   background-position: 50% 100%;
 }
 
+.popup-thnk_event {
+  background-image: url(../img/event/thank_you_page.jpg);
+  background-position: 50% 100%;
+}
+
 .popup-thnk__text {
   font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
   font-size: 24px;
@@ -5075,6 +5081,10 @@ a {
 
 .yw__nav_regatta .nav__line {
   width: 80px;
+}
+
+.yw__nav_event .nav__line {
+  width: 88px;
 }
 
 .yw__body {
@@ -5381,6 +5391,10 @@ a {
   padding-right: 20px;
 }
 
+.yw-form_event {
+  background-color: #002a45;
+}
+
 .yw-form__title {
   font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
   text-align: center;
@@ -5416,6 +5430,12 @@ a {
 
 .yw-partners__item span {
   display: block;
+}
+
+.yw-partners_event {
+  min-height: calc(100vh - 160px);
+  background-image: url(../img/event/partners_bg.png);
+  padding-bottom: 50px;
 }
 
 .yw-socials {
@@ -5605,7 +5625,7 @@ a {
 }
 
 .ac-license__btn-container {
-  margin-top: 90px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -5765,6 +5785,7 @@ a {
 
 .instructors {
   position: relative;
+  background-color: #000;
   *zoom: 1;
 }
 
@@ -6304,82 +6325,262 @@ a {
   fill: #000;
 }
 
-@media only screen and (min-width: 320px) {
+.np-header {
+  padding: 5px 15px;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21);
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  background-color: #fff;
+  *zoom: 1;
+}
 
-  .yw-descr__pic {
+.np-header:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.np-header__controlls {
+  float: left;
+}
+
+.np-header__checkbox {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 50px;
+}
+
+.np-header__checkbox:not(:last-child) {
+  margin-right: 10px;
+}
+
+.np-header__checkbox_event input[type="checkbox"] + .checkbox__block {
+  border-color: #ee5004;
+}
+
+.np-header__checkbox_event input[type="checkbox"]:checked + .checkbox__block {
+  background-color: #ee5004;
+}
+
+.np-header__checkbox .checkbox__block {
+  height: 25px;
+  width: 25px;
+  margin-top: 13px;
+}
+
+.np-header__checkbox span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 21px;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+}
+
+.np-header__btn-container {
+  float: right;
+}
+
+.np-content {
+  padding: 10px;
+  margin-top: 60px;
+}
+
+.np-item {
+  height: 350px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.np-item .np-item__content:before {
+  width: 75px;
+  padding: 0 5px 3px;
+  font-size: 18px;
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+}
+
+.np-item_news .np-item__content:before {
+  content: 'новости';
+  color: #000;
+  background-color: #f6cb02;
+}
+
+.np-item_event .np-item__content:before {
+  content: 'событие';
+  color: #000;
+  background-color: #ee5004;
+}
+
+.np-item__content {
+  padding: 160px 40px 0;
+}
+
+.np-item__title {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+}
+
+.np-item__date {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 15px;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+}
+
+.event-place__pic {
+  width: 100%;
+  height: 260px;
+  background-image: url("../img/event/place.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+.event-place__pic-title {
+  font-size: 30px;
+  color: #fff;
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  padding-top: 140px;
+  padding-left: 25px;
+}
+
+.event-place__contacts {
+  width: 100%;
+  padding: 25px 30px 45px;
+  background-color: #002a45;
+}
+
+.event-place__title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+  margin-bottom: 55px;
+}
+
+.event-place__item {
+  margin-bottom: 55px;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.event-place__item-title {
+  color: #fff;
+}
+
+.event-place__item-text {
+  color: #f6cb02;
+  font-size: 30px;
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+}
+
+.event-place__map {
+  width: 100%;
+  height: 330px;
+  background-color: #b5b5b5;
+}
+
+.event-place__socials {
+  width: 100%;
+  background-color: #002a45;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.event-place__socials-item {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 35px;
+}
+
+.event-place__socials-item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.event-place__button {
+  margin: 0 auto;
+  display: block;
+  font-size: 18px;
+}
+
+.event-partners-button {
+  display: block;
+  margin: 50px auto 0;
+}
+
+@media only screen and (min-width: 320px){
+  .yw-descr__pic{
     padding-top: 20px;
     padding-left: 20px;
   }
 }
 
-@media only screen and (max-height: 450px) {
-
-  .chapter__subject {
+@media only screen and (max-height: 450px){
+  .chapter__subject{
     height: 120px;
   }
-
-  .chapter__list {
+  .chapter__list{
     top: 120px;
   }
 }
 
-@media (min-width: 480px) {
-
-  .subject__title {
+@media (min-width: 480px){
+  .subject__title{
     font-size: 50px;
   }
 }
 
-@media only screen and (max-width: 450px) {
-
-  .chapter__nav a {
+@media only screen and (max-width: 450px){
+  .chapter__nav a{
     font-size: 20px;
   }
 }
 
-@media only screen and (max-width: 375px) {
-
-  .message .icon {
+@media only screen and (max-width: 375px){
+  .message .icon{
     font-size: 32px;
     margin-right: 15px;
   }
-
-  .message span {
+  .message span{
     font-size: 16px;
     letter-spacing: 0;
   }
-
-  .region {
+  .region{
     font-size: 20px;
   }
-
-  .type {
+  .type{
     font-size: 20px;
     height: 100px;
     line-height: 100px;
   }
-
-  .type__checkbox {
+  .type__checkbox{
     padding-left: 70px;
   }
-
-  .type__checkbox:before {
+  .type__checkbox:before{
     left: 15px;
     font-size: 8px;
   }
-
-  .type__checkbox .checkbox__block {
+  .type__checkbox .checkbox__block{
     margin-top: 30px;
   }
-
-  .popup__in {
+  .popup__in{
     padding: 15px 20px;
   }
 }
 
-@media (max-width: 320px) {
-
-  .subject__title {
+@media (max-width: 320px){
+  .subject__title{
     font-size: 36px;
   }
 }

@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Pages</title>
+    <title>News Archive</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
     <meta name="theme-color" content="#f6cb02">
@@ -41,9 +41,8 @@
     <div class="out">
       <!--BEGIN  header-->
       <header class="header">
-        <div class="header__in"> <button type="button" class="header__home header__home_btn js-close-chapter">
-<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</button> <button type="button" class="header__burger burger js-toggle-menu">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -122,32 +121,50 @@
           </nav>
           </div>
         </div>
-        <div class="container">
-          <ul class="z">
-            <li><a href="main.html">Main page</a></li>
-            <li><a href="search.html">Search page</a></li>
-            <li><a href="search-advanced.html">Advanced search page</a></li>
-            <li><a href="yacht.html">Yacht page</a></li>
-            <li><a href="calendar.html">Calendar page</a></li>
-            <li><a href="yacht-wiki.html">Yacht Wiki</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="404.html">404</a></li>
-            <li><a href="regatta.html">Regatta</a></li>
-            <li><a href="news-detail.html">News Detail</a></li>
-            <li><a href="yacht-wiki-archive.html">Yacht Wiki Archive</a></li>
-            <li><a href="news-page.html">News Page</a></li>
-            <li><a href="news-page-archive.html">News Page Archive</a></li>
-            <li><a href="event.html">Event</a></li>
-          </ul>
+        <div class="np-header">
+          <div class="np-header__controlls"> <label class="checkbox np-header__checkbox np-header__checkbox_news">
+        <input type="checkbox">
+        <span class="checkbox__block"></span>
+        <span>Новости</span>
+      </label> <label class="checkbox np-header__checkbox np-header__checkbox_event">
+        <input type="checkbox">
+        <span class="checkbox__block"></span>
+        <span>События</span>
+      </label> </div>
+          <div class="np-header__btn-container"> <a href="#" class="button button_yellow button_sm ">Свежие новости</a> </div>
         </div>
-        <style>
-          .z a {
-            font-size: 30px;
-            color: #f6cb02
-          }
-
-        </style>
+        <div class="np-content">
+          <div class="np-item np-item_news" style='background-image: url(img/news/news-bg.jpg);'>
+            <div class="np-item__content">
+              <div class="np-item__title">Где отдыхать на яхте <br>зимой</div>
+              <div class="np-item__date">ноябрь 8, 2016</div>
+            </div>
+          </div>
+          <div class="np-item np-item_event" style='background-image: url(img/news/news-bg.jpg);'>
+            <div class="np-item__content">
+              <div class="np-item__title">Где отдыхать на яхте <br>зимой</div>
+              <div class="np-item__date">ноябрь 8, 2016</div>
+            </div>
+          </div>
+          <div class="np-item np-item_event" style='background-image: url(img/news/news-bg.jpg);'>
+            <div class="np-item__content">
+              <div class="np-item__title">Где отдыхать на яхте <br>зимой</div>
+              <div class="np-item__date">ноябрь 8, 2016</div>
+            </div>
+          </div>
+          <div class="np-item np-item_event" style='background-image: url(img/news/news-bg.jpg);'>
+            <div class="np-item__content">
+              <div class="np-item__title">Где отдыхать на яхте <br>зимой</div>
+              <div class="np-item__date">ноябрь 8, 2016</div>
+            </div>
+          </div>
+          <div class="np-item np-item_event" style='background-image: url(img/news/news-bg.jpg);'>
+            <div class="np-item__content">
+              <div class="np-item__title">Где отдыхать на яхте <br>зимой</div>
+              <div class="np-item__date">ноябрь 8, 2016</div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- END content -->
       <!-- BEGIN scripts -->

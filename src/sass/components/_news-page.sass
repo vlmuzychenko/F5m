@@ -1,0 +1,69 @@
+.np-header
+  padding: 5px 15px
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
+  width: 100%
+  position: fixed
+  top: 60px
+  background-color: #fff
+  +clr
+  &__controlls
+    float: left
+  &__checkbox
+    display: inline-block
+    vertical-align: top
+    line-height: 50px
+    &:not(:last-child)
+      margin-right: 10px
+    &_event
+      input[type="checkbox"] + .checkbox__block
+        border-color: #ee5004
+    &_event
+      input[type="checkbox"]:checked + .checkbox__block
+        background-color: #ee5004
+    .checkbox__block
+      height: 25px
+      width: 25px
+      margin-top: 13px
+    span
+      display: inline-block
+      vertical-align: top
+      font-size: 21px
+      +reg
+  &__btn-container
+    float: right
+.np-content
+  padding: 10px
+  margin-top: 60px
+.np-item
+  height: 350px
+  box-sizing: border-box
+  margin-bottom: 10px
+  +cover
+  .np-item__content:before
+    width: 75px
+    padding: 0 5px 3px
+    font-size: 18px
+    +f-demi
+  &_news
+    .np-item__content:before
+      content: 'новости'
+      color: #000
+      background-color: $primary
+  &_event
+    .np-item__content:before
+      content: 'событие'
+      color: #000
+      background-color: #ee5004
+  &__content
+    padding: 160px 40px 0
+  &__title
+    margin-top: 20px
+    font-size: 24px
+    line-height: 24px
+    color: #fff
+    +f-demi
+  &__date
+    font-size: 18px
+    color: #fff
+    margin-top: 15px
+    +reg
