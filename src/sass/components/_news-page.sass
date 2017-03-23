@@ -39,20 +39,15 @@
   box-sizing: border-box
   margin-bottom: 10px
   +cover
-  .np-item__content:before
+  &__label
     width: 75px
     padding: 0 5px 3px
     font-size: 18px
+    color: #000
     +f-demi
-  &_news
-    .np-item__content:before
-      content: 'новости'
-      color: #000
+    &_news
       background-color: $primary
-  &_event
-    .np-item__content:before
-      content: 'событие'
-      color: #000
+    &_event
       background-color: #ee5004
   &__content
     padding: 160px 40px 0
