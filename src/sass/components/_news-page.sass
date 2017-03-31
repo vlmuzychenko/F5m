@@ -3,6 +3,7 @@
   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21)
   width: 100%
   position: fixed
+  z-index: 100
   top: 60px
   background-color: #fff
   +clr
@@ -38,6 +39,12 @@
   height: 350px
   box-sizing: border-box
   margin-bottom: 10px
+  &:before
+      content: ''
+      position: absolute
+      width: calc(100% - 20px)
+      height: inherit
+      background: linear-gradient(to top, rgba(0, 0, 0, .5), transparent)
   +cover
   &__label
     width: 75px
@@ -51,6 +58,8 @@
       background-color: #ee5004
   &__content
     padding: 160px 40px 0
+    z-index: 10
+    position: relative
   &__title
     margin-top: 20px
     font-size: 24px

@@ -3857,11 +3857,16 @@ a {
 }
 
 .datepicker {
-  position: relative;
+  position: fixed;
+  background-color: #fff;
+  z-index: 10;
+  width: 100%;
+  top: 60px;
 }
 
 .datepicker__row {
   text-align: center;
+  padding: 5px 0;
   *zoom: 1;
 }
 
@@ -4030,6 +4035,10 @@ a {
   height: 100%;
   padding-top: 5px;
   min-height: 520px;
+  background-image: url("../img/mob_cal_bg_002.png");
+  background-image-background-repeat: no-repeat;
+  background-image-background-size: cover;
+  background-image-background-position: 50% 50%;
 }
 
 .events__chapter {
@@ -4043,6 +4052,7 @@ a {
   margin-right: 7px;
   text-align: center;
   box-shadow: 3px 0 8px -3px rgba(0, 0, 0, 0.21);
+  background-color: #fff;
   text-align: center;
   font-size: 0;
   letter-spacing: 2px;
@@ -4774,6 +4784,10 @@ a {
 
 .description__actions > div:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.description__actions > div .button {
+  font-size: 16px;
 }
 
 .description__table {
@@ -6398,6 +6412,7 @@ a {
   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.21);
   width: 100%;
   position: fixed;
+  z-index: 100;
   top: 60px;
   background-color: #fff;
   *zoom: 1;
@@ -6462,6 +6477,14 @@ a {
   background-position: 50% 50%;
 }
 
+.np-item:before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 20px);
+  height: inherit;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
 .np-item__label {
   width: 75px;
   padding: 0 5px 3px;
@@ -6480,6 +6503,8 @@ a {
 
 .np-item__content {
   padding: 160px 40px 0;
+  z-index: 10;
+  position: relative;
 }
 
 .np-item__title {

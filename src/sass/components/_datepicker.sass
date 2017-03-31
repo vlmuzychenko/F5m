@@ -1,7 +1,12 @@
 .datepicker
-	position: relative
+	position: fixed
+	background-color: #fff
+	z-index: 10
+	width: 100%
+	top: 60px
 	&__row
 		text-align: center
+		padding: 5px 0
 		+clr
 	&__btn-left, &__btn-right, &__select
 		display: inline-block
@@ -91,7 +96,3 @@
 		font-size: 14px
 		.datepicker__input
 			padding: 10px 0
-
-
-
-
