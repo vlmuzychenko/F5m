@@ -256,4 +256,23 @@ let popupMore = new Popup({
 	// 	// e.preventDefault();
 	// });
 
+
+	$('.js-select-multiple').each(function () {
+		 $(this).multipleSelect({
+				width: '100%',
+				placeholder: $(this).attr('placeholder'),
+				countSelected: ' # из % выбрано',
+				selectAll: false,
+				allSelected: 'Все выбрано'
+		 });
+	});
+
+	$('.js-select-single').each(function () {
+		 $(this).multipleSelect({
+				width: '100%',
+				placeholder: $(this).attr('placeholder'),
+				single: true
+		 });
+	});
+
 })();
