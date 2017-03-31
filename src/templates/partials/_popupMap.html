@@ -1,5 +1,12 @@
 <div class="popup popup_map js-popup-map" data-popup="map">
 	<button class="popup__close btn-close js-close-popup-map">{{mixins.icon('close')}}</button>
+	<div class="yacht-map__search-move js-yacht-map-move checkbox">
+		<label for="yacht-map-move" class="checkbox checkbox_left checkbox_mod">
+			<span class="checkbox__name">Поиск при перемещении карты</span>
+			<input type='checkbox' id='yacht-map-move' name=''>
+			<span class="checkbox__block"></span>
+		</label>
+	</div>
 	<div class="popup__map map" id="map"></div>
 
 	{% if mapBtns !== false %}

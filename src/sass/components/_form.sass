@@ -213,3 +213,15 @@
 	&__slider
 		margin-top: 30px
 		margin-bottom: 15px
+
+.js-select-multiple li span
+	margin-left: 10px
+
+.js-select-multiple li::before
+	width: 18px
+	height: 18px
+	border: 1px solid #000
+
+.js-select-multiple li.selected::before
+	background: svg-load('../../build/img/check.svg', fill=#fff) #000 center center no-repeat
+	background-size: 16px 16px

@@ -19,3 +19,29 @@
 			fill: #e2e2e2
 			font-size: 30px
 
+.yacht-map__search-move
+	 position: absolute
+	 min-width: 248px
+	 height: 33px
+	 line-height: 33px
+	 z-index: 1
+	 padding: 6px 10px
+	 top: 20px
+	 left: 15px
+	 box-shadow: 0 0 8px rgba(0, 0, 0, 0.19)
+	 background-color: #f6cb02
+	 label
+			margin-left: 10px
+			+coverdiv
+	 .checkbox__name
+			color: #000
+			font-size: 14px
+			display: inline-block
+			vertical-align: top
+	 .checkbox__block
+			width: 14px
+			height: 14px
+			border: 1px solid #000
+			margin-top: 10px
+	 .checkbox_mod input[type="checkbox"]:checked + .checkbox__block
+	 		background-size: 12px 12px

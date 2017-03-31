@@ -168,7 +168,7 @@ let popupMore = new Popup({
 })();
 
 (function() {
-	let typeBtn = $('.js-type');
+	/*let typeBtn = $('.js-type');
 	let items = $('.js-item');
 
 	typeBtn.on('click', function(e) {
@@ -185,8 +185,26 @@ let popupMore = new Popup({
 			? items.addClass('item_list')
 			: items.removeClass('item_list');
 
-	});
+	});*/
 })();
+
+$(document).on('click', '.js-type', function(e){
+	e.preventDefault();
+
+	let typeBtn = $('.js-type');
+	let items = $('.js-item');
+
+	let target = $(this);
+	let type = target.data('type');
+	if(target.hasClass('is-active')) return null;
+
+	typeBtn.removeClass('is-active');
+	target.addClass('is-active');
+
+	type == 'list'
+		? items.addClass('item_list')
+		: items.removeClass('item_list');
+});
 
 (function() {
 	let moreBtn = $('.js-show-more');
