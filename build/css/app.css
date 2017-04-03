@@ -4630,8 +4630,7 @@ a {
   padding: 0 20px 0 95px;
 }
 
-.type__checkbox:before {
-  content: '';
+.type__icon {
   position: absolute;
   font-size: 10px;
   top: 50%;
@@ -4639,10 +4638,10 @@ a {
   height: 6.5em;
   width: 5em;
   margin-top: -32px;
-  background: url("../img/yacht.png") center/cover no-repeat;
+  background: center / cover no-repeat;
 }
 
-.type__checkbox .checkbox__block {
+.type .checkbox__block {
   float: right;
   margin-top: 40px;
 }
@@ -6273,8 +6272,9 @@ a {
 }
 
 .detail-page {
-  height: 100%;
-  min-height: 480px;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 80px;
 }
 
 .detail-page__slider {
@@ -6392,11 +6392,18 @@ a {
 
 .detail-page__btn-container {
   width: 50%;
-  margin: 30px auto;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
 }
 
 .detail-page__btn-container .button:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.detail-page .yw-socials {
+  position: absolute;
+  bottom: 0;
 }
 
 .yw-socials_yellow {
@@ -6738,12 +6745,12 @@ a {
     padding-left: 70px;
   }
 
-  .type__checkbox:before {
+  .type__icon {
     left: 15px;
     font-size: 8px;
   }
 
-  .type__checkbox .checkbox__block {
+  .type .checkbox__block {
     margin-top: 30px;
   }
 
