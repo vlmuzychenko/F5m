@@ -2694,6 +2694,20 @@ a {
   border: 1px solid #f6cb02;
 }
 
+.checkbox__img {
+  content: '';
+  position: absolute;
+  font-size: 4px;
+  top: 50%;
+  left: 0;
+  height: 6.5em;
+  width: 5em;
+  margin-top: -16px;
+  background: center/cover no-repeat;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 .checkbox_dark input[type="checkbox"]:checked + .checkbox__block {
   background-color: #000;
 }
@@ -2705,20 +2719,6 @@ a {
 .checkbox_icon {
   position: relative;
   padding-left: 30px;
-}
-
-.checkbox_icon:before {
-  content: '';
-  position: absolute;
-  font-size: 4px;
-  top: 50%;
-  left: 0;
-  height: 6.5em;
-  width: 5em;
-  margin-top: -16px;
-  background: url(../img/yacht.png) center/cover no-repeat;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 .checkbox_mod {
@@ -2785,7 +2785,7 @@ a {
   height: 16px;
   position: absolute;
   background: #f6cb02;
-  left: -50%;
+  left: -30px;
   top: 21px;
   border-radius: 8px;
   -webkit-animation-duration: 1.5s;

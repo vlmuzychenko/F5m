@@ -15,6 +15,18 @@
 		width: 40px
 		border: 1px solid $primary
 
+	&__img
+		content: ''
+		position: absolute
+		font-size: 4px
+		top: 50%
+		left: 0
+		height: 6.5em
+		width: 5em
+		margin-top: -16px
+		background: center/cover no-repeat
+		+gpu
+
 .checkbox_dark
 	input[type="checkbox"]
 		&:checked + .checkbox__block
@@ -25,17 +37,6 @@
 .checkbox_icon
 	position: relative
 	padding-left: 30px
-	&:before
-		content: ''
-		position: absolute
-		font-size: 4px
-		top: 50%
-		left: 0
-		height: 6.5em
-		width: 5em
-		margin-top: -16px
-		background: url(../img/yacht.png) center/cover no-repeat
-		+gpu
 
 .checkbox_mod
 	position: relative
