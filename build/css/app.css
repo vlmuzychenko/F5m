@@ -2775,6 +2775,27 @@ a {
   margin: 0 12px;
 }
 
+.nav__slide:first-child {
+  position: relative;
+}
+
+.nav__slide:first-child:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background: #f6cb02;
+  left: -50%;
+  top: 21px;
+  border-radius: 8px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+
 .nav__slide.swiper-slide-active {
   opacity: 1;
 }
@@ -2790,6 +2811,28 @@ a {
   transition: -webkit-transform .4s ease;
   transition: transform .4s ease;
   transition: transform .4s ease, -webkit-transform .4s ease;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-46px);
+    transform: translateX(-46px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-46px);
+    transform: translateX(-46px);
+  }
 }
 
 .message {
@@ -5199,11 +5242,12 @@ a {
 
 .yw__video-btn span {
   font-family: "Casper-Bold", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   color: #fff;
   display: block;
-  padding-top: 103px;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  padding-top: 110px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .yw__video-btn span::before {
@@ -5212,7 +5256,7 @@ a {
   top: 0;
   left: 50%;
   width: 103px;
-  height: 103px;
+  height: 104px;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);

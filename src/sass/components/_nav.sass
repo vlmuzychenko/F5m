@@ -19,6 +19,20 @@
 		height: 60px
 		line-height: 60px
 		margin: 0 12px
+		&:first-child
+			position: relative
+			&:before
+				content: ''
+				width: 16px
+				height: 16px
+				position: absolute
+				background: $primary
+				left: -50%
+				top: 21px
+				border-radius: 8px
+				animation-duration: 1.5s
+				animation-iteration-count: infinite
+				animation-name: scroll
 		&.swiper-slide-active
 			opacity: 1
 			.nav__item
@@ -27,3 +41,10 @@
 		+f-demi
 		text-transform: uppercase
 		transition: transform .4s ease
+
+@keyframes scroll
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+		transform: translateX(-46px)
