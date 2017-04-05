@@ -6351,6 +6351,10 @@ a {
   background-position: 50% 50%;
 }
 
+.detail-page__slider .slick-slide {
+  position: relative;
+}
+
 .detail-page__slider .slick-dots {
   position: absolute;
   bottom: 15px;
@@ -6438,14 +6442,25 @@ a {
 }
 
 .detail-page__btn-container {
-  width: 50%;
-  margin: 0 auto;
+  text-align: center;
   margin-top: 30px;
   margin-bottom: 100px;
 }
 
 .detail-page__btn-container .button:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.detail-page .detail-page__slider .detail-page__video-btn {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  background-image: url(../img/video-btn.png);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .detail-page .yw-socials {
