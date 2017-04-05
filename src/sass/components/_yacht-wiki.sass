@@ -22,9 +22,11 @@
 		overflow: auto
 	&__content
 		.swiper-slide
+			position: relative
+			height: calc(100vh - 120px)
+			overflow: auto
 			> *
 				box-sizing: border-box
-			position: relative
 
 	&__message
 		position: absolute

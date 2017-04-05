@@ -262,18 +262,6 @@ $(document).on('click', '.js-type', function(e){
 		e.preventDefault();
 	});
 
-	// $('.chapters__items, .chapters, body').on('scroll',function(e) {
-	// 	console.log('scrolling');
-	// 	// var event = e.originalEvent,
-	// 	// 	d = event.wheelDelta || -event.detail;
-	//
-	// 	// console.log($('.js-chapter-inner.is-active').length);
-	// 	// this.scrollTop += ( d < 0 ? 1 : -1 ) * 30;
-	// 	if($('.js-chapter-inner.is-active').length) this.scrollTop = 0;
-	//
-	// 	// e.preventDefault();
-	// });
-
 
 	$('.js-select-multiple').each(function () {
 		 $(this).multipleSelect({
