@@ -1,0 +1,41 @@
+.yacht
+  &__preloader-container
+    width: 100vw
+    height: calc(100vh - 120px)
+    position: absolute
+    left: 0
+    top: 60px
+    background-color: #fff
+    z-index: 999
+    display: none
+    &.active
+      display: block
+  &__preloader
+    width: 340px
+    position: absolute
+    left: 50%
+    top: 30%
+    transform: translate(-50%, 0%)
+    text-align: center
+    display: none
+    &.active
+      display: block
+    &_res-no
+      display: block
+      display: none
+      &.active
+        display: block
+  &__preloader-icon
+    width: 55px
+    margin: 0 auto
+    margin-top: 10%
+  &__preloader-text
+    +f-bold
+    color: #333333
+    text-transform: uppercase
+    font-size: 20px
+    opacity: .8
+    padding-top: 15px
+    span
+      +f-demi
+      display: block

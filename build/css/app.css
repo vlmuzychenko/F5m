@@ -6748,6 +6748,66 @@ a {
   transform: translateX(-50%);
 }
 
+.yacht__preloader-container {
+  width: 100vw;
+  height: calc(100vh - 120px);
+  position: absolute;
+  left: 0;
+  top: 60px;
+  background-color: #fff;
+  z-index: 999;
+  display: none;
+}
+
+.yacht__preloader-container.active {
+  display: block;
+}
+
+.yacht__preloader {
+  width: 340px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  text-align: center;
+  display: none;
+}
+
+.yacht__preloader.active {
+  display: block;
+}
+
+.yacht__preloader_res-no {
+  display: block;
+  display: none;
+}
+
+.yacht__preloader_res-no.active {
+  display: block;
+}
+
+.yacht__preloader-icon {
+  width: 55px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.yacht__preloader-text {
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 20px;
+  opacity: .8;
+  padding-top: 15px;
+}
+
+.yacht__preloader-text span {
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  display: block;
+}
+
 @media only screen and (min-width: 320px) {
 
   .yw-descr__pic {
