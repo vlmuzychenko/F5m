@@ -6763,6 +6763,11 @@ a {
   display: block;
 }
 
+.yacht__preloader-container.active_res-no {
+  display: block;
+  z-index: 0;
+}
+
 .yacht__preloader {
   width: 340px;
   position: absolute;
