@@ -5293,7 +5293,12 @@ a {
   text-align: center;
   padding-top: 30px;
   width: 50%;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 .yw-descr__btn-container .button {
