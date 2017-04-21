@@ -3565,16 +3565,16 @@ a {
   transition: all .25s ease-in-out;
 }
 
-.btn-share:hover, .btn-share.is-shared {
+.btn-share.is-shared {
   background-color: #475993;
 }
 
-.btn-share:hover .btn-share__icon, .btn-share.is-shared .btn-share__icon {
+.btn-share.is-shared .btn-share__icon {
   left: 18%;
   background-color: #fff;
 }
 
-.btn-share:hover .btn-share__icon i path, .btn-share.is-shared .btn-share__icon i path {
+.btn-share.is-shared .btn-share__icon i path {
   fill: #475993;
 }
 
