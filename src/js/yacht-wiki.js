@@ -33,8 +33,8 @@ $(function(){
      fade: true,
      swipe: false,
      cssEase: 'linear',
-     prevArrow: $('.yw-p__slider-btn-left'),
-     nextArrow: $('.yw-p__slider-btn-right')
+     prevArrow: $('.js-p__slider-btn-left'),
+     nextArrow: $('.js-p__slider-btn-right')
   });
 
   $('.js-yw-programm-slider-flot').slick({
@@ -46,8 +46,8 @@ $(function(){
      fade: true,
      swipe: false,
      cssEase: 'linear',
-     prevArrow: $('.yw-flot__slider-btn-left'),
-     nextArrow: $('.yw-flot__slider-btn-right')
+     prevArrow: $('.js-flot__slider-btn-left'),
+     nextArrow: $('.js-flot__slider-btn-right')
   });
 
   $('.js-thnk-stat').click(function(){
