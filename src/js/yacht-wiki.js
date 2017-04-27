@@ -37,6 +37,19 @@ $(function(){
      nextArrow: $('.yw-p__slider-btn-right')
   });
 
+  $('.js-yw-programm-slider-flot').slick({
+     useTransform: true,
+     slidesToShow: 1,
+     infinite: false,
+     slidesToScroll: 1,
+     draggable: false,
+     fade: true,
+     swipe: false,
+     cssEase: 'linear',
+     prevArrow: $('.yw-flot__slider-btn-left'),
+     nextArrow: $('.yw-flot__slider-btn-right')
+  });
+
   $('.js-thnk-stat').click(function(){
     $('.yw-form-wrap').fadeOut(500);
     $('.popup-thnk').delay(500).fadeIn();
