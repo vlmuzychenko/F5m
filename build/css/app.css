@@ -5811,6 +5811,12 @@ a {
   min-height: calc(100vh - 120px);
 }
 
+.ac-license p {
+  font-size: 24px;
+  color: #fff;
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+}
+
 .ac-license__list {
   margin-bottom: 30px;
 }
