@@ -20,8 +20,22 @@
 				box-sizing: border-box
 			position: relative
 .ac-license
-	height: calc(100vh - 120px)
-	min-height: 650px
+	min-height: calc(100vh - 120px)
+	&__list
+		margin-bottom: 30px
+	&__list-item
+		text-indent: 20px
+		font-size: 24px
+		position: relative
+		+f-demi
+		&:before
+			content: '/'
+			left: -20px
+			top: 0
+			font-size: 1em
+			color: $primary
+			position: absolute
+			+f-demi
 .ac-license
   &__pic
     height: 190px
@@ -32,11 +46,16 @@
     +cover
   &__title
     +f-bold
-    font-size: 60px
-    color: $white
+    font-size: 36px
+    line-height: 1em
+    color: $primary
     text-transform: uppercase
+    margin-bottom: 25px
+    padding-top: 30px
+		span
+			font-size: 60px
   &__content
-    min-height: calc(100% - 190px)
+    min-height: 100%
     background-color: #000
   &__text
     font-size: 18px
@@ -354,3 +373,8 @@
 		margin: 0 auto
 		.button
 			margin-top: 40px
+
+.ac-form
+	background-color: $primary
+	padding: 20px
+	min-height: calc(100vh - 120px)

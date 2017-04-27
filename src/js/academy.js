@@ -20,12 +20,4 @@ $(function(){
     prevArrow: $('.gallery__slider-btn-left'),
     nextArrow: $('.gallery__slider-btn-right')
   });
-
-  $('.js-select-single').each(function () {
-     $(this).multipleSelect({
-        width: '100%',
-        placeholder: $(this).attr('placeholder'),
-        single: true
-     });
-  });
 })

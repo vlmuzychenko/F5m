@@ -143,6 +143,9 @@
                 <div class="nav__slide swiper-slide">
                   <div class="nav__item">фмк</div>
                 </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">записаться</div>
+                </div>
               </div>
               <div class="nav__line js-nav-line"></div>
             </div>
@@ -152,14 +155,17 @@
               <div class="ac__content swiper-wrapper ">
                 <div class="swiper-slide">
                   <div class="ac-license">
-                    <div class="ac-license__pic">
-                      <div class="ac-license__title">лицензия iyt</div>
-                    </div>
                     <div class="ac-license__content">
-                      <div class="ac-license__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-                      <div class="ac-license__btn-container">
-                      <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a> </div>
+                      <div class="ac-license__text">
+                        <div class="ac-license__title"> <span>IYT</span> <br>International <br>Yacht <br>Training </div>
+                        <ul class="ac-license__list">
+                          <li class="ac-license__list-item">Профессиональные курсы IYT MOY 200T официально одобрены американским US Coastguard и английской MCA, они легитимны на яхтах под всеми флагами британского содружества, США и ещё ряда островных государств в Карибском бассейне и
+                            тихом океане. </li>
+                          <li class="ac-license__list-item">Любительские сертификаты IYT распознаются чартерными компаниями повсеместно. </li>
+                          <li class="ac-license__list-item">В школах сети IYT вы можете, одновременно с дипломом IYT, получить европейский сертификат ICC.</li>
+                        </ul>
+                      </div>
+                      <div class="ac-course__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="academy">Записаться</a> <a href="#" class="button button_dark button_lg ">Календарь</a> </div>
                     </div>
                   </div>
                 </div>
@@ -328,6 +334,38 @@
                     </div>
                   </div>
                 </div>
+                <div class="swiper-slide">
+                  <div class="ac-form">
+                    <form action="">
+                      <div class="form__field">
+                        <div class="input input_lg input_op"> <input id="formName" type="text" class="input__main" placeholder="ФИО"> <label class="input__label" for="formName">Имя и фамилия</label> </div>
+                      </div>
+                      <div class="form__field">
+                        <div class="input input_lg input_op"> <input id="formPhone" type="tel" class="input__main js-phone" placeholder="(0--) --- -- --"> <label class="input__label" for="formPhone">Телефон</label> </div>
+                      </div>
+                      <div class="form__field">
+                        <div class="input input_lg input_op"> <input id="formEmail" type="email" class="input__main" placeholder="name@mail.com"> <label class="input__label" for="formEmail">Email</label> </div>
+                      </div>
+                      <div class="form__field">
+                        <div class="input input_lg input_op js-select-field input-academy_dropdown"> <select name="" id="" class="js-select-single">
+			              <option>Не определился</option>
+			              <option>25.02 (по субботам)</option>
+			              <option>28.02 (по вторникам и четвергам)</option>
+			              <option>6.03 (по понедельникам и средам)</option>
+			            </select> <label for="" class="input__label">Старт ближайшего курса</label>
+                          <div class="input__descr"> <span>Занятия проводятся по таким дням:</span>
+                            <ol>
+                              <li>1. Понедельник-среда</li>
+                              <li>2. Вторник-четверг</li>
+                              <li>3. Суббота (занятие длится _ часов)</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__field form__field_center"> <button type="button" class="button button_lg js-thnk">Записаться</button> </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -349,10 +387,10 @@
                 </div>
                 <div class="form__field">
                   <div class="input input_lg input_op js-select-field input-academy_dropdown"> <select name="" id="" class="js-select-single">
-              <option value="Не определился">Не определился</option>
-              <option value="25.02 (по субботам)">25.02 (по субботам)</option>
-              <option value="28.02 (по вторникам и четвергам)">28.02 (по вторникам и четвергам)</option>
-              <option value="6.03 (по понедельникам и средам)">6.03 (по понедельникам и средам)</option>
+              <option>Не определился</option>
+              <option>25.02 (по субботам)</option>
+              <option>28.02 (по вторникам и четвергам)</option>
+              <option>6.03 (по понедельникам и средам)</option>
             </select> <label for="" class="input__label">Старт ближайшего курса</label>
                     <div class="input__descr"> <span>Занятия проводятся по таким дням:</span>
                       <ol>
