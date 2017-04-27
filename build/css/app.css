@@ -3210,6 +3210,7 @@ a {
 
 .button_xxl {
   width: 280px;
+  vertical-align: top;
 }
 
 .button_xl {
@@ -3542,6 +3543,90 @@ a {
 .js-select-multiple li.selected::before {
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%3E %3Cpath clip-rule='evenodd' d='M21.652 3.211a.747.747 0 0 0-1.061 0L9.41 14.34a.744.744 0 0 1-1.062 0L3.449 9.351a.743.743 0 0 0-1.062 0L.222 11.297a.751.751 0 0 0 .001 1.07l4.94 5.184c.292.296.771.776 1.062 1.07l2.124 2.141a.751.751 0 0 0 1.062 0l14.366-14.34a.762.762 0 0 0 0-1.071l-2.125-2.14z' fill-rule='evenodd'/%3E %3C/svg%3E") #000 center center no-repeat;
   background-size: 16px 16px;
+}
+
+.btn-share {
+  border: 1px solid #475993;
+  text-align: center;
+  outline: none;
+  background-color: #fff;
+  display: inline-block;
+  overflow: hidden;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 25px;
+  width: 130px;
+  margin-bottom: 20px;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+  transition: all .25s ease-in-out;
+}
+
+.btn-share.is-shared {
+  background-color: #475993;
+}
+
+.btn-share.is-shared .btn-share__icon {
+  left: 18%;
+  background-color: #fff;
+}
+
+.btn-share.is-shared .btn-share__icon i path {
+  fill: #475993;
+}
+
+.btn-share__icon {
+  border-radius: 50%;
+  background-color: #475993;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 82%;
+  transition: all .25s ease-in-out;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-share__icon:before, .btn-share__icon:after {
+  content: 'Share it';
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  position: relative;
+  width: 60px;
+  display: block;
+}
+
+.btn-share__icon:before {
+  color: #475993;
+  left: -69px;
+  top: -5px;
+}
+
+.btn-share__icon:after {
+  color: #fff;
+  left: 45px;
+  top: -55px;
+}
+
+.btn-share__icon i {
+  width: 15px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn-share__icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .dates {
@@ -6448,8 +6533,8 @@ a {
 
 .detail-page__btn-container {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 100px;
+  margin: 30px auto 100px;
+  width: 280px;
 }
 
 .detail-page__btn-container .button:not(:last-child) {
