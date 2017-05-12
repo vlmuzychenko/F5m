@@ -43,63 +43,37 @@ let popup = new Popup({
 	popupOpen: '.js-open-popup'
 });
 
-/*let popupMore = new Popup({
-	popup: '.js-popup-more',
-	popupClose: '.js-close-popup-more',
-	popupOpen: '.js-open-popup-more',
-	popupIn: '.js-popup-more-in',
-	hideFromParent: true,
-	beforeOpen(popup,e) {
-		let target = $(e.currentTarget);
-
-		let more = target.data('information-for-popup');
-		const {title, img, text, link} = more;
-
-		let moreTitle = popup.find('.js-more-title');
-		let moreImg = popup.find('.js-more-photo');
-		let moreText = popup.find('.js-more-text');
-		let moreLink = popup.find('.js-more-link');
-
-		moreTitle.text(title);
-		moreText.html(text);
-		moreImg.css('background-image', `url(${img})`);
-		moreLink.attr('href', link);
-	}
-});*/
-
-var popupMore = new Popup({
+let popupMore = new Popup({
     popup: '.js-popup-more',
     popupClose: '.js-close-popup-more',
     popupOpen: '.js-open-popup-more',
     popupIn: '.js-popup-more-in',
     hideFromParent: true,
-    beforeOpen: function beforeOpen(popup, e) {
-        var target = $(e.currentTarget);
+    beforeOpen(popup,e) {
+        let target = $(e.currentTarget);
 
-        var more = target.parents('.js-infromation-more');
+        let more = target.data('information-for-popup');
+        const {
+            title,
+            img,
+            text,
+            link,
+            moreBtn,
+            more_mess,
+            actualBtn,
+            actual_mess,
+            actual_link,
+            writeBtn
+        } = more;
 
-        var _more$data = more.data('information-for-popup'),
-            title = _more$data.title,
-            img = _more$data.img,
-            text = _more$data.text,
-            link = _more$data.link,
-            moreBtn = _more$data.more,
-            more_mess = _more$data.more_mess,
-            actualBtn = _more$data.actual,
-            actual_mess = _more$data.actual_mess,
-            actual_link = _more$data.actual_link,
-            writeBtn = _more$data.write;
-
-
-
-        var moreTitle = popup.find('.js-more-title');
-        var moreImg = popup.find('.js-more-photo');
-        var moreText = popup.find('.js-more-text');
-        var moreLink = popup.find('.js-more-link');
+        let moreTitle = popup.find('.js-more-title');
+        let moreImg = popup.find('.js-more-photo');
+        let moreText = popup.find('.js-more-text');
+        let moreLink = popup.find('.js-more-link');
 
         moreTitle.text(title);
         moreText.html(text);
-        moreImg.css('background-image', 'url(' + img + ')');
+        moreImg.css('background-image', `url(${img})`);
         moreLink.attr('href', link);
 
         if(moreBtn == 1){
@@ -108,7 +82,6 @@ var popupMore = new Popup({
         }else{
             $('.js-more-link').css('display','none');
         }
-
         if(actualBtn == 1){
             $('.actual_items').text(actual_mess);
             $('.actual_items').attr('href',actual_link);
@@ -116,7 +89,6 @@ var popupMore = new Popup({
         }else{
             $('.actual_items').css('display','none');
         }
-
         if(writeBtn == 1){
             $('.js-open-popup').css('display','block');
         }else{
