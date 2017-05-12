@@ -43,7 +43,7 @@ let popup = new Popup({
 	popupOpen: '.js-open-popup'
 });
 
-let popupMore = new Popup({
+/*let popupMore = new Popup({
 	popup: '.js-popup-more',
 	popupClose: '.js-close-popup-more',
 	popupOpen: '.js-open-popup-more',
@@ -65,6 +65,65 @@ let popupMore = new Popup({
 		moreImg.css('background-image', `url(${img})`);
 		moreLink.attr('href', link);
 	}
+});*/
+
+var popupMore = new Popup({
+    popup: '.js-popup-more',
+    popupClose: '.js-close-popup-more',
+    popupOpen: '.js-open-popup-more',
+    popupIn: '.js-popup-more-in',
+    hideFromParent: true,
+    beforeOpen: function beforeOpen(popup, e) {
+        var target = $(e.currentTarget);
+
+        var more = target.parents('.js-infromation-more');
+
+        var _more$data = more.data('information-for-popup'),
+            title = _more$data.title,
+            img = _more$data.img,
+            text = _more$data.text,
+            link = _more$data.link,
+            moreBtn = _more$data.more,
+            more_mess = _more$data.more_mess,
+            actualBtn = _more$data.actual,
+            actual_mess = _more$data.actual_mess,
+            actual_link = _more$data.actual_link,
+            writeBtn = _more$data.write;
+
+
+
+        var moreTitle = popup.find('.js-more-title');
+        var moreImg = popup.find('.js-more-photo');
+        var moreText = popup.find('.js-more-text');
+        var moreLink = popup.find('.js-more-link');
+
+        moreTitle.text(title);
+        moreText.html(text);
+        moreImg.css('background-image', 'url(' + img + ')');
+        moreLink.attr('href', link);
+
+        if(moreBtn == 1){
+            $('.js-more-link').text(more_mess);
+            $('.js-more-link').css('display','block');
+        }else{
+            $('.js-more-link').css('display','none');
+        }
+
+        if(actualBtn == 1){
+            $('.actual_items').text(actual_mess);
+            $('.actual_items').attr('href',actual_link);
+            $('.actual_items').css('display','block');
+        }else{
+            $('.actual_items').css('display','none');
+        }
+
+        if(writeBtn == 1){
+            $('.js-open-popup').css('display','block');
+        }else{
+            $('.js-open-popup').css('display','none');
+        }
+
+    }
 });
 
 
