@@ -43,7 +43,7 @@ let popup = new Popup({
 	popupOpen: '.js-open-popup'
 });
 
-let popupMore = new Popup({
+/*let popupMore = new Popup({
     popup: '.js-popup-more',
     popupClose: '.js-close-popup-more',
     popupOpen: '.js-open-popup-more',
@@ -96,7 +96,7 @@ let popupMore = new Popup({
         }
 
     }
-});
+});*/
 
 
 
