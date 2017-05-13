@@ -4314,7 +4314,10 @@ a {
 
 .event-info__btns .button {
   width: 230px;
-  text-transform: uppercase;
+}
+
+.event-info__btns .button_xxl {
+  width: 280px;
 }
 
 .event-info__btns .button:not(:last-child) {
