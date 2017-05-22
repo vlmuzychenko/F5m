@@ -5836,21 +5836,30 @@ a {
   margin-bottom: 30px;
 }
 
+.ac-license__main-title {
+  font-size: 20px;
+  color: #fff;
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  margin-top: 10p;
+}
+
 .ac-license__list-item {
-  text-indent: 20px;
   font-size: 24px;
   position: relative;
   font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  padding-top: 100px;
 }
 
-.ac-license__list-item:before {
-  content: '/';
-  left: -20px;
-  top: 0;
-  font-size: 1em;
-  color: #f6cb02;
+.ac-license__list-icon {
   position: absolute;
-  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  left: 0;
+  top: 20px;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .ac-license__pic {
@@ -5866,12 +5875,12 @@ a {
 
 .ac-license__title {
   font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
-  font-size: 36px;
+  font-size: 60px;
   line-height: 1em;
   color: #f6cb02;
   text-transform: uppercase;
   margin-bottom: 25px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .ac-license span {
