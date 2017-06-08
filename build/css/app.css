@@ -5282,10 +5282,12 @@ a {
 }
 
 .yw__nav {
-  position: absolute;
+  position: fixed;
+  z-index: 999;
   top: 60px;
   left: 0;
   right: 0;
+  background-color: #fff;
 }
 
 .yw__nav .nav__line {
@@ -5798,10 +5800,12 @@ a {
 }
 
 .ac__nav {
-  position: absolute;
+  position: fixed;
+  z-index: 999;
   top: 60px;
   left: 0;
   right: 0;
+  background-color: #fff;
 }
 
 .ac__nav .nav__line {
@@ -5816,6 +5820,8 @@ a {
 
 .ac__content .swiper-slide {
   position: relative;
+  height: calc(100vh - 120px);
+  overflow: auto;
 }
 
 .ac__content .swiper-slide > * {
@@ -6207,6 +6213,7 @@ a {
 .gallery-container {
   height: calc(100vh - 120px);
   min-height: 650px;
+  overflow: hidden;
 }
 
 .gallery {
@@ -7026,6 +7033,20 @@ a {
 
   .subject__title {
     font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  .event {
+    width: 380px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .event {
+    width: 500px;
   }
 }
 

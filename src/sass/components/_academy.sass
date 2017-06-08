@@ -4,10 +4,12 @@
 	margin-top: -60px
 	height: 100vh
 	&__nav
-		position: absolute
+		position: fixed
+		z-index: 999
 		top: 60px
 		left: 0
 		right: 0
+		background-color: #fff
 		.nav__line
 			width: 100px
 	&__body
@@ -16,9 +18,11 @@
 		overflow: auto
 	&__content
 		.swiper-slide
+			position: relative
+			height: calc(100vh - 120px)
+			overflow: auto
 			> *
 				box-sizing: border-box
-			position: relative
 .ac-license
 	min-height: calc(100vh - 120px)
 	p
@@ -263,6 +267,7 @@
 .gallery-container
 	height: calc(100vh - 120px)
 	min-height: 650px
+	overflow: hidden
 
 .gallery
 	height: 500px
