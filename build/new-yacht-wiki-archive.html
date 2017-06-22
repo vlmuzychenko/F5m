@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>New Yacht Wiki Archive</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
+    <meta name="theme-color" content="#f6cb02">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      function resize()
+      {
+        var metaTag = document.querySelector('meta[name="viewport"]');
+        if (metaTag)
+        {
+          metaTag.remove();
+          console.log('metaTag');
+        }
+        metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width < 600)
+        {
+          metaTag.content = "width=480, user-scalable=0";
+        }
+        else
+        {
+          metaTag.content = "width=480, initial-scale=1.0, user-scalable=0";
+        }
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+      }
+      resize();
+      window.addEventListener('orientationchange', resize, false);
+
+    </script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!--BEGIN  header-->
+      <header class="header">
+        <div class="header__in"> <a href="#" class="header__home">
+<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+</a> <button type="button" class="header__burger burger js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button> </div>
+      </header>
+      <!--END  header-->
+      <div class="menu js-menu">
+        <div class="menu__topline"> <a href="#" class="menu__step js-navigation-step">
+<svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg>
+ <span data-root-title="главное меню"></span></a>
+          <!--<button class="menu__close btn-close js-close-menu">
+<svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
+</button>--></div>
+        <!--
+		root | .nav
+			- first level link | .navigation__link
+				- second level link | .navigation__link + .navigation__more
+					-third level link | .navigation__link + .navigation__more
+						-firth level link | .navigation__link
+
+					-third level link | .navigation__link
+
+				- second level link | .navigation__link
+				- second level link | .navigation__link
+			-first level link | .navigation__link
+	-->
+        <div class="menu__navigation">
+          <nav class="navigation js-navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Сервисы</a>
+                <div class="navigation__more js-navigation-more">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"> <a href="#" class="navigation__link">яхт-вики</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link">Аренда яхт</a> </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">регаты</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a>
+                            <div class="navigation__more js-navigation-more">
+                              <ul class="navigation__list">
+                                <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                                <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                              </ul>
+                          </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">Академия</a>
+                      <div class="navigation__more js-navigation-more">
+                        <ul class="navigation__list">
+                          <li class="navigation__item"> <a href="#" class="navigation__link">лицензии</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">теоретический курс</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ПРАКТИЧЕСКИЙ КУРС</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ИНСТРУКТОРЫ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">КЛАССЫ ОБУЧЕНИЯ</a> </li>
+                          <li class="navigation__item"> <a href="#" class="navigation__link">ФЛОТИЛИИ МОЛОДЫХ КАПИТАНОВ</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  </div>
+              </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КАЛЕНДАРЬ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">НОВОСТИ</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link js-open-navigation-more">КОНТАКТЫ</a> </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+        <div class="yw" id='scrl'>
+          <div class="yw__nav">
+            <div class="nav js-nav swiper-container">
+              <div class="nav__list swiper-wrapper swiper-wrapper_archive">
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">описание события</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">детали</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">галерея</div>
+                </div>
+              </div>
+              <div class="nav__line js-nav-line"></div>
+            </div>
+          </div>
+          <div class="yw__body">
+            <div class="swiper-container js-content">
+              <div class="yw__content swiper-wrapper ">
+                <div class="swiper-slide">
+                  <div class="yw-descr">
+                    <div class="yw-descr__pic">
+                      <div class="yw-descr__pic-title"> <span style='color:#ec1c82; font-size: 3em;'>Buongiorno,</span> <span style='color:#fff; font-size: 5em; line-height: .5em;'>Italia!</span> <span style='color:#f6cb02; font-size: 3em;'>29.04 - 06.05</span> <span style='color:#004e9d; font-size: 4em; line-height: .5em;'>2017</span>                        </div>
+                      <div class="yw__video-btn"> <span>Посмотрите видео</span> </div>
+                      <div class="yw-descr__btn-container"> <a href="#" class="button button_yellow button_lg js-open-popup" data-open="registration">Записаться</a> <a href="#" class="button button_lg button_dark">Календарь</a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="detail-page">
+                    <div class="detail-page__slider js-detail-page-slider">
+                      <div style="background-image: url(img/news-detail/news-det-1.jpg);"></div>
+                    </div>
+                    <div class="detail-page__info">
+                      <div class="detail-page__label detail-page__label_gray detail-page__label_s">архив</div>
+                      <div class="detail-page__date">8 ноября 2016</div>
+                    </div>
+                    <div class="detail-page__content">
+                      <div class="detail-page__title">Где отдыхать на яхте зимой</div>
+                      <div class="detail-page__text">Cat ipsum dolor sit amet, hola te quiero. Destroy the blinds kitty scratches couch bad kitty mew sleep in the bathroom sink. Chase laser under the bed.<br>Eat grass, throw it back up immediately regret falling into bathtub. Lick
+                        the plastic bag sniff other cat's butt and hang jaw half open thereafter but present belly, scratch hand when stroked hide when guests come over, for my left donut is missing, as is my right yet lick yarn hanging out of own butt.
+                        Leave hair everywhere. Meow to be let in find empty spot in cupboard and sleep all day, cats go for world domination for give attitude, eat and than sleep on your face. Intrigued by the shower always hungry. Ignore the squirrels,
+                        you'll never catch them anyway.</div>
+                    </div>
+                    <div class="detail-page__btn-container">
+                      <a hred="#" class="btn-share">
+                        <div class="btn-share__icon"> <i>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.413 14.199" enable-background="new 0 0 7.413 14.199" xml:space="preserve">
+                      <g>
+                      	<defs>
+                      		<rect id="SVGID_1_" width="7.413" height="14.199"/>
+                      	</defs>
+                      	<clipPath id="SVGID_2_">
+                      		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+                      	</clipPath>
+                      	<path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M5.911,2.396c0.44-0.015,1.503-0.004,1.503-0.004V0.104
+                      		c-0.235-0.024-0.481-0.058-0.728-0.07C6.235,0.016,5.784-0.007,5.332,0.002C4.643,0.018,3.99,0.186,3.421,0.594
+                      		c-0.654,0.47-1.013,1.131-1.149,1.91C2.215,2.826,2.2,3.159,2.191,3.485C2.179,4,2.189,5.22,2.189,5.22H0v2.555h2.177v6.425h2.66
+                      		V7.785h2.17c0.11-0.85,0.22-1.691,0.334-2.568c-0.175,0-2.521,0-2.521,0S4.825,3.951,4.841,3.4
+                      		C4.861,2.647,5.309,2.417,5.911,2.396"/>
+                      </g>
+                    </svg>
+                  </i> </div>
+                      </a> <a href="#" class="button button_xl button_yellow">Актуальные яхт-вики</a> <a href="#" class="button button_xl">Календарь</a> </div>
+                    <div class="yw-socials yw-socials_yellow"> <a href='#' class="yw-socials__socials-item">
+                
+<svg class="icon icon-yt_black"><use xlink:href="img/sprite.svg#icon-yt_black"></use></svg>
+
+              </a> <a href='#' class="yw-socials__socials-item">
+                
+<svg class="icon icon-fb_black"><use xlink:href="img/sprite.svg#icon-fb_black"></use></svg>
+
+              </a> <a href='#' class="yw-socials__socials-item">
+                
+<svg class="icon icon-inst_black"><use xlink:href="img/sprite.svg#icon-inst_black"></use></svg>
+
+              </a> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="yw-det">
+                    <div class="yw-det__slider yw-det__slider_archive">
+                      <div style='background-image: url(img/yacht-wiki/det-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-1.jpg);'></div>
+                    </div>
+                    <div class="yw-det__slider-nav yw-det__slider-nav_archive">
+                      <div style='background-image: url(img/yacht-wiki/det-p-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-2.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-3.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-4.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-1.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-2.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-3.jpg);'></div>
+                      <div style='background-image: url(img/yacht-wiki/det-p-4.jpg);'></div>
+                    </div>
+                  </div>
+                  <div class="detail-page__btn-container">
+                    <a hred="#" class="btn-share">
+                      <div class="btn-share__icon"> <i>
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.413 14.199" enable-background="new 0 0 7.413 14.199" xml:space="preserve">
+										<g>
+											<defs>
+												<rect id="SVGID_1_" width="7.413" height="14.199"/>
+											</defs>
+											<clipPath id="SVGID_2_">
+												<use xlink:href="#SVGID_1_"  overflow="visible"/>
+											</clipPath>
+											<path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M5.911,2.396c0.44-0.015,1.503-0.004,1.503-0.004V0.104
+												c-0.235-0.024-0.481-0.058-0.728-0.07C6.235,0.016,5.784-0.007,5.332,0.002C4.643,0.018,3.99,0.186,3.421,0.594
+												c-0.654,0.47-1.013,1.131-1.149,1.91C2.215,2.826,2.2,3.159,2.191,3.485C2.179,4,2.189,5.22,2.189,5.22H0v2.555h2.177v6.425h2.66
+												V7.785h2.17c0.11-0.85,0.22-1.691,0.334-2.568c-0.175,0-2.521,0-2.521,0S4.825,3.951,4.841,3.4
+												C4.861,2.647,5.309,2.417,5.911,2.396"/>
+										</g>
+									</svg>
+								</i> </div>
+                    </a> <a href="#" class="button button_xl button_yellow">Актуальные яхт-вики</a> <a href="#" class="button button_xl">Календарь</a> </div>
+                  <div class="yw-socials yw-socials_yellow"> <a href='#' class="yw-socials__socials-item">
+							
+<svg class="icon icon-yt_black"><use xlink:href="img/sprite.svg#icon-yt_black"></use></svg>
+
+						</a> <a href='#' class="yw-socials__socials-item">
+							
+<svg class="icon icon-fb_black"><use xlink:href="img/sprite.svg#icon-fb_black"></use></svg>
+
+						</a> <a href='#' class="yw-socials__socials-item">
+							
+<svg class="icon icon-inst_black"><use xlink:href="img/sprite.svg#icon-inst_black"></use></svg>
+
+						</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
+  </body>
+
+</html>
