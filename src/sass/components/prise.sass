@@ -1,0 +1,25 @@
+.prise
+  display: flex
+  justify-content: center
+  margin-bottom: 30px
+  &__item
+    text-align: center
+    position: relative
+    padding: 20px 0
+    &:after
+      content: ''
+      display: block
+      height: 90%
+      width: 12px
+      background-color: $primary
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%) skewX(-20deg)
+      z-index: -1
+  &__place
+    font-size: 21px
+  &__title
+    text-transform: uppercase
+    +bold
+    font-size: 24px
