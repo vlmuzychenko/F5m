@@ -140,6 +140,7 @@
 .yw-price
 	text-align: right
 	&__pic
+		position: relative
 		height: 230px
 		box-shadow: 0px 15px 30px -1px rgba(0, 0, 0, 0.3)
 		margin-bottom: 30px
@@ -170,6 +171,44 @@
 		margin-top: 50px
 		margin-bottom: 40px
 		text-align: center
+	&__item
+		width: 33.33%
+		padding: 0 20px
+		position: relative
+		text-align: left
+		color: #8d70ef
+		+f-bold
+		& + &
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 2px
+				height: 68%
+				background-color: #fff
+		&.active
+			color: #fff
+			.yw-price
+				&__item-date
+					color: $primary
+	&__item-text
+		font-size: 15px
+	&__item-date
+		font-size: 15px
+	&__item-value
+		font-size: 48px
+		line-height: .75
+	&__item-period
+		font-size: 24px
+		line-height: 1
+
+.yw-price-container
+	width: 100%
+	display: flex
+	position: absolute
+	+vcenter
 
 .yw-p
 	position: relative
