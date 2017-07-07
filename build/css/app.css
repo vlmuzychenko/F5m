@@ -3631,6 +3631,22 @@ a {
   height: 100%;
 }
 
+input[type="tel"]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input[type="tel"]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input[type="tel"]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input[type="tel"]:focus::placeholder {
+  color: transparent;
+}
+
 .dates {
   display: inline-block;
   vertical-align: middle;
@@ -5389,6 +5405,12 @@ a {
 
 .yw-descr__btn-container {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.yw-descr__btn-container .button {
+  margin-bottom: 20px;
 }
 
 .yw-details {
