@@ -192,3 +192,37 @@
 	background-color: rgba(0,0,0,.8)
 	color: $primary
 	border-color: $primary
+
+
+.popup_email
+	.popup
+		&__in
+			background-image: url(../img/email-bg.png)
+			+cover
+			width: 100%
+			max-width: 740px
+			padding: 10px 30px 30px
+			min-height: calc(100vh - 115px)
+		&__close-wrap
+			float: right
+			display: flex
+			font-size: 24px
+		&__close
+			position: relative
+			width: 100%
+			font-size: 13.3333px
+			background-color: rgba(#000, .7)
+			padding-right: 25px
+		&__close-text
+			font-size: 24px
+			color: #fff
+			+f-book
+			padding-right: 10px
+		&__close-icon
+			position: relative
+			width: 35px
+			height: 35px
+			.icon-close
+				font-size: 35px
+				fill: #fff
+				+vcenter

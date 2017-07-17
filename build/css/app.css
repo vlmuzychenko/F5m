@@ -2548,6 +2548,13 @@ button.swiper-pagination-bullet {
   font-style: normal;
 }
 
+@font-face {
+  font-family: FuturaPT-Book;
+  src: url("fonts/FuturaPT-Book.woff2") format("woff2"), url("fonts/FuturaPT-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body, .out {
   height: 100%;
 }
@@ -2659,6 +2666,18 @@ a {
   height: 40px;
   width: 40px;
   border: 1px solid #f6cb02;
+}
+
+.checkbox__block_bold {
+  border-width: 4px;
+}
+
+.checkbox__name {
+  font-family: FuturaPT-Book, Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  color: #fff;
+  margin-right: 5px;
+  margin-bottom: 7px;
 }
 
 .checkbox__img {
@@ -5109,6 +5128,55 @@ input[type="tel"]:focus::placeholder {
   border-color: #f6cb02;
 }
 
+.popup_email .popup__in {
+  background-image: url(../img/email-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  max-width: 740px;
+  padding: 10px 30px 30px;
+  min-height: calc(100vh - 115px);
+}
+
+.popup_email .popup__close-wrap {
+  float: right;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+}
+
+.popup_email .popup__close {
+  position: relative;
+  width: 100%;
+  font-size: 13.3333px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-right: 25px;
+}
+
+.popup_email .popup__close-text {
+  font-size: 24px;
+  color: #fff;
+  font-family: FuturaPT-Book, Helvetica, Arial, sans-serif;
+  padding-right: 10px;
+}
+
+.popup_email .popup__close-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.popup_email .popup__close-icon .icon-close {
+  font-size: 35px;
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .search {
   position: relative;
   padding-top: 120px;
@@ -7014,6 +7082,121 @@ input[type="tel"]:focus::placeholder {
   text-transform: uppercase;
   font-family: "Casper-Bold", Helvetica, Arial, sans-serif;
   font-size: 24px;
+}
+
+.email {
+  position: relative;
+}
+
+.email__title {
+  font-size: 47px;
+  text-transform: uppercase;
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+  color: #f6cb02;
+  margin-bottom: 30px;
+}
+
+.email__body {
+  padding: 35px;
+  padding-top: 125px;
+  padding-bottom: 70px;
+}
+
+.email__body_thnk {
+  text-align: center;
+}
+
+.email__text {
+  font-size: 28px;
+  color: #fff;
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+}
+
+.email__text_l {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
+}
+
+.email__pic {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.email__pic img {
+  object-fit: contain;
+}
+
+.email-interests {
+  width: 68%;
+  margin: 0 auto;
+}
+
+.email-interests__title {
+  color: #f6cb02;
+  font-size: 36px;
+  font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+}
+
+.email-checkboxes {
+  margin-top: 25px;
+}
+
+.email-checkboxes__item {
+  margin-bottom: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.email-input {
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.email-input__btn {
+  margin-left: auto;
+}
+
+.email-input__input {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background-color: transparent;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+}
+
+.email-input__input::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+}
+
+.email-input__input:-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
+}
+
+.email-input__input::placeholder {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Casper-Regular", Helvetica, Arial, sans-serif;
 }
 
 @media only screen and (max-height: 450px) {
