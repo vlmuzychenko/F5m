@@ -1,0 +1,35 @@
+---
+title: Popup Email Thank
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="popup popup_email js-popup is-open" style='display: block;'>
+
+	<button type="button" class="popup__close popup__close_email btn-close js-close-popup">
+    <div class="popup__close-wrap">
+      <p class="popup__close-text">Закрыть форму</p>
+      <span class="popup__close-icon">{{mixins.icon('close')}}</span>
+    </div>
+  </button>
+
+	<div class="popup__in js-popup-in">
+    <div class="email">
+      <h2 class="email__title">будем на связи?</h2>
+			<div class="email__pic">
+				<img src="img/email-thnk.png" alt="">
+			</div>
+			<p class="email__text email__text_l email__text_center">
+				Спасибо!
+				<br>
+				Подписка оформлена.
+			</p>
+    </div>
+
+	</div>
+
+</div>
+
+
+{% endblock %}

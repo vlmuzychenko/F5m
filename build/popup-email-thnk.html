@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Pages</title>
+    <title>Popup Email Thank</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
     <meta name="theme-color" content="#f6cb02">
@@ -41,9 +41,9 @@
     <div class="out">
       <!--BEGIN  header-->
       <header class="header">
-        <div class="header__in"> <button type="button" class="header__home header__home_btn js-close-chapter">
+        <div class="header__in"> <a href="#" class="header__home">
 <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</button> <button type="button" class="header__burger burger js-toggle-menu">
+</a> <button type="button" class="header__burger burger js-toggle-menu">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -123,37 +123,22 @@
           </nav>
           </div>
         </div>
-        <div class="container">
-          <ul class="z">
-            <li><a href="main.html">Main page</a></li>
-            <li><a href="search.html">Search page</a></li>
-            <li><a href="search-advanced.html">Advanced search page</a></li>
-            <li><a href="yacht.html">Yacht page</a></li>
-            <li><a href="calendar.html">Calendar page</a></li>
-            <li><a href="yacht-wiki.html">Yacht Wiki</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="404.html">404</a></li>
-            <li><a href="regatta.html">Regatta</a></li>
-            <li><a href="news-detail.html">News Detail</a></li>
-            <li><a href="yacht-wiki-archive.html">Yacht Wiki Archive</a></li>
-            <li><a href="news-page.html">News Page</a></li>
-            <li><a href="news-page-archive.html">News Page Archive</a></li>
-            <li><a href="event.html">Event</a></li>
-            <li><a href="yacht-wiki-main.html">Yacht Wiki Main</a></li>
-            <li><a href="yacht-wiki-main-archive.html">Yacht Wiki Main Archive</a></li>
-            <li><a href="new-yacht-wiki-archive.html"> New Yacht Wiki Archive</a></li>
-            <li><a href="popup-email.html"> Popup Email</a></li>
-            <li><a href="popup-email-thnk.html"> Popup Email Thank</a></li>
-          </ul>
+        <div class="popup popup_email js-popup is-open" style='display: block;'> <button type="button" class="popup__close popup__close_email btn-close js-close-popup">
+    <div class="popup__close-wrap">
+      <p class="popup__close-text">Закрыть форму</p>
+      <span class="popup__close-icon">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</span>
+    </div>
+  </button>
+          <div class="popup__in js-popup-in">
+            <div class="email">
+              <h2 class="email__title">будем на связи?</h2>
+              <div class="email__pic"> <img src="img/email-thnk.png" alt=""> </div>
+              <p class="email__text email__text_l email__text_center"> Спасибо! <br> Подписка оформлена. </p>
+            </div>
+          </div>
         </div>
-        <style>
-          .z a {
-            font-size: 30px;
-            color: #f6cb02
-          }
-
-        </style>
       </div>
       <!-- END content -->
       <!-- BEGIN scripts -->
