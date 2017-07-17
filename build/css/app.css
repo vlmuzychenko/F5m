@@ -3158,11 +3158,11 @@ a {
 }
 
 .button_sm {
-  width: 150px;
+  width: 200px;
 }
 
 .button_sm {
-  width: 200px;
+  width: 150px;
 }
 
 .button_lg {
@@ -5135,7 +5135,7 @@ input[type="tel"]:focus::placeholder {
   background-position: 50% 50%;
   width: 100%;
   max-width: 740px;
-  padding: 10px 30px 30px;
+  padding: 10px 10px 30px 30px;
   min-height: calc(100vh - 115px);
 }
 
@@ -7089,7 +7089,7 @@ input[type="tel"]:focus::placeholder {
 }
 
 .email__title {
-  font-size: 47px;
+  font-size: 45px;
   text-transform: uppercase;
   font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
   color: #f6cb02;
@@ -7131,7 +7131,7 @@ input[type="tel"]:focus::placeholder {
 }
 
 .email-interests {
-  width: 68%;
+  width: 73%;
   margin: 0 auto;
 }
 
@@ -7139,6 +7139,8 @@ input[type="tel"]:focus::placeholder {
   color: #f6cb02;
   font-size: 36px;
   font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
+  text-align: right;
+  width: 100%;
 }
 
 .email-checkboxes {
