@@ -2676,7 +2676,7 @@ a {
   font-family: FuturaPT-Book, Helvetica, Arial, sans-serif;
   font-size: 26px;
   color: #fff;
-  margin-right: 5px;
+  margin-left: 5px;
   margin-bottom: 7px;
 }
 
@@ -5128,6 +5128,10 @@ input[type="tel"]:focus::placeholder {
   border-color: #f6cb02;
 }
 
+.popup_email {
+  z-index: 1000;
+}
+
 .popup_email .popup__in {
   background-image: url(../img/email-bg.png);
   background-repeat: no-repeat;
@@ -7143,22 +7147,24 @@ input[type="tel"]:focus::placeholder {
   color: #f6cb02;
   font-size: 36px;
   font-family: "FuturaPT-Demi", Helvetica, Arial, sans-serif;
-  text-align: right;
   width: 100%;
 }
 
 .email-checkboxes {
   margin-top: 25px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .email-checkboxes__item {
-  margin-bottom: 30px;
+  width: 49%;
+  margin-bottom: 15px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
 }
 
 .email-input {
