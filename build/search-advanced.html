@@ -307,30 +307,40 @@
                 <div class="form__block">
                   <div class="form__title">Тип яхты</div>
                   <div class="form__field form__field_mt">
-                    <div class="form__checkbox"> <label class="checkbox checkbox_icon checkbox_mod">
-								<span class="checkbox__img" style='background-image: url("img/yacht.png");'></span>
-								<input type="checkbox">
-								<span class="checkbox__block"></span>
-								<span>Моторные яхты</span>
-							</label> </div>
-                    <div class="form__checkbox"> <label class="checkbox checkbox_icon checkbox_mod">
-								<span class="checkbox__img" style='background-image: url("img/yacht.png");'></span>
-								<input type="checkbox">
-								<span class="checkbox__block"></span>
-								<span>Парусные катамараны</span>
-							</label> </div>
-                    <div class="form__checkbox"> <label class="checkbox checkbox_icon checkbox_mod">
-								<span class="checkbox__img" style='background-image: url("img/yacht.png");'></span>
-								<input type="checkbox">
-								<span class="checkbox__block"></span>
-								<span>Парусные яхты</span>
-							</label> </div>
-                    <div class="form__checkbox"> <label class="checkbox checkbox_icon checkbox_mod">
-								<span class="checkbox__img" style='background-image: url("img/yacht.png");'></span>
-								<input type="checkbox">
-								<span class="checkbox__block"></span>
-								<span>Мега яхты</span>
-							</label> </div>
+                    <div class="form__checkbox-group">
+                      <div class="form__checkbox form__checkbox_l"> <label class="checkbox checkbox_icon checkbox_mod">
+									<input type="checkbox">
+									<span class="checkbox__block checkbox__block_left"></span>
+									<span>Парусная однокорпусная яхта</span>
+								</label> </div>
+                      <div class="form__checkbox form__checkbox_l form__checkbox_subtype"> <label class="checkbox checkbox_icon checkbox_mod">
+									<input type="checkbox">
+									<span class="checkbox__block checkbox__block_left"></span>
+									<span>Парусная однокорпусная яхта</span>
+								</label> </div>
+                      <div class="form__checkbox form__checkbox_l form__checkbox_subtype"> <label class="checkbox checkbox_icon checkbox_mod">
+									<input type="checkbox">
+									<span class="checkbox__block checkbox__block_left"></span>
+									<span>Парусная однокорпусная яхта</span>
+								</label> </div>
+                    </div>
+                    <div class="form__checkbox-group">
+                      <div class="form__checkbox form__checkbox_l"> <label class="checkbox checkbox_icon checkbox_mod">
+									<input type="checkbox">
+									<span class="checkbox__block checkbox__block_left"></span>
+									<span>Парусная однокорпусная яхта</span>
+								</label> </div>
+                      <div class="form__checkbox form__checkbox_l form__checkbox_subtype"> <label class="checkbox checkbox_icon checkbox_mod">
+									<input type="checkbox">
+									<span class="checkbox__block checkbox__block_left"></span>
+									<span>Парусная однокорпусная яхта</span>
+								</label> </div>
+                      <div class="form__checkbox form__checkbox_l form__checkbox_subtype"> <label class="checkbox checkbox_icon checkbox_mod">
+									<input type="checkbox">
+									<span class="checkbox__block checkbox__block_left"></span>
+									<span>Парусная однокорпусная яхта</span>
+								</label> </div>
+                    </div>
                   </div>
                 </div>
                 <div class="form__block">
@@ -360,19 +370,46 @@
                     </div>
                   </div>
                 </div>
-                <div class="form__block form__block_no-bd js-slider">
+                <div class="form__block js-range-slider">
                   <div class="form__title form__title_mb">Количество людей</div>
                   <div class="form__row">
-                    <div class="form__col form__col_full form__col_center">
-                      <div class="input input_additional"> <input type="text" class="input__main js-slider-input" value="15" data-min="0" data-max="40"> <span class="input__text">чел.</span> </div>
+                    <div class="form__col">
+                      <div class="input input_additional"> <input type="text" class="input__main js-range-slider-from" placeholder="От" value="1" data-min="1"> <span class="input__text">чел.</span> </div>
+                    </div>
+                    <div class="form__col form__col_right">
+                      <div class="input input_inline input_additional"> <input type="text" class="input__main js-range-slider-to" placeholder="До" value="25" data-max="50"> <span class="input__text">чел.</span> </div>
                     </div>
                   </div>
                   <div class="form__slider">
                     <div class="slider">
-                      <div class="js-slider-main slider__main"></div>
+                      <div class="js-range-slider-main slider__main"></div>
                     </div>
                   </div>
                 </div>
+                <!-- <div class="form__block form__block_no-bd js-slider">
+
+					<div class="form__title form__title_mb">Количество людей</div>
+
+					<div class="form__row">
+
+						<div class="form__col form__col_full form__col_center">
+							<div class="input input_additional">
+								<input type="text" class="input__main js-slider-input" value="15" data-min="0" data-max="40">
+								<span class="input__text">чел.</span>
+							</div>
+						</div>
+
+
+
+					</div>
+
+					<div class="form__slider">
+						<div class="slider">
+							<div class="js-slider-main slider__main"></div>
+						</div>
+					</div>
+
+				</div> -->
                 <div class="form__more more js-more"> <button type="button" class="more__btn js-show-more" data-text="Меньше фильтров"><span>Больше фильтров</span></button>
                   <div class="more__body js-more-body">
                     <div class="form__block">

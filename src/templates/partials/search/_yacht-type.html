@@ -1,4 +1,4 @@
-{% set types = ['парусные яхты', 'моторные яхты', 'катамараны', 'суперяхты'] %}
+{% set types = ['Парусная многокорпусная яхта', 'моторные яхты', 'катамараны', 'суперяхты'] %}
 <div class="types">
 
 	{% for type in types %}
@@ -7,7 +7,7 @@
 
 			<span>{{type}}</span>
 			<input type="checkbox">
-			<span class="checkbox__block"></span>
+			<span class="checkbox__block checkbox__block_right"></span>
 			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
 			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
 		</label>

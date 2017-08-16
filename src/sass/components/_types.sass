@@ -1,11 +1,12 @@
 .type
 	position: relative
-	display: block
-	height: 120px
+	display: flex
+	align-items: center
+	min-height: 120px
 	margin: 7px 0
 	background: #dbdbdb
 	font-size: 24px
-	line-height: 120px
+	line-height: 1.5
 	+f-demi
 	text-transform: uppercase
 	+r(375)
@@ -14,7 +15,8 @@
 		line-height: 100px
 	&__checkbox
 		position: relative
-		padding: 0 20px 0 95px
+		padding: 0 60px 0 95px
+		width: 100%
 		+r(375)
 			padding-left: 70px
 	&__icon
@@ -32,11 +34,6 @@
 			font-size: 8px
 		&_hover
 			opacity: 0
-	.checkbox
-		&__block
-			float: right
-			margin-top: 40px
-			+r(375)
-				margin-top: 30px
+
 .types
 	margin-bottom: 40px

@@ -28,7 +28,7 @@
 
 .button_sm
 	width: 200px
-	
+
 .button_sm
 	width: 150px
 
@@ -173,6 +173,17 @@
 	&__checkbox
 		padding-right: 150px
 		margin-bottom: 15px
+	&__checkbox_l
+		padding-right: 0
+		span
+			+bold
+	&__checkbox_subtype
+		margin-left: 30px
+		span
+			+reg
+	&__checkbox-group
+		& + &
+			margin-top: 30px
 	&__field
 		margin-bottom: 26px
 		&:last-child

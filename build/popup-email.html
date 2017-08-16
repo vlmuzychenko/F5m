@@ -171,8 +171,14 @@
                 </div>
               </div>
               <form action="" class="email-input">
-                <!-- добавить класс error сюда --><input type='text' name='email' placeholder='Укажите здесь свой email' class='email-input__input'> <button type='submit' class='button button_sm button_white email-input__btn'>на связи!</button> </form>
+                <!-- добавить класс error сюда --><input type='text' name='email' placeholder='Укажите здесь свой email' class='email-input__input'> <button type='submit' class='button button_sm button_white email-input__btn'>
+						<span>на связи!</span>
+						<div class='loader-wrap'>
+							<div class="loader"></div>
+						</div>
+					</button> </form>
             </div>
+            <p class="email-delay-text"> Ой, что-то пошло не так и мы не можем записать ваши контаткы сейчас.<br>Покажем вам форму позже. </p>
           </div>
         </div>
       </div>

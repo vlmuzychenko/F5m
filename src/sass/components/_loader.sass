@@ -1,0 +1,20 @@
+.loader-wrap
+  width: 30px
+  display: inline-block
+  vertical-align: middle
+  margin-bottom: 5px
+
+.loader
+  border: 6px solid #f6cb02
+  border-top: 6px solid #fff
+  border-radius: 50%
+  width: 30px
+  height: 30px
+  animation: spin 2s linear infinite
+  transition: .3s ease
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
