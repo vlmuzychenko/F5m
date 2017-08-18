@@ -349,7 +349,7 @@ $(document).on('click', '.js-type', function(e){
 	});
 
 
-	$('.js-select-multiple').each(function () {
+	/*$('.js-select-multiple').each(function () {
 		 $(this).multipleSelect({
 				width: '100%',
 				placeholder: $(this).attr('placeholder'),
@@ -357,7 +357,62 @@ $(document).on('click', '.js-type', function(e){
 				selectAll: false,
 				allSelected: 'Все выбрано'
 		 });
-	});
+	});*/
+
+	$('.js-select-multiple').each(function () {
+			 var options = {
+					 width: '100%',
+					 placeholder: $(this).attr('placeholder'),
+					 countSelected: ' # выбрано',
+					 selectAll: false,
+					 allSelected: 'Все выбрано'
+			 };
+			 if ($(this).attr('id') == 'regions') {
+					 options['onClick'] = function (view) {
+							if(view.value == 'all_regions'){
+									if(view.checked){
+											$('#regions').multipleSelect("checkAll");
+									}else{
+											$('#regions').multipleSelect("uncheckAll");
+									}
+							}
+							 $("#countries").multipleSelect("uncheckAll");
+							 $("#cities").multipleSelect("uncheckAll");
+					 };
+					 options['onClose'] = function () {
+							 $("#countries").multipleSelect("uncheckAll");
+							 $("#cities").multipleSelect("uncheckAll");
+							 handleRegions();
+					 };
+			 }else if($(this).attr('id') == 'countries'){
+					 options['onClick'] = function (view) {
+							 if(view.value == 'all_countries'){
+									 if(view.checked){
+											 $('#countries').multipleSelect("checkAll");
+									 }else{
+											 $('#countries').multipleSelect("uncheckAll");
+									 }
+							 }
+							 $("#cities").multipleSelect("uncheckAll");
+					 };
+					 options['onClose'] = function(){
+							 $("#cities").multipleSelect("uncheckAll");
+							 handleCountries();
+					 }
+			 }else if($(this).attr('id') == 'cities'){
+					 options['onClick'] = function (view) {
+							 if(view.value == 'all_cities'){
+									 if(view.checked){
+											 $('#cities').multipleSelect("checkAll");
+									 }else{
+											 $('#cities').multipleSelect("uncheckAll");
+									 }
+							 }
+					 };
+			 }
+
+			 $(this).multipleSelect(options);
+	 });
 
 	$('.js-select-single').each(function () {
 		 $(this).multipleSelect({
