@@ -1,0 +1,99 @@
+.acquiring
+  height: 100%
+  span
+    color: #ff3333
+  &__header
+    background-color: rgba(0,0,0,0)
+    display: flex
+    align-items: center
+    margin-left: -4px
+    +rmin(1024)
+      margin-left: -5px
+  &__bottom-wrap
+    margin-top: 15px
+    text-align: center
+    +rmin(1024)
+      margin-top: 30px
+    & > * + *
+      margin-top: 10px
+  &__title
+    text-transform: uppercase
+    font-size: 48px
+    color: #fff
+    +f-bold
+    span.empty
+      display: inline-block
+      width: 70px
+      height: 5px
+      background-color: $primary
+      margin-bottom: -5px
+    &_center
+      text-align: center
+      line-height: .8
+    &_s
+      font-size: 15px
+    &_m
+      font-size: 20px
+    &_black
+      color: #000
+    &_yellow
+      color: $primary
+      span
+        color: $primary
+  &__field
+    padding: 10px 13px 25px
+    & > * + *
+      margin-top: 25px
+    &_yellow
+      background-color: $primary
+    &_pic-bg
+      background-image: url(../img/acquire-bg.jpg)
+      +cover
+      padding-bottom: 50px
+  &__input-col
+    font-size: 20px
+    +bold
+  &__label
+    display: block
+    margin-bottom: 5px
+    &_white
+      color: #fff
+    span
+      margin-left: 10px
+  &__input
+    width: 100%
+    padding: 10px 13px
+    +bold
+    font-size: 20px
+    &::placeholder
+      color: rgba(0,0,0, .5)
+    &_textarea
+      padding-bottom: 25px
+      resize: none
+      background-color: rgba(#fff, .5)
+      border: none
+      &::placeholder
+        color: rgba(0,0,0, .8)
+  &__btn
+    margin-top: 15px
+  &__select
+    .ms-drop
+      padding: 0
+      input
+        display: none
+      ul
+        max-height: 110px !important
+        & > li
+          &:before,
+          &:after
+            content: none
+          label
+            padding: 10px 13px !important
+            &:hover
+              background-color: rgba($primary, .5)
+            span
+              color: #000
+    .ms-choice
+      & > span
+        padding: 0 0 0 13px
+        color: #000

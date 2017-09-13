@@ -4,5 +4,6 @@ import './common';
 import './yacht-wiki';
 import './academy';
 import './detail-page';
+import './spinner';
 
 sayHello();

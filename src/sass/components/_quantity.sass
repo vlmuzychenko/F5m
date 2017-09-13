@@ -1,0 +1,41 @@
+.quantity
+  position: relative
+  display: inline-block
+  width: 46.25%
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input[type=number]
+  -moz-appearance: textfield
+
+.quantity input
+  width: 100%
+  padding: 10px 40px
+  +bold
+  font-size: 16px
+  text-align: center
+  color: #000
+  +rmin(1024)
+    font-size: 20px
+
+.quantity-button
+  position: absolute
+  top: 0
+  cursor: pointer
+  width: 40px
+  height: 100%
+  user-select: none
+  +bold
+  font-size: 20px
+  text-align: center
+  color: #000
+  background-color: #dcdcdc
+
+.quantity-button.quantity-up
+  right: 0
+
+.quantity-button.quantity-down
+  left: 0
