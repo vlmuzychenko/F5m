@@ -74,9 +74,20 @@
       border: none
       &::placeholder
         color: rgba(0,0,0, .8)
+    &.error
+      background: #ff6e6e
+      &::placeholder
+        color: #cc3333
   &__btn
     margin-top: 15px
   &__select
+    &.error
+      .ms-choice
+        background: #ff6e6e
+        & > span
+          color: #cc3333
+        & > div
+          border-color: #cc3333 transparent transparent transparent
     .ms-drop
       padding: 0
       input
