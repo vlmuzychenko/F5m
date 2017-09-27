@@ -4,7 +4,13 @@
 	{% for region in regions %}
 	<div class="region">
 		<label class="region__checkbox checkbox">
-			<span>{{region}}</span>
+			<div class="region__text">
+				<span>{{region}}</span>
+				<span class="region__season">
+					Сезон:
+					<span>фев - ноя</span>
+				</span>
+			</div>
 			<input type="checkbox">
 			<span class="checkbox__block"></span>
 		</label>

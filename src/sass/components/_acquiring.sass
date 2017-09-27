@@ -7,13 +7,9 @@
     display: flex
     align-items: center
     margin-left: -4px
-    +rmin(1024)
-      margin-left: -5px
   &__bottom-wrap
     margin-top: 15px
     text-align: center
-    +rmin(1024)
-      margin-top: 30px
     & > * + *
       margin-top: 10px
   &__title
@@ -34,6 +30,8 @@
       font-size: 15px
     &_m
       font-size: 20px
+    &_ml
+      font-size: 30px
     &_black
       color: #000
     &_yellow
@@ -50,6 +48,18 @@
       background-image: url(../img/acquire-bg.jpg)
       +cover
       padding-bottom: 50px
+    &_high
+      height: calc(100vh - 152px - 55px)
+    &_center
+      text-align: center
+      padding: 25px 20px 50px
+      & > * + *
+        margin-top: 20px
+    &_center-s
+      text-align: center
+      padding: 10px 20px 30px
+      & > * + *
+        margin-top: 25px
   &__input-col
     font-size: 20px
     +bold
@@ -113,3 +123,15 @@
       & > span
         padding: 0 0 0 13px
         color: #000
+  &__tel
+    display: block
+    font-size: 42px
+  &__error-logo
+    background-image: url(../img/help.svg)
+    background-size: contain
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    width: 120px
+    height: 120px
+    margin-left: auto
+    margin-right: auto

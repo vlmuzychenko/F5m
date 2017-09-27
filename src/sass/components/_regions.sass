@@ -1,20 +1,32 @@
 .region
-	height: 80px
+	//height: 80px
 	margin: 2px 0
-	padding: 0 20px
+	padding: 15px 20px
 	background: #1d1d1d
 	color: #fff
 	+f-demi
 	font-size: 24px
-	line-height: 80px
+	//line-height: 80px
 	text-transform: uppercase
 	+r(375)
 		font-size: 20px
+	&__text
+		display: inline-block
+		span
+			display: block
+	&__season
+		display: inline !important
+		text-transform: none
+		font-size: 18px
+		+reg
+		span
+			display: inline
+			text-transform: uppercase
 	&__checkbox
 		.checkbox
 			&__block
 				float: right
-				margin-top: 18px
+				margin-top: 10px
 
 .regions
 	margin-bottom: 44px

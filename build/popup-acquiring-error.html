@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Yacht Wiki Main</title>
+    <title>Popup Acquiring Error</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
     <meta name="theme-color" content="#f6cb02">
@@ -123,14 +123,28 @@
           </nav>
           </div>
         </div>
-        <div class="event-list event-list_arch">
-          <div class="event-list-item" style="background-image: url(img/yacht-wiki-main/yw-1.jpg);">
-            <div class="event-list-item__title"> <span style='color:#ec1c82; font-size: 3em;'>Buongiorno,</span> <span style='color:#fff; font-size: 5em; line-height: .5em;'>Italia!</span> <span style='color:#f6cb02; font-size: 3em;'>29.04 - 06.05</span> <span style='color:#004e9d; font-size: 4em; line-height: .5em;'>2017</span>              </div> <a href="#" class="event-list-item__button button button_black button_lg">Как это было</a> </div>
-          <div class="event-list-item" style="background-image: url(img/yacht-wiki-main/yw-1.jpg);">
-            <div class="event-list-item__title"> <span style='color:#ec1c82; font-size: 3em;'>Buongiorno,</span> <span style='color:#fff; font-size: 5em; line-height: .5em;'>Italia!</span> <span style='color:#f6cb02; font-size: 3em;'>29.04 - 06.05</span> <span style='color:#004e9d; font-size: 4em; line-height: .5em;'>2017</span>              </div> <a href="#" class="event-list-item__button button button_black button_lg">Как это было</a> </div>
-          <div class="event-list-item" style="background-image: url(img/yacht-wiki-main/yw-1.jpg);">
-            <div class="event-list-item__title"> <span style='color:#ec1c82; font-size: 3em;'>Buongiorno,</span> <span style='color:#fff; font-size: 5em; line-height: .5em;'>Italia!</span> <span style='color:#f6cb02; font-size: 3em;'>29.04 - 06.05</span> <span style='color:#004e9d; font-size: 4em; line-height: .5em;'>2017</span>              </div> <a href="#" class="event-list-item__button button button_black button_lg">Как это было</a> </div>
-          <div class="event-list__button event-list__button_bottom"> <a href="#" class="button button_yellow button_xxl">Актуальные яхт-вики</a> </div>
+        <div class="popup popup_acquiring popup_acquiring-error popup_email js-popup is-open" style='display: block;'> <button type="button" class="popup__close popup__close_email btn-close js-close-popup">
+    <div class="popup__close-wrap">
+      <p class="popup__close-text">Закрыть форму</p>
+      <span class="popup__close-icon">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</span>
+    </div>
+  </button>
+          <div class="popup__in js-popup-in">
+            <div class="acquiring">
+              <div class="acquiring__body">
+                <div class="acquiring__field acquiring__field_yellow acquiring__field_center-s">
+                  <h2 class="acquiring__title acquiring__title_center">регаты</h2>
+                  <p class="acquiring__title acquiring__title_ml">извините, что-то пошло не так</p>
+                </div>
+                <div class="acquiring__field acquiring__field_pic-bg acquiring__field_center acquiring__field_high">
+                  <p class="acquiring__title acquiring__title_ml"> пожалуйста, <br> обратитесь к администрации fleet5 </p> <a href='tel:0443371535' class="acquiring__title acquiring__title_yellow acquiring__tel">(044) 337 15 35</a>
+                  <div class="acquiring__error-logo"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- END content -->

@@ -1,0 +1,44 @@
+---
+title: Popup Acquiring Error
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="popup popup_acquiring popup_acquiring-error popup_email js-popup is-open" style='display: block;'>
+
+	<button type="button" class="popup__close popup__close_email btn-close js-close-popup">
+    <div class="popup__close-wrap">
+      <p class="popup__close-text">Закрыть форму</p>
+      <span class="popup__close-icon">{{mixins.icon('close')}}</span>
+    </div>
+  </button>
+
+	<div class="popup__in js-popup-in">
+    <div class="acquiring">
+			<div class="acquiring__body">
+				<div class="acquiring__field acquiring__field_yellow acquiring__field_center-s">
+					<h2 class="acquiring__title acquiring__title_center">регаты</h2>
+					<p class="acquiring__title acquiring__title_ml">извините, что-то пошло не так</p>
+				</div>
+				<div class="acquiring__field acquiring__field_pic-bg acquiring__field_center acquiring__field_high">
+					<p class="acquiring__title acquiring__title_ml">
+						пожалуйста,
+						<br>
+						обратитесь к администрации fleet5
+					</p>
+					<a href='tel:0443371535' class="acquiring__title acquiring__title_yellow acquiring__tel">(044) 337 15 35</a>
+					<div class="acquiring__error-logo"></div>
+				</div>
+
+
+			</div>
+
+    </div>
+
+	</div>
+
+</div>
+
+
+{% endblock %}
