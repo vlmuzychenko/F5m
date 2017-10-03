@@ -4713,7 +4713,6 @@ input[type="tel"]:focus::placeholder {
 
 .region__checkbox .checkbox__block {
   float: right;
-  margin-top: 10px;
 }
 
 .regions {
@@ -6181,7 +6180,7 @@ input[type="tel"]:focus::placeholder {
 }
 
 .ac-course__btn-container .button {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .instructors {
@@ -6519,7 +6518,6 @@ input[type="tel"]:focus::placeholder {
 }
 
 .fmk__btn-container {
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -7763,6 +7761,13 @@ input[type=number] {
 
   .event {
     width: 380px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .fmk__btn-container {
+    width: 50%;
   }
 }
 
