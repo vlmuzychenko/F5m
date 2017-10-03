@@ -5504,13 +5504,17 @@ input[type="tel"]:focus::placeholder {
   height: 115px;
 }
 
-.yw-det__btn {
+.yw-det__btn-container {
   position: absolute;
   bottom: 160px;
   left: 50%;
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 9999;
+}
+
+.yw-det__btn-container .button {
+  margin-bottom: 20px;
 }
 
 .yw-det .slick-list,
