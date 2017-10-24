@@ -41,9 +41,8 @@
     <div class="out">
       <!--BEGIN  header-->
       <header class="header">
-        <div class="header__in"> <a href="#" class="header__home">
-<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</a> <button type="button" class="header__burger burger js-toggle-menu">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -52,9 +51,8 @@
       </header>
       <!--END  header-->
       <div class="menu js-menu">
-        <div class="menu__topline"> <a href="#" class="menu__step js-navigation-step">
-<svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg>
- <span data-root-title="главное меню"></span></a>
+        <div class="menu__topline">
+          <a href="#" class="menu__step js-navigation-step"> <svg class="icon icon-arrow-left-sm"><use xlink:href="img/sprite.svg#icon-arrow-left-sm"></use></svg> <span data-root-title="главное меню"></span></a>
           <!--<button class="menu__close btn-close js-close-menu">
 <svg class="icon icon-close-thin"><use xlink:href="img/sprite.svg#icon-close-thin"></use></svg>
 </button>--></div>
@@ -168,48 +166,39 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="types">
-                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
-
-			<span>Парусная многокорпусная яхта</span>
-			<input type="checkbox">
-			<span class="checkbox__block checkbox__block_right"></span>
-			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
-			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
-		</label> </div>
-                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
-
-			<span>моторные яхты</span>
-			<input type="checkbox">
-			<span class="checkbox__block checkbox__block_right"></span>
-			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
-			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
-		</label> </div>
-                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
-
-			<span>катамараны</span>
-			<input type="checkbox">
-			<span class="checkbox__block checkbox__block_right"></span>
-			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
-			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
-		</label> </div>
-                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
-
-			<span>суперяхты</span>
-			<input type="checkbox">
-			<span class="checkbox__block checkbox__block_right"></span>
-			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
-			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
-		</label> </div>
+                  <div class="yacht-image-two top-2">
+                    <div class="par-2">
+                      <div class="block-yacht mar-bottom"> <img class="img-1 rel-po" src="img/yacht1.png" alt="">
+                        <p class="text-center  wids">Парусная яхта</p> <span class="mini"><img class="img-min" src="img/tick1.png" alt=""></span> </div>
+                      <div class="block-yacht padding-1"> <img class="img-1" src="img/boat1.png" alt="">
+                        <p class="text-center  wids">Моторная яхта</p> <span class="mini"><img class="img-min" src="img/tick1.png" alt=""></span> </div>
+                    </div>
+                    <div class="par-2">
+                      <div class="block-yacht mar-bottom"> <img class="img-1 rel-po" src="img/yacht2.png" alt="">
+                        <p class="text-center hei">Парусный катамаран</p> <span class="mini"><img class="img-min" src="img/tick1.png" alt=""></span> </div>
+                      <div class="block-yacht padding-1 toppp"> <img class="img-1" src="img/boat2.png" alt="">
+                        <p class="text-center hei bott">Супер-яхта</p> <span class="mini"><img class="img-min super" src="img/tick1.png" alt=""></span> </div>
+                    </div>
                   </div>
                 </div>
                 <div class="search__vertical swiper-slide">
-                  <div class="dates">
-                    <div class="dates__field">
-                      <div class="dates__title">Отплытие</div> <input readonly='true' type="text" class="dates__input" data-calendar-from data-title="Отплытие"> </div>
-                    <div class="dates__field">
-                      <div class="dates__title">Прибытие</div> <input readonly='true' type="text" class="dates__input" data-calendar-to data-title="Прибытие"> </div>
-                  </div>
+                  <!-- <div class="dates">
+	<div class="dates__field">
+		<div class="dates__title">Отплытие</div>
+		<input readonly='true' type="text" class="dates__input" data-calendar-from data-title="Отплытие">
+	</div>
+	<div class="dates__field">
+		<div class="dates__title">Прибытие</div>
+		<input readonly='true' type="text" class="dates__input" data-calendar-to data-title="Прибытие">
+	</div>
+</div> -->
+                  <div class="rental-dates">
+                    <p class="text-date">ДАТЫ АРЕНДЫ ЯХТЫ</p>
+                    <div class="two-par-input">
+                      <div class="position"> <input type="text" id="sailing" readonly="" name="date_from" required="" class="dates__input" data-calendar-from="" data-title="Отплытие"> <img src="img/calendar_icon.svg" alt=""> <span>Отплытие</span> </div>
+                      <div class="position">
+                      <input name="date_to" readonly="" id="arrival" required="" type="text" class="dates__input" data-calendar-to="" data-title="Прибытие"> <img src="img/calendar_icon.svg" alt=""> <span>Прибытие</span> </div>
+                    </div> <button class="button-one">НАЙТИ</button> </div>
                 </div>
                 <div class="search__vertical search__vertical_yellow swiper-slide">
                   <div class="final">

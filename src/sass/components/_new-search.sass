@@ -2,16 +2,13 @@ body
 	+r(800)
 		min-height: 100vh
 
-.background-block
-	/*background: url('../../img/bg.png');*/
-	background-size: cover!important
-	background-repeat: no-repeat!important
-	/*transition: all .5s linear;*/
-
-.img-1.rel-po
-	+r(800)
-		position: relative
-		top: 6px
+.img-1
+	+r(420)
+		width: 70px
+	&.rel-po
+		+r(800)
+			position: relative
+			top: 6px
 
 .left-block
 	max-width: 440px
@@ -29,6 +26,7 @@ body
 		cursor: pointer
 		+r(800)
 			margin-left: 0px
+			height: 28px
 	ul
 		+r(800)
 			margin-bottom: 0px
@@ -55,11 +53,17 @@ body
 			font-size: 18px
 		+r(435)
 			font-size: 15px
+		+r(400)
+			font-size: 14px
 		&.active-2
 			color: #FFCC00
 			font-weight: bold
 			transition: all 0.5s
 			transform: scale(1.2, 1.2)
+			+r(800)
+				font-size: 14px
+			+r(400)
+				font-size: 14px
 			+r(435)
 				font-size: 14px
 			&:before
@@ -69,6 +73,10 @@ body
 				right: 4px
 				+r(435)
 					bottom: 4px
+				+r(400)
+					bottom: 3px
+				+r(350)
+					right: 2px
 			&:after
 				content: url('../img/sep.png')
 				position: relative
@@ -76,6 +84,10 @@ body
 				left: 4px
 				+r(435)
 					bottom: 4px
+				+r(400)
+					bottom: 3px
+				+r(350)
+					left: 2px
 
 .click-img
 	height: 700px
@@ -97,19 +109,29 @@ body
 .block-yacht
 	position: relative
 	max-width: 145px
-  width: 100%
+	width: 100%
 	border: 2px solid #FFCC00
 	padding-top: 15px
-  padding-bottom: 5px
-  cursor: pointer
+	padding-bottom: 2px
+	cursor: pointer
+	margin-bottom: 30px
 	+r(800)
 		padding-top: 0px
+	+r(320)
+		max-width: 97px
+		margin-bottom: 14px
 	&.padding-1
 		+r(800)
 			padding-top: 73px
+		+r(420)
+			padding-top: 64px
+		+r(320)
+			padding-top: 63px
 		&.toppp
 			+r(800)
 				padding-top: 61px
+			+r(420)
+				padding-top: 53px
 	img
 		display: block
 		margin: 0 auto
@@ -143,11 +165,13 @@ body
 	color: #fff
 	text-align: center
 	width: 95px
-  text-align: center
-  margin: 0 auto
-  margin-top: 10px
-  +f-book
+	text-align: center
+	margin: 0 auto
+	margin-top: 10px
+	+f-book
 	+r(800)
+		font-size: 11px
+	+r(420)
 		font-size: 11px
 	&.hei
 		+r(800)
@@ -210,13 +234,24 @@ body
 			height: 37px
 			text-align: center
 			+f-book
-		}
+		+r(400)
+			margin: 0 auto
+			box-sizing: border-box
+			display: block
+		+r(320)
+			max-width: 287px
+			height: 37px
 	span
 		color: #fff
 		position: absolute
 		top: 44px
 		right: 8px
 		+f-book
+		+r(400)
+			right: 0px
+		+r(320)
+			right: 7px
+			top: 43px
 	img
 		position: absolute
 		top: 0
@@ -237,6 +272,9 @@ body
 	+r(800)
 		margin-top: 0
 		font-size: 20px
+	+r(320)
+		padding: 10px 65px 10px 65px
+		margin-top: -8px
 	&:hover
 		background: #fff
 
@@ -329,6 +367,8 @@ body
 			margin-top: 0px
 			display: flex
 			justify-content: space-around
+		+r(320)
+			padding-top: 42px
 
 .block-760
 	display: none
@@ -367,200 +407,6 @@ body
 	+r(800)
 		font-size: 17.5px
 
-
-@media screen and (max-width: 420px) {
-	.block-yacht.padding-1 {
-    	padding-top: 64px;
-	}
-
-	.par-2 {
-    	max-width: 104px;
-	}
-
-	.block-yacht.padding-1.toppp {
-    	padding-top: 53px;
-	}
-
-	.yacht-image-two.top-2 {
-	    padding-top: 40px;
-	    padding-bottom: 30px;
-	    max-width: 268px;
-	    margin: 0 auto;
-	    margin-top: 0px;
-	}
-
-	.img-1.rel-po {
-		position: relative;
-    	top: 6px;
-	}
-
-	.img-1 {
-    	width: 70px;
-	}
-
-	.text-center {
-    	font-size: 11px;
-	}
-
-	.mini {
-	    position: absolute;
-	    width: 15px;
-	    height: 15px;
-	    top: 5px;
-	    right: 5px;
-	}
-
-	.wids {
-		width: 40px;
-	}
-
-	.block-yacht {
-		padding-top: 0px;
-	}
-
-	.background-block {
-    	min-height: calc(100vh - 126px);
-	}
-
-	.left-block li.active-2:after {
-	    bottom: 4px;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	.img-1 {
-		width: 70px;
-	}
-
-	.mini {
-	    position: absolute;
-	    width: 10px;
-	    height: 10px;
-	    top: 5px;
-	    right: 5px;
-	}
-
-	.block-yacht.padding-1 {
-    	padding-top: 64px;
-	}
-
-	.img-min.super {
-		margin-bottom: 14px;
-	}
-
-	.mini {
-	    position: absolute;
-	    width: 15px;
-	    height: 15px;
-	    top: 5px;
-	    right: 5px;
-	}
-
-	.position input {
-		margin: 0 auto;
-	    box-sizing: border-box;
-	    display: block;
-	}
-
-
-	.position span {
-		right: 0px;
-	}
-
-	.text-center {
-		font-size: 11px;
-	}
-
-	.wids {
-		width: 40px;
-	}
-
-
-
-	.block-yacht {
-		padding-top: 0;
-	}
-
-	.left-block li {
-    	font-size: 14px;
-	}
-
-/* 	.left-block li:hover {
-    	font-size: 12px;
-	} */
-
-	.left-block li.active-2:before {
-    	bottom: 3px;
-	}
-
-	.left-block li.active-2:after {
-	    bottom: 3px;
-	}
-
-
-}
-
-@media screen and (max-width: 350px) {
-
-	.left-block li.active-2:before {
-   		 right: 2px;
-	}
-
-	.left-block li.active-2:after {
-   		 left: 2px;
-	}
-}
-
-@media screen and (max-width: 320px) {
-
-
-
-	.position input {
-		max-width: 287px;
-		height: 37px;
-	}
-
-	.position span {
-    	right: 7px;
-    	top: 43px;
-	}
-
-
-	.button-one {
-		padding: 10px 65px 10px 65px;
-		margin-top: -8px;
-	}
-
-
-
-	.block-yacht {
-    	max-width: 97px;
-    	padding-top: 0px;
-	}
-
-	.block-yacht.padding-1 {
-    	padding-top: 63px;
-	}
-
-	.par-2 {
-    	max-width: 104px;
-	}
-
-	.yacht-image-two.top-2 {
-	    padding-top: 42px;
-	    padding-bottom: 30px;
-	    max-width: 268px;
-	    margin: 0 auto;
-	    margin-top: 0px;
-	}
-
-	.img-1.rel-po {
-		position: relative;
-    	top: 6px;
-	}
-
-	.block-yacht {
-    	margin-bottom: 14px;
-	}
-
-}
+.img-min.super
+	+r(400)
+		margin-bottom: 14px

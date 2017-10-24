@@ -1,16 +1,26 @@
-{% set types = ['Парусная многокорпусная яхта', 'моторные яхты', 'катамараны', 'суперяхты'] %}
-<div class="types">
-
-	{% for type in types %}
-	<div class="type">
-		<label class="type__checkbox checkbox checkbox_dark">
-
-			<span>{{type}}</span>
-			<input type="checkbox">
-			<span class="checkbox__block checkbox__block_right"></span>
-			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
-			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
-		</label>
+<div class="yacht-image-two top-2">
+	<div class="par-2">
+		<div class="block-yacht mar-bottom">
+			<img class="img-1 rel-po" src="img/yacht1.png" alt="">
+			<p class="text-center  wids">Парусная яхта</p>
+			<span class="mini"><img class="img-min" src="img/tick1.png" alt=""></span>
+		</div>
+		<div class="block-yacht padding-1">
+			<img class="img-1" src="img/boat1.png" alt="">
+			<p class="text-center  wids">Моторная яхта</p>
+			<span class="mini"><img class="img-min" src="img/tick1.png" alt=""></span>
+		</div>
 	</div>
-	{% endfor %}
+	<div class="par-2">
+		<div class="block-yacht mar-bottom">
+			<img class="img-1 rel-po" src="img/yacht2.png" alt="">
+			<p class="text-center hei">Парусный катамаран</p>
+			<span class="mini"><img class="img-min" src="img/tick1.png" alt=""></span>
+		</div>
+		<div class="block-yacht padding-1 toppp">
+			<img class="img-1" src="img/boat2.png" alt="">
+			<p class="text-center hei bott">Супер-яхта</p>
+			<span class="mini"><img class="img-min super" src="img/tick1.png" alt=""></span>
+		</div>
+	</div>
 </div>

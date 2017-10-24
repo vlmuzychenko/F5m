@@ -1,4 +1,5 @@
-$(document).ready(function(){
+(function(){
+  //regions carousel
   var top_click = true;
   var bottoms_click = true;
 
@@ -38,4 +39,4 @@ $(document).ready(function(){
      e.preventDefault();
      $(this).toggleClass('active-2');
   });
-})
+})();

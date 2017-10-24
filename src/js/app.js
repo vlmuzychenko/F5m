@@ -5,5 +5,4 @@ import './yacht-wiki';
 import './academy';
 import './detail-page';
 import './spinner';
-
-sayHello();
+import './new-search-regions';
