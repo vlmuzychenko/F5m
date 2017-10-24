@@ -1,0 +1,48 @@
+{% set tabs = ['регион', 'выбрать яхту', 'выбрать дату', 'помощь']%}
+
+<div class="search">
+
+	<div class="search__nav">
+
+		<div class="nav js-nav swiper-container">
+
+			<div class="nav__list swiper-wrapper">
+				{% for tab in tabs %}
+					<div class="nav__slide swiper-slide">
+						<div class="nav__item">{{tab}}</div>
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="nav__line js-nav-line"></div>
+
+		</div>
+
+
+	</div>
+
+	<form class="search__body search__body_new">
+		<div class="swiper-container js-content">
+			<div class="search__content swiper-wrapper ">
+
+				<div class="swiper-slide">
+					{% include "./search/_regions-new.html" %}
+				</div>
+
+				<div class="swiper-slide">
+					{% include "./search/_yacht-type-new.html" %}
+				</div>
+
+				<div class="search__vertical swiper-slide">
+					{% include "./search/_dates-new.html" %}
+				</div>
+
+				<div class="search__vertical search__vertical_yellow swiper-slide">
+					{% include "./search/_final-new.html" %}
+				</div>
+
+			</div>
+		</div>
+	</form>
+
+</div>

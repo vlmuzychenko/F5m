@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Pages</title>
+    <title>New Search Page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
     <meta name="theme-color" content="#f6cb02">
@@ -41,9 +41,9 @@
     <div class="out">
       <!--BEGIN  header-->
       <header class="header">
-        <div class="header__in"> <button type="button" class="header__home header__home_btn js-close-chapter">
+        <div class="header__in"> <a href="#" class="header__home">
 <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</button> <button type="button" class="header__burger burger js-toggle-menu">
+</a> <button type="button" class="header__burger burger js-toggle-menu">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -123,40 +123,124 @@
           </nav>
           </div>
         </div>
-        <div class="container">
-          <ul class="z">
-            <li><a href="main.html">Main page</a></li>
-            <li><a href="search.html">Search page</a></li>
-            <li><a href="search-new.html">New search page</a></li>
-            <li><a href="search-advanced.html">Advanced search page</a></li>
-            <li><a href="yacht.html">Yacht page</a></li>
-            <li><a href="calendar.html">Calendar page</a></li>
-            <li><a href="yacht-wiki.html">Yacht Wiki</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="404.html">404</a></li>
-            <li><a href="regatta.html">Regatta</a></li>
-            <li><a href="news-detail.html">News Detail</a></li>
-            <li><a href="yacht-wiki-archive.html">Yacht Wiki Archive</a></li>
-            <li><a href="news-page.html">News Page</a></li>
-            <li><a href="news-page-archive.html">News Page Archive</a></li>
-            <li><a href="event.html">Event</a></li>
-            <li><a href="yacht-wiki-main.html">Yacht Wiki Main</a></li>
-            <li><a href="yacht-wiki-main-archive.html">Yacht Wiki Main Archive</a></li>
-            <li><a href="new-yacht-wiki-archive.html"> New Yacht Wiki Archive</a></li>
-            <li><a href="popup-email.html"> Popup Email</a></li>
-            <li><a href="popup-email-thnk.html"> Popup Email Thank</a></li>
-            <li><a href="popup-acquiring.html"> Popup Acquiring</a></li>
-            <li><a href="popup-acquiring-error.html"> Popup Acquiring Error</a></li>
-          </ul>
-        </div>
-        <style>
-          .z a {
-            font-size: 30px;
-            color: #f6cb02
-          }
+        <div class="search">
+          <div class="search__nav">
+            <div class="nav js-nav swiper-container">
+              <div class="nav__list swiper-wrapper">
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">регион</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">выбрать яхту</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">выбрать дату</div>
+                </div>
+                <div class="nav__slide swiper-slide">
+                  <div class="nav__item">помощь</div>
+                </div>
+              </div>
+              <div class="nav__line js-nav-line"></div>
+            </div>
+          </div>
+          <form class="search__body search__body_new">
+            <div class="swiper-container js-content">
+              <div class="search__content swiper-wrapper ">
+                <div class="swiper-slide">
+                  <div class="left-block">
+                    <div class="tab-img top-p"> <img src="img/arrow-up.png" alt=""> </div>
+                    <ul class="click-img-2">
+                      <li class="slider-child">БАЛТИЙСКОЕ МОРЕ</li>
+                      <li class="slider-child">ЕВРОПА-АТЛАНТИКА</li>
+                      <li class="slider-child">СРЕДИЗЕМНОЕ МОРЕ</li>
+                      <li class="slider-child active-2">ВСЕ РЕГИОНЫ</li>
+                      <li class="slider-child">АТЛАНТИЧЕСКИЙ ОКЕАН</li>
+                      <li class="slider-child">ТИХИЙ ОКЕАН</li>
+                      <li class="slider-child">ИНДИЙСКИЙ ОКЕАН</li>
+                      <li class="slider-child">США</li>
+                      <li class="slider-child">АЗИЯ</li>
+                      <li class="slider-child">КАРИБСКИЕ ОСТРОВА</li>
+                      <li class="slider-child">БАГАМСКИЕ ОСТРОВА</li>
+                      <li class="slider-child">ЦЕНТРАЛЬНАЯ И ЮЖНАЯ АМЕРИКА</li>
+                      <li class="slider-child">КУБА</li>
+                    </ul>
+                    <div class="tab-img bottom-p"> <img src="img/arrow-down.png" alt=""> </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="types">
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
 
-        </style>
+			<span>Парусная многокорпусная яхта</span>
+			<input type="checkbox">
+			<span class="checkbox__block checkbox__block_right"></span>
+			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
+			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
+		</label> </div>
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+
+			<span>моторные яхты</span>
+			<input type="checkbox">
+			<span class="checkbox__block checkbox__block_right"></span>
+			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
+			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
+		</label> </div>
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+
+			<span>катамараны</span>
+			<input type="checkbox">
+			<span class="checkbox__block checkbox__block_right"></span>
+			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
+			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
+		</label> </div>
+                    <div class="type"> <label class="type__checkbox checkbox checkbox_dark">
+
+			<span>суперяхты</span>
+			<input type="checkbox">
+			<span class="checkbox__block checkbox__block_right"></span>
+			<span class="type__icon" style="background-image: url('img/catamarans.svg')"></span>
+			<span class="type__icon type__icon_hover" style="background-image: url('img/catamarans_hover.svg')"></span>
+		</label> </div>
+                  </div>
+                </div>
+                <div class="search__vertical swiper-slide">
+                  <div class="dates">
+                    <div class="dates__field">
+                      <div class="dates__title">Отплытие</div> <input readonly='true' type="text" class="dates__input" data-calendar-from data-title="Отплытие"> </div>
+                    <div class="dates__field">
+                      <div class="dates__title">Прибытие</div> <input readonly='true' type="text" class="dates__input" data-calendar-to data-title="Прибытие"> </div>
+                  </div>
+                </div>
+                <div class="search__vertical search__vertical_yellow swiper-slide">
+                  <div class="final">
+                    <div class="final__title"> Найти подходящие яхты </div>
+                    <div class="final__btn"> <button type="submit" class="button button_xl button_white">Найти</button> </div>
+                    <div class="final__footer"> <a href="#" class="button button_xl">Развернуты поиск</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="popup popup_calendar" data-calendar-popup> <button type="button" class="popup__close btn-close" data-close-calendar>
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</button>
+          <div class="popup__in">
+            <div class="popup__title" data-calendar-title>Отплытие</div>
+            <div class="calendar">
+              <ul class="calendar__years">
+                <li><a href="#" data-calendar-year data-value="2016">2016</a></li>
+                <li><a href="#" data-calendar-year class="is-active" data-value="2017">2017</a></li>
+                <li><a href="#" data-calendar-year data-value="2018">2018</a></li>
+                <li><a href="#" data-calendar-year data-value="2019">2019</a></li>
+                <li><a href="#" data-calendar-year data-value="2020">2020</a></li>
+                <li><a href="#" data-calendar-year data-value="2021">2021</a></li>
+              </ul>
+              <div class="calendar__main" data-calendar></div>
+              <div class="popup__button calendar__button"> <button type="button" class="button button_lg" data-calendar-save>Сохранить</button> </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- END content -->
       <!-- BEGIN scripts -->
