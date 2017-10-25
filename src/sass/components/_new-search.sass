@@ -107,6 +107,7 @@ body
 	justify-content: space-between
 
 .block-yacht
+	display: block
 	position: relative
 	max-width: 145px
 	width: 100%
@@ -122,7 +123,7 @@ body
 		margin-bottom: 14px
 	&.padding-1
 		+r(800)
-			padding-top: 73px
+			padding-top: 70px
 		+r(420)
 			padding-top: 64px
 		+r(320)
@@ -138,6 +139,26 @@ body
 	.img-1
 		+r(800)
 			width: 70px
+
+input[type='checkbox']
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	z-index: -1
+	&:checked
+		+ .block-yacht
+			background-color: $primary
+			.text-center
+				color: #000
+			.mini
+				background: #000
+				border: none
+				img
+					display: block !important
+			.img-1
+				filter: brightness(1) invert(100%)
+				transition: all .5s linear
 
 .mini
 	position: absolute
@@ -187,7 +208,6 @@ body
 	padding-top: 92px
 
 .rental-dates
-	margin-top: 70px
 	+r(800)
 		padding-bottom: 30px
 
@@ -203,7 +223,7 @@ body
 		width: 228px
 		line-height: 45px
 		margin: 0 auto
-		margin-bottom: 6px
+		margin-bottom: 15px
 		padding-top: 22px
 
 .two-par-input
@@ -217,9 +237,10 @@ body
 .position
 	position: relative
 	max-width: 330px
-  width: 100%
-  height: 35px
+	width: 100%
+	height: 35px
 	+r(800)
+		margin: 0 auto
 		margin-bottom: 45px
 		max-width: 285px
 		height: 37px
@@ -254,13 +275,16 @@ body
 			top: 43px
 	img
 		position: absolute
+		width: auto
+		height: 100%
+		margin: 4px
 		top: 0
 
 .button-one
 	background: #FFCC00
 	border: none
 	outline: none
-	padding: 15px 90px 15px 90px
+	padding: 7px 75px
 	border-radius: 60px
 	font-size: 28px
 	margin: 0 auto
@@ -270,11 +294,8 @@ body
 	cursor: pointer
 	transition: all .25s ease-in-out
 	+r(800)
-		margin-top: 0
+		margin-top: 15px
 		font-size: 20px
-	+r(320)
-		padding: 10px 65px 10px 65px
-		margin-top: -8px
 	&:hover
 		background: #fff
 
@@ -299,7 +320,7 @@ body
 	color: #fff
 	border: 2px solid #fff
 	border-radius: 30px
-	padding: 10px 39px 10px 39px
+	padding: 8px 15px
 	+f-book
 	cursor: pointer
 	transition: all .25s ease-in-out
@@ -370,11 +391,6 @@ body
 		+r(320)
 			padding-top: 42px
 
-.block-760
-	display: none
-	+r(800)
-		display: block
-
 .disp-flex
 	border-bottom: 3px solid #FFCC00
 	margin: 15px
@@ -382,6 +398,7 @@ body
 	flex-direction: column
 
 .par-2
+	width: 100%
 	+r(800)
 		max-width: 104px
 
@@ -402,6 +419,15 @@ body
 		+r(800)
 			margin: 0 auto
 			display: block
+
+.tab-last
+	max-width: 600px
+	width: 100%
+	margin: 0 auto
+
+.tab-midle
+	padding-bottom: 77px
+	padding-top: 15px
 
 .click-1, .click-2, .click-3
 	+r(800)
