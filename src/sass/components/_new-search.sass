@@ -1,15 +1,3 @@
-body
-	+r(800)
-		min-height: 100vh
-
-.img-1
-	+r(420)
-		width: 70px
-	&.rel-po
-		+r(800)
-			position: relative
-			top: 6px
-
 .left-block
 	max-width: 440px
 	width: 100%
@@ -22,18 +10,14 @@ body
 		+r(800)
 			margin-bottom: 0px
 	img
-		margin-left: 15px
-		cursor: pointer
-		+r(800)
-			margin-left: 0px
-			height: 28px
+		margin-left: 0px
+		height: 28px
 	ul
-		+r(800)
-			margin-bottom: 0px
-			height: 288px
-			overflow: hidden
-			margin: 0 auto
-			text-align: center
+		margin-bottom: 0px
+		height: 288px
+		overflow: hidden
+		margin: 0 auto
+		text-align: center
 	li
 		font-size: 18px
 		color: #fff
@@ -121,24 +105,19 @@ body
 	+r(320)
 		max-width: 97px
 		margin-bottom: 14px
-	&.padding-1
-		+r(800)
-			padding-top: 70px
-		+r(420)
-			padding-top: 64px
-		+r(320)
-			padding-top: 63px
-		&.toppp
-			+r(800)
-				padding-top: 61px
-			+r(420)
-				padding-top: 53px
-	img
+	&__img
 		display: block
+		transition: opacity .3s
+		&_checked
+			opacity: 0
+	&__pic
 		margin: 0 auto
-	.img-1
-		+r(800)
-			width: 70px
+		width: 80px
+		height: 120px
+		position: relative
+		img
+			max-width: 100%
+			+vcenter
 
 input[type='checkbox']
 	position: absolute
@@ -149,6 +128,10 @@ input[type='checkbox']
 	&:checked
 		+ .block-yacht
 			background-color: $primary
+			.block-yacht__img
+				opacity: 0
+				&_checked
+					opacity: 1
 			.text-center
 				color: #000
 			.mini
@@ -156,9 +139,6 @@ input[type='checkbox']
 				border: none
 				img
 					display: block !important
-			.img-1
-				filter: brightness(1) invert(100%)
-				transition: all .5s linear
 
 .mini
 	position: absolute
@@ -363,17 +343,11 @@ input[type='checkbox']
 		border: none
 		img
 			display: block !important
-	.img-1
-		filter: brightness(1) invert(100%)
-		transition: all .5s linear
 
 .block-two-new
 	background: #FFCC00
 	.text-center
 		color: #000
-	.img-1
-		filter: brightness(1) invert(100%)
-		transition: all .5s linear
 	.mini
 		border: 1px solid #000
 
