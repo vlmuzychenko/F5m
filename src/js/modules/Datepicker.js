@@ -44,6 +44,7 @@ export default class Calendar {
 			showOtherMonths: true,
 			selectOtherMonths: false,
 			dateFormat: 'dd.mm.yy',
+			minDate: new Date(),
 			onChangeMonthYear: year => setActiveYear.call(this, year)
 		});
 
