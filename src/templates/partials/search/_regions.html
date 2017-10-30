@@ -1,14 +1,27 @@
-{% set regions = ['южная америка', 'северная америка', 'западная африка', 'северная европа', 'атлантическая европа', 'средний восток', 'средиземноморье', 'океания', 'карибы', 'индийский океан'] %}
+{% set regions = [
+	{name: 'АЗИЯ', date: 'Круглый год'},
+	{name: 'АТЛАНТИЧЕСКИЙ ОКЕАН', date: 'Круглый год (Канарские острова)'},
+	{name: 'БАГАМСКИЕ ОСТРОВА', date: 'ноя - май'},
+	{name: 'БАЛТИЙСКОЕ МОРЕ', date: 'май - сен'},
+	{name: 'КАРИБСКИЕ ОСТРОВА', date: 'ноя - июн'},
+	{name: 'ЦЕНТРАЛЬНАЯ И ЮЖНАЯ АМЕРИКА', date: 'ноя - май'},
+	{name: 'КУБА', date: 'Круглый год'},
+	{name: 'ЕВРОПА-АТЛАНТИКА', date: 'май - сен'},
+	{name: 'ИНДИЙСКИЙ ОКЕАН', date: 'Круглый год'},
+	{name: 'СРЕДИЗЕМНОЕ МОРЕ', date: 'апр - ноя'},
+	{name: 'ТИХИЙ ОКЕАН', date: 'Круглый год (в разных регионах)'},
+	{name: 'США', date: 'Круглый год (в разных регионах)'}] %}
+
 
 <div class="regions">
 	{% for region in regions %}
 	<div class="region">
 		<label class="region__checkbox checkbox">
 			<div class="region__text">
-				<span>{{region}}</span>
+				<span>{{region.name}}</span>
 				<span class="region__season">
 					Сезон:
-					<span>фев - ноя</span>
+					<span>{{region.date}}</span>
 				</span>
 			</div>
 			<input type="checkbox">
