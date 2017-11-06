@@ -4846,8 +4846,18 @@ input[type="tel"]:focus::placeholder {
   display: inline;
 }
 
+.region__checkbox {
+  padding-right: 45px;
+  position: relative;
+}
+
 .region__checkbox .checkbox__block {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .regions {
