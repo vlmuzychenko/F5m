@@ -108,8 +108,9 @@
 				<div class="swiper-slide">
 					<div class="yw-price">
 						<div class="yw-price__pic" style='background-image: url(img/yacht-wiki/yw-price-bg-previous.jpg); display: none;'></div>
-						<div class="yw-price__pic" style='background-image: url(img/yacht-wiki/yw-price-bg.jpg);'>
-							<div class="yw-price-container">
+						<div class="yw-price__pic" style='background-image: url(img/yacht-wiki/yw-price-bg-1.jpg);'>
+							<p class="yw-price__value">990 €</p>
+							<div class="yw-price-container" style='display: none;'>
 								<div class="yw-price__item active">
 									<div class="yw-price__item-text">покупая яхт-вик</div>
 									<div class="yw-price__item-date">до 01.08.17</div>
@@ -130,13 +131,27 @@
 								</div>
 							</div>
 						</div>
+						<form class="yw-price__tumbler">
+								<formfield class="js-price yw-price__tumbler-item" data-price-info='{"included": "услуги шкипера, аренда яхты,страховой депозит", "extra": "перелёт,виза,трансфер из/до аэpопорта"}'>
+									<input type="radio" id='990' name='price-value' value='990' checked>
+									<label for="990">990 €</label>
+								</formfield>
+								<formfield class="js-price yw-price__tumbler-item" data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах", "extra": "перелётперелёт,виза,трансфер из/до аэpопорта"}'>
+									<input type="radio" id='1100' name='price-value' value='1100'>
+									<label for="1100">1100 €</label>
+								</formfield>
+								<formfield class="js-price yw-price__tumbler-item" data-price-info='{"included": "услуги шкипера,аренда яхты,страховой депозит,топливо на яхте,стоянки во всех маринах,услуги видео оператора услуги видео оператора,медицинское страхование", "extra": "перелёт,виза,трансфер из/до аэpопорта"}'>
+									<input type="radio" id='1290' name='price-value' value='1290'>
+									<label for="1290">1290 €</label>
+								</formfield>
+						</form>
 						<div class="yw-price__content">
 							<div class="yw-price__title" style='display: none;'>
 								990€
 								<span>7 дней</span>
 							</div>
 							<div class="yw-price__list-title">В стоимость входит:</div>
-							<ul class="yw-price__list">
+							<ul class="yw-price__list js-included">
 								<li>услуги шкипера</li>
 								<li>аренда яхты</li>
 								<li>страховой депозит</li>
@@ -154,7 +169,7 @@
 								<li>топливо на яхте</li>
 							</ul>
 							<div class="yw-price__list-title">Дополнительно оплачиваются:</div>
-							<ul class="yw-price__list">
+							<ul class="yw-price__list js-extra">
 								<li>перелёт</li>
 								<li>виза</li>
 								<li>трансфер из/до аэропорта</li>

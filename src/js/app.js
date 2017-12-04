@@ -6,3 +6,4 @@ import './academy';
 import './detail-page';
 import './spinner';
 import './new-search-regions';
+import './price';

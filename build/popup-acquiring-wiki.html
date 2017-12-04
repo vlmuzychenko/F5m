@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Pages</title>
+    <title>Popup Acquiring Wiki</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--<meta name="viewport" content="device-width, initial-scale=1.0, user-scalable=no">-->
     <meta name="theme-color" content="#f6cb02">
@@ -41,9 +41,8 @@
     <div class="out">
       <!--BEGIN  header-->
       <header class="header">
-        <div class="header__in"> <button type="button" class="header__home header__home_btn js-close-chapter">
-<svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-</button> <button type="button" class="header__burger burger js-toggle-menu">
+        <div class="header__in">
+          <a href="#" class="header__home"> <svg class="icon icon-arrow-left"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg> </a> <button type="button" class="header__burger burger js-toggle-menu">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -122,41 +121,41 @@
           </nav>
           </div>
         </div>
-        <div class="container">
-          <ul class="z">
-            <li><a href="main.html">Main page</a></li>
-            <li><a href="search.html">Search page</a></li>
-            <li><a href="search-new.html">New search page</a></li>
-            <li><a href="search-advanced.html">Advanced search page</a></li>
-            <li><a href="yacht.html">Yacht page</a></li>
-            <li><a href="calendar.html">Calendar page</a></li>
-            <li><a href="yacht-wiki.html">Yacht Wiki</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="404.html">404</a></li>
-            <li><a href="regatta.html">Regatta</a></li>
-            <li><a href="news-detail.html">News Detail</a></li>
-            <li><a href="yacht-wiki-archive.html">Yacht Wiki Archive</a></li>
-            <li><a href="news-page.html">News Page</a></li>
-            <li><a href="news-page-archive.html">News Page Archive</a></li>
-            <li><a href="event.html">Event</a></li>
-            <li><a href="yacht-wiki-main.html">Yacht Wiki Main</a></li>
-            <li><a href="yacht-wiki-main-archive.html">Yacht Wiki Main Archive</a></li>
-            <li><a href="new-yacht-wiki-archive.html"> New Yacht Wiki Archive</a></li>
-            <li><a href="popup-email.html"> Popup Email</a></li>
-            <li><a href="popup-email-thnk.html"> Popup Email Thank</a></li>
-            <li><a href="popup-acquiring-academy.html"> Popup Acquiring Academy</a></li>
-            <li><a href="popup-acquiring-wiki.html"> Popup Acquiring Wiki</a></li>
-            <li><a href="popup-acquiring-error.html"> Popup Acquiring Error</a></li>
-          </ul>
+        <div class="popup popup_acquiring popup_email js-popup is-open" style='display: block;'> <button type="button" class="popup__close popup__close_email btn-close js-close-popup">
+    <div class="popup__close-wrap">
+      <p class="popup__close-text">Закрыть форму</p>
+      <span class="popup__close-icon">
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+</span>
+    </div>
+  </button>
+          <div class="popup__in js-popup-in">
+            <div class="acquiring">
+              <div class="acquiring__body">
+                <div class="acquiring__field acquiring__field_yellow">
+                  <h2 class="acquiring__title acquiring__title_center">яхтвик</h2>
+                  <h3 class="acquiring__title acquiring__title_s acquiring__title_black"> Для оплаты онлайн заполните обязательные поля <span>*</span> </h3>
+                  <div class="acquiring__input-col"> <label for="name" class="acquiring__label">Как Вас зовут?<span>*</span></label> <input type='text' id='name' placeholder='Имя Фамилия' class="acquiring__input error"> </div>
+                  <div class="acquiring__input-col"> <label for="email" class="acquiring__label">Email<span>*</span></label> <input type='text' id='email' placeholder='name@mail.com' class="acquiring__input"> </div>
+                </div>
+                <div class="acquiring__field acquiring__field_pic-bg">
+                  <div class="acquiring__input-col">
+                    <h3 for="select" class="acquiring__label acquiring__label_white">Выбранный продукт:<span>*</span></h3>
+                    <p class="acquiring__chosen">CANARY YACHTWEEK 25.11 — 02.12 2017 - 490€</p>
+                  </div>
+                  <div class="acquiring__input-col"> <label for="spinner" class="acquiring__label acquiring__label_white">Укажите количество людей:<span>*</span></label>
+                    <div class="quantity js-spinner error"> <input name='spinner' type="number" min="1" max="40" step="1" value="1"> </div>
+                  </div>
+                  <div class="acquiring__input-col"> <label for="comment" class="acquiring__label acquiring__label_white">Комментарий:</label> <textarea name="comment" placeholder='Не обязательное поле' rows='4' class="acquiring__input acquiring__input_textarea"></textarea> </div>
+                  <div
+                    class="acquiring__bottom-wrap">
+                    <h3 class="acquiring__title acquiring__title_m acquiring__title_yellow">Сумма к оплате:</h3>
+                    <div class="acquiring__title acquiring__title_m acquiring__title_yellow"> <span class="empty"></span> <span style='display: none;' class="filled">100.000</span> <span> грн</span> </div> <a href="#" class="button button_white acquiring__btn">оплатить на Fondy.ua <span class='icon'></span></a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <style>
-          .z a {
-            font-size: 30px;
-            color: #f6cb02
-          }
-
-        </style>
       </div>
       <!-- END content -->
       <!-- BEGIN scripts -->
