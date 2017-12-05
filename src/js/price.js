@@ -8,10 +8,13 @@ $(function(){
   var currentInfo = currentPrice.parent().data('price-info');
   var currentIncludedCont = currentInfo.included.split(',');
   var currentExtraCont = currentInfo.extra.split(',');
+  var currentImg = currentInfo.img;
+  console.log(currentImg);
 
   includedWrap.html('');
   extraWrap.html('');
   $('.yw-price__value').text(currentText);
+  $('.yw-price__pic').css('background-image', `url(${currentImg})`);
   for(var i = 0; i < currentIncludedCont.length; i++){
     includedWrap.append('<li>'+currentIncludedCont[i]+'</li>');
   }
@@ -27,10 +30,12 @@ $(function(){
     var info = target.parent().data('price-info');
     var includedCont = info.included.split(',');
     var extraCont = info.extra.split(',');
+    var img = info.img;
 
     includedWrap.html('');
     extraWrap.html('');
     $('.yw-price__value').text(text);
+    $('.yw-price__pic').css('background-image', `url(${img})`);
     for(var i = 0; i < includedCont.length; i++){
       includedWrap.append('<li>'+includedCont[i]+'</li>');
     }

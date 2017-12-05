@@ -4846,8 +4846,18 @@ input[type="tel"]:focus::placeholder {
   display: inline;
 }
 
+.region__checkbox {
+  padding-right: 45px;
+  position: relative;
+}
+
 .region__checkbox .checkbox__block {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .regions {
@@ -6054,6 +6064,7 @@ input[type='checkbox']:checked + .block-yacht .mini img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
+  transition: .3s ease;
 }
 
 .yw-price__value {
@@ -6064,6 +6075,7 @@ input[type='checkbox']:checked + .block-yacht .mini img {
   color: #fff;
   font-size: 86px;
   line-height: 1;
+  transition: .3s ease;
   font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
 }
 
@@ -8272,7 +8284,7 @@ input[type='checkbox']:checked + .block-yacht .mini img {
 }
 
 .acquiring__select .ms-drop ul {
-  max-height: 110px !important;
+  max-height: 195px !important;
 }
 
 .acquiring__select .ms-drop ul > li.group {
