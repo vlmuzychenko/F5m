@@ -135,12 +135,15 @@
                 <div class="acquiring__field acquiring__field_yellow">
                   <h2 class="acquiring__title acquiring__title_center">регаты</h2>
                   <h3 class="acquiring__title acquiring__title_s acquiring__title_black"> Для оплаты онлайн заполните обязательные поля <span>*</span> </h3>
-                  <div class="acquiring__input-col"> <label for="name" class="acquiring__label">Как Вас зовут?<span>*</span></label> <input type='text' id='name' placeholder='Имя Фамилия' class="acquiring__input error"> </div>
+                  <div class="acquiring__input-col"> <label for="name" class="acquiring__label">Как Вас зовут?<span>*</span></label> <input type='text' id='name' placeholder='Имя Фамилия' class="acquiring__input">
+                    <!--add class error-->
+                  </div>
                   <div class="acquiring__input-col"> <label for="email" class="acquiring__label">Email<span>*</span></label> <input type='text' id='email' placeholder='name@mail.com' class="acquiring__input"> </div>
                 </div>
                 <div class="acquiring__field acquiring__field_pic-bg">
                   <div class="acquiring__input-col"> <label for="select" class="acquiring__label acquiring__label_white">Выберите регату:<span>*</span></label>
-                    <div class="acquiring__select js-select-field error"> <select name="select" class="js-select-single">
+                    <div class="acquiring__select js-select-field">
+                      <!--add class error--><select name="select" class="js-select-single">
 								<option value="Цена вниз">Цена вниз</option>
 								<option value="Цена вверх">Цена вверх</option>
 								<option value="Год выпуска вниз">Год выпуска вниз</option>
@@ -150,7 +153,8 @@
 							</select> </div>
                   </div>
                   <div class="acquiring__input-col"> <label for="spinner" class="acquiring__label acquiring__label_white">Укажите количество людей:<span>*</span></label>
-                    <div class="quantity js-spinner error"> <input name='spinner' type="number" min="1" max="40" step="1" value="1"> </div>
+                    <div class="quantity js-spinner">
+                      <!--add class error--><input name='spinner' type="number" min="1" max="40" step="1" value="1"> </div>
                   </div>
                   <div class="acquiring__input-col"> <label for="comment" class="acquiring__label acquiring__label_white">Комментарий:</label> <textarea name="comment" placeholder='Не обязательное поле' rows='4' class="acquiring__input acquiring__input_textarea"></textarea> </div>
                   <div
