@@ -9,7 +9,6 @@ $(function(){
   var currentIncludedCont = currentInfo.included.split(',');
   var currentExtraCont = currentInfo.extra.split(',');
   var currentImg = currentInfo.img;
-  console.log(currentImg);
 
   includedWrap.html('');
   extraWrap.html('');
