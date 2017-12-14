@@ -43,14 +43,14 @@
 
 
   $('.js-price label').click(function(e){
-    // var fondy_price = $(this).parents('.js-price').data('fprice');
-    // var fondy_title = $(this).parents('.js-price').data('ftitle');
-    // var _id = $(this).parents('.js-price').data('id');
-    // $('#selected_id').val(_id);
-    // $('.filled').text(fondy_price);
-    // $('select.select-product option:selected').attr('data-id',_id).attr('value',fondy_price).text(fondy_title);
-    // $('div.select-product button>span').text(fondy_title);
-    // calculateFondySum();
+    var fondy_price = $(this).parents('.js-price').data('fprice');
+    var fondy_title = $(this).parents('.js-price').data('ftitle');
+    var _id = $(this).parents('.js-price').data('id');
+    $('#selected_id').val(_id);
+    $('.filled').text(fondy_price);
+    $('select.select-product option:selected').attr('data-id',_id).attr('value',fondy_price).text(fondy_title);
+    $('div.select-product button>span').text(fondy_title);
+    calculateFondySum();
 
     var target = $(e.currentTarget);
 
