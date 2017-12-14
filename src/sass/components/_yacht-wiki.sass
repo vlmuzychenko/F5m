@@ -216,16 +216,17 @@
 		text-align: left
 		color: #8d70ef
 		+f-bold
-		& + &
-			&::before
-				content: ''
-				position: absolute
-				left: 0
-				top: 50%
-				transform: translateY(-50%)
-				width: 2px
-				height: 68%
-				background-color: #fff
+		&.show-before
+			& + &
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					width: 2px
+					height: 68%
+					background-color: #fff
 		&.active
 			color: #fff
 			.yw-price

@@ -6169,7 +6169,7 @@ input[type='checkbox']:checked + .block-yacht .mini img {
   font-family: "FuturaPT-Bold", Helvetica, Arial, sans-serif;
 }
 
-.yw-price__item + .yw-price__item::before {
+.yw-price__item.show-before + .yw-price__item.show-before::before {
   content: '';
   position: absolute;
   left: 0;
